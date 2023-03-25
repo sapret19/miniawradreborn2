@@ -12,6 +12,7 @@ import 'package:miniawradreborn2/page/tabbar_sabul.dart';
 import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
 import 'package:miniawradreborn2/pdf.dart';
+import 'package:miniawradreborn2/per.dart';
 import 'package:miniawradreborn2/rute.dart';
 import 'package:sizer/sizer.dart';
 
@@ -19,9 +20,14 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

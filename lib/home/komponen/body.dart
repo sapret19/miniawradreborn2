@@ -26,7 +26,7 @@ class _bodyState extends State<body> {
         children: [
           const head(),
           Container(
-            height: 692,
+            height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             transform: Matrix4.translationValues(0, -45, 1),
             decoration: const BoxDecoration(
