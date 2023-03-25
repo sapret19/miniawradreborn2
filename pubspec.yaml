@@ -70,6 +70,7 @@ flutter:
   assets:
     - assets/images/
     - assets/pdf/
+    - assets/json/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -83,6 +84,12 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: LPMQ IsepMisbah
+      fonts:
+        - asset: assets/fonts/LPMQ IsepMisbah.ttf
+    - family: KFGQPC Uthmanic Script HAFS
+      fonts:
+        - asset: assets/fonts/KFGQPC Uthmanic Script HAFS Regular.otf
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Bold.ttf

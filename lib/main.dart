@@ -11,6 +11,7 @@ import 'package:miniawradreborn2/page/tabbar_diba.dart';
 import 'package:miniawradreborn2/page/tabbar_sabul.dart';
 import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
+import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
 import 'package:miniawradreborn2/pdf.dart';
 import 'package:miniawradreborn2/rute.dart';
 import 'package:sizer/sizer.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       return GetMaterialApp(
         title: 'Mini Awrad Santri',
         theme: ThemeData(),
-        home: const Home(),
+        home: const single_page_baru(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,
