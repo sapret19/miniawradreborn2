@@ -17,7 +17,7 @@ class _Tabbar_pageState extends State<Tabbar_waqiah> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: DefaultTabController(
-        length: 2,
+        length: 3,
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -103,6 +103,7 @@ class _Tabbar_pageState extends State<Tabbar_waqiah> {
                           color: Color.fromARGB(255, 194, 194, 194))
                     ]),
                 child: TabBar(
+                    isScrollable: true,
                     indicator: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.all(Radius.circular(11)),
@@ -116,6 +117,7 @@ class _Tabbar_pageState extends State<Tabbar_waqiah> {
                     tabs: [
                       nama_tab(namatab: 'Al-Waqiah'),
                       nama_tab(namatab: 'Doa'),
+                      nama_tab(namatab: 'Doa Shalat Hajat')
                     ]),
               ),
               Container(
@@ -127,6 +129,7 @@ class _Tabbar_pageState extends State<Tabbar_waqiah> {
                     children: [
                       page_tab(pagetab: 'Waqiah.pdf'),
                       page_tab(pagetab: 'doa_waqiah.pdf'),
+                      page_tab(pagetab: 'hajat.pdf')
                     ]),
               )
             ],
