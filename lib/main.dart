@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Mini Awrad Santri',
         theme: ThemeData(),
-        home: const single_page_baru(),
+        home: const Home(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,
@@ -44,47 +44,3 @@ class _MyAppState extends State<MyApp> {
     });
   }
 }
-
-// class tombol extends StatelessWidget {
-//   const tombol({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       body: Container(
-//         child: Center(
-//           child: ButtonWidget(
-//             text: 'Firebase PDF',
-//             onClicked: () async {
-//               final url = 'dalail_ahad.pdf';
-//               final file = await PDFApi.loadFirebase(url);
-
-//               if (file == null) return;
-//               openPDF(context, file);
-//             },
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-
-// class ButtonWidget extends StatelessWidget {
-//   final String text;
-//   final VoidCallback onClicked;
-
-//   const ButtonWidget({
-//     Key? key,
-//     required this.text,
-//     required this.onClicked,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) => ElevatedButton(
-//         style: ElevatedButton.styleFrom(
-//           minimumSize: Size.fromHeight(50),
-//         ),
-//         child: Text(text, style: TextStyle(fontSize: 20)),
-//         onPressed: onClicked,
-//       );
-// }

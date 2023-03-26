@@ -43,29 +43,44 @@ class _FontSettingPageState extends State<FontSettingPage> {
     await _prefs.setDouble(_key, _fontSize);
   }
 
+  void _resetData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove('font_size');
+    setState(() {
+      _fontSize = 16.0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Font Setting"),
+        title: Text("Pengaturan Font"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Font Size",
-              style: Theme.of(context).textTheme.headline6,
-            ),
             SizedBox(height: 8.0),
             Slider(
               value: _fontSize,
               min: 10.0,
-              max: 32.0,
-              divisions: 6,
+              max: 40.0,
+              // label: _fontSize.round().toString(),
+              // divisions: 40,
               onChanged: _setFontSize,
             ),
+            Text(
+              "Contoh Tulisan",
+              style: TextStyle(fontSize: _fontSize),
+              // Theme.of(context).textTheme.headline6,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  _resetData;
+                },
+                child: Text('Reset Data'))
           ],
         ),
       ),

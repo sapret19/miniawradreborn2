@@ -12,6 +12,7 @@ import 'package:miniawradreborn2/page/tabbar_sabul.dart';
 import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
 import 'package:miniawradreborn2/page/single_list.dart';
+import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
 import 'package:miniawradreborn2/pdf.dart';
 import 'package:miniawradreborn2/per.dart';
 import 'package:miniawradreborn2/set.dart';
@@ -35,7 +36,7 @@ Map<String, WidgetBuilder> get rute {
     "/diba": (BuildContext context) =>
         page(judulpage: 'Maulid Diba', pdfpage: "diba.pdf"),
     "/sabul": (BuildContext context) => const Tabbar_sabul(),
-    "/dalail": (BuildContext context) => HomePage(),
+    "/dalail": (BuildContext context) => single_page_baru(),
   };
 }
 
