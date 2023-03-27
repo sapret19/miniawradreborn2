@@ -13,6 +13,7 @@ import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
 import 'package:miniawradreborn2/page/single_list.dart';
 import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
+import 'package:miniawradreborn2/page_baru/tab_yasintahlil.dart';
 import 'package:miniawradreborn2/pdf.dart';
 import 'package:miniawradreborn2/per.dart';
 import 'package:miniawradreborn2/set.dart';
@@ -24,10 +25,10 @@ Map<String, WidgetBuilder> get rute {
     "/home": (BuildContext context) => const Home(),
     "/kitab": (BuildContext context) => const grid_page(),
     "/tawassul": (BuildContext context) =>
-        page(judulpage: "Tawassul", pdfpage: "tawassul.pdf"),
+        single_page_baru(judul: "Tawassul", data: "tawassul.json"),
     "/birrul": (BuildContext context) =>
-        page(judulpage: "Birrul Walidayn", pdfpage: "birul.pdf"),
-    "/yasintahlil": (BuildContext context) => const Tabbar_yasin(),
+        single_page_baru(judul: "Birrul Walidayn", data: "birrul.json"),
+    "/yasintahlil": (BuildContext context) => YasinTahlil(),
     "/istighosah": (BuildContext context) =>
         page(judulpage: "Istighosah", pdfpage: "istighosah.pdf"),
     "/waqiah": (BuildContext context) => const Tabbar_waqiah(),
@@ -36,7 +37,10 @@ Map<String, WidgetBuilder> get rute {
     "/diba": (BuildContext context) =>
         page(judulpage: 'Maulid Diba', pdfpage: "diba.pdf"),
     "/sabul": (BuildContext context) => const Tabbar_sabul(),
-    "/dalail": (BuildContext context) => single_page_baru(),
+    "/dalail": (BuildContext context) => single_page_baru(
+          judul: "Contoh",
+          data: "waqiah.json",
+        ),
   };
 }
 

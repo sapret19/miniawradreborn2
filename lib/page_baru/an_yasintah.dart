@@ -9,16 +9,16 @@ import 'package:miniawradreborn2/page_baru/model_json.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class single_page_baru extends StatefulWidget {
-  final String judul;
+class yasinan extends StatefulWidget {
+  // final String judul;
   final String data;
-  single_page_baru({super.key, required this.judul, required this.data});
+  yasinan({super.key, required this.data});
 
   @override
-  State<single_page_baru> createState() => _single_page_baruState();
+  State<yasinan> createState() => _yasinanState();
 }
 
-class _single_page_baruState extends State<single_page_baru> {
+class _yasinanState extends State<yasinan> {
   Future<List<ModelJson>> ReadJsonData() async {
     final JsonData =
         await rootBundle.rootBundle.loadString("assets/json/${widget.data}");
@@ -57,8 +57,6 @@ class _single_page_baruState extends State<single_page_baru> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("${widget.judul}"),
-        centerTitle: true,
         actions: [
           IconButton(
             icon: const Icon(Icons.font_download),
