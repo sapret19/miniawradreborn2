@@ -3,14 +3,14 @@ import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class YasinTahlil extends StatefulWidget {
-  const YasinTahlil({Key? key}) : super(key: key);
+class Waqiahan extends StatefulWidget {
+  const Waqiahan({Key? key}) : super(key: key);
 
   @override
   _TabBarPageState createState() => _TabBarPageState();
 }
 
-class _TabBarPageState extends State<YasinTahlil>
+class _TabBarPageState extends State<Waqiahan>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
   double _fontSize = 16;
@@ -64,7 +64,7 @@ class _TabBarPageState extends State<YasinTahlil>
         backgroundColor: Color.fromARGB(255, 68, 118, 218),
         centerTitle: true,
         title: const Text(
-          'Yasin dan Tahlil',
+          'Waqiah',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
@@ -109,6 +109,7 @@ class _TabBarPageState extends State<YasinTahlil>
                     Padding(
                       padding: EdgeInsets.all(5),
                       child: TabBar(
+                        isScrollable: true,
                         unselectedLabelColor: Colors.black,
                         labelColor: Colors.white,
                         indicatorColor: Colors.white,
@@ -121,16 +122,7 @@ class _TabBarPageState extends State<YasinTahlil>
                         tabs: const [
                           Tab(
                             child: Text(
-                              'Yasin',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Tahlil',
+                              'Waqiah',
                               style: TextStyle(
                                   fontFamily: 'Montserrat',
                                   fontWeight: FontWeight.bold,
@@ -146,6 +138,16 @@ class _TabBarPageState extends State<YasinTahlil>
                                   fontSize: 16),
                             ),
                           ),
+                          Tab(
+                            child: Text(
+                              'Doa Sholat hajat',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -159,8 +161,9 @@ class _TabBarPageState extends State<YasinTahlil>
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    yasinan(data: "yasin.json", fontSize: _currentFontSize),
-                    yasinan(data: "tahlil.json", fontSize: _currentFontSize),
+                    yasinan(data: "waqiah.json", fontSize: _currentFontSize),
+                    yasinan(
+                        data: "doa_waqiah.json", fontSize: _currentFontSize),
                     yasinan(data: "doa_tahlil.json", fontSize: _currentFontSize)
                   ],
                 ),

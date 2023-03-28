@@ -3,14 +3,14 @@ import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class YasinTahlil extends StatefulWidget {
-  const YasinTahlil({Key? key}) : super(key: key);
+class Sabul extends StatefulWidget {
+  const Sabul({Key? key}) : super(key: key);
 
   @override
   _TabBarPageState createState() => _TabBarPageState();
 }
 
-class _TabBarPageState extends State<YasinTahlil>
+class _TabBarPageState extends State<Sabul>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
   double _fontSize = 16;
@@ -18,7 +18,7 @@ class _TabBarPageState extends State<YasinTahlil>
 
   @override
   void initState() {
-    tabController = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 7, vsync: this);
     super.initState();
     _loadFontSize();
   }
@@ -64,7 +64,7 @@ class _TabBarPageState extends State<YasinTahlil>
         backgroundColor: Color.fromARGB(255, 68, 118, 218),
         centerTitle: true,
         title: const Text(
-          'Yasin dan Tahlil',
+          'Sab`ul Munjiyat',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
@@ -109,6 +109,7 @@ class _TabBarPageState extends State<YasinTahlil>
                     Padding(
                       padding: EdgeInsets.all(5),
                       child: TabBar(
+                        isScrollable: true,
                         unselectedLabelColor: Colors.black,
                         labelColor: Colors.white,
                         indicatorColor: Colors.white,
@@ -146,6 +147,42 @@ class _TabBarPageState extends State<YasinTahlil>
                                   fontSize: 16),
                             ),
                           ),
+                          Tab(
+                            child: Text(
+                              'Doa',
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16),
+                            ),
+                          ),
+                          Tab(
+                            child: Text(
+                              'Doa',
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16),
+                            ),
+                          ),
+                          Tab(
+                            child: Text(
+                              'Doa',
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16),
+                            ),
+                          ),
+                          Tab(
+                            child: Text(
+                              'Doa',
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -161,6 +198,12 @@ class _TabBarPageState extends State<YasinTahlil>
                   children: [
                     yasinan(data: "yasin.json", fontSize: _currentFontSize),
                     yasinan(data: "tahlil.json", fontSize: _currentFontSize),
+                    yasinan(
+                        data: "doa_tahlil.json", fontSize: _currentFontSize),
+                    yasinan(data: "yasin.json", fontSize: _currentFontSize),
+                    yasinan(data: "tahlil.json", fontSize: _currentFontSize),
+                    yasinan(
+                        data: "doa_tahlil.json", fontSize: _currentFontSize),
                     yasinan(data: "doa_tahlil.json", fontSize: _currentFontSize)
                   ],
                 ),

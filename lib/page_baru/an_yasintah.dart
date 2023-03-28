@@ -12,7 +12,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class yasinan extends StatefulWidget {
   // final String judul;
   final String data;
-  yasinan({super.key, required this.data});
+  yasinan({super.key, required this.data, required double fontSize});
 
   @override
   State<yasinan> createState() => _yasinanState();
@@ -56,30 +56,30 @@ class _yasinanState extends State<yasinan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.font_download),
-            onPressed: () async {
-              final fontSize = await Navigator.push<double>(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => FontSettingPage(
-                    initialFontSize: _fontSize,
-                    onFontSizeChanged: _onFontSizeChanged,
-                  ),
-                ),
-              );
-              if (fontSize != null) {
-                setState(() {
-                  _fontSize = fontSize;
-                });
-                _saveFontSize(fontSize);
-              }
-            },
-          )
-        ],
-      ),
+      // appBar: AppBar(
+      //   actions: [
+      //     IconButton(
+      //       icon: const Icon(Icons.font_download),
+      //       onPressed: () async {
+      //         final fontSize = await Navigator.push<double>(
+      //           context,
+      //           MaterialPageRoute(
+      //             builder: (context) => FontSettingPage(
+      //               initialFontSize: _fontSize,
+      //               onFontSizeChanged: _onFontSizeChanged,
+      //             ),
+      //           ),
+      //         );
+      //         if (fontSize != null) {
+      //           setState(() {
+      //             _fontSize = fontSize;
+      //           });
+      //           _saveFontSize(fontSize);
+      //         }
+      //       },
+      //     )
+      //   ],
+      // ),
       body: FutureBuilder(
         future: ReadJsonData(),
         builder: (context, data) {
@@ -96,7 +96,7 @@ class _yasinanState extends State<yasinan> {
                     margin: EdgeInsets.symmetric(vertical: 1),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         // Text(
                         //   'Bismillah',

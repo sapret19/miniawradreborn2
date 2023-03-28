@@ -17,10 +17,13 @@ class list extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Dalailul Khoirot"),
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            AppBar_normalpage(judul: 'Dalailul Khoirot'),
+            // AppBar_normalpage(judul: 'Dalailul Khoirot'),
             Container(
               margin: EdgeInsets.all(20),
               child: SizedBox(

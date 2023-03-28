@@ -17,12 +17,16 @@ class _grid_pageState extends State<grid_page> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Kitab-kitab"),
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const AppBar_normalpage(
-              judul: 'Kitab-Kitab',
-            ),
+            // const AppBar_normalpage(
+            //   judul: 'Kitab-Kitab',
+            // ),
             Container(
               child: Column(
                 children: [
