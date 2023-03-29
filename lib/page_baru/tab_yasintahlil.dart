@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miniawradreborn2/page_baru/an_namatab.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -118,34 +119,10 @@ class _TabBarPageState extends State<YasinTahlil>
                           borderRadius: BorderRadius.circular(10),
                         ),
                         controller: tabController,
-                        tabs: const [
-                          Tab(
-                            child: Text(
-                              'Yasin',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Tahlil',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Doa',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
+                        tabs: [
+                          nama_tab(namatab: 'Yasin'),
+                          nama_tab(namatab: 'Tahlil'),
+                          nama_tab(namatab: 'Doa')
                         ],
                       ),
                     ),
@@ -172,3 +149,4 @@ class _TabBarPageState extends State<YasinTahlil>
     );
   }
 }
+

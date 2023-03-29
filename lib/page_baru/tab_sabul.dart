@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miniawradreborn2/page_baru/an_namatab.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -120,69 +121,13 @@ class _TabBarPageState extends State<Sabul>
                         ),
                         controller: tabController,
                         tabs: const [
-                          Tab(
-                            child: Text(
-                              'Yasin',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Tahlil',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Doa',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Doa',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Doa',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Doa',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Doa',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
+                          nama_tab(namatab: 'As-Sajdah'),
+                          nama_tab(namatab: 'Yasin'),
+                          nama_tab(namatab: 'Fussilat'),
+                          nama_tab(namatab: 'Ad-Dukhan'),
+                          nama_tab(namatab: 'Al-Waqiah'),
+                          nama_tab(namatab: 'Al-Hasyr'),
+                          nama_tab(namatab: 'Al-Mulk')
                         ],
                       ),
                     ),
@@ -196,15 +141,13 @@ class _TabBarPageState extends State<Sabul>
                 child: TabBarView(
                   controller: tabController,
                   children: [
+                    yasinan(data: "sajdah.json", fontSize: _currentFontSize),
                     yasinan(data: "yasin.json", fontSize: _currentFontSize),
-                    yasinan(data: "tahlil.json", fontSize: _currentFontSize),
-                    yasinan(
-                        data: "doa_tahlil.json", fontSize: _currentFontSize),
-                    yasinan(data: "yasin.json", fontSize: _currentFontSize),
-                    yasinan(data: "tahlil.json", fontSize: _currentFontSize),
-                    yasinan(
-                        data: "doa_tahlil.json", fontSize: _currentFontSize),
-                    yasinan(data: "doa_tahlil.json", fontSize: _currentFontSize)
+                    yasinan(data: "fussilat.json", fontSize: _currentFontSize),
+                    yasinan(data: "dukhon.json", fontSize: _currentFontSize),
+                    yasinan(data: "waqiah.json", fontSize: _currentFontSize),
+                    yasinan(data: "hasyr.json", fontSize: _currentFontSize),
+                    yasinan(data: "mulk.json", fontSize: _currentFontSize)
                   ],
                 ),
               )
