@@ -38,7 +38,7 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Mini Awrad Santri',
         theme: ThemeData(),
-        home: ListHome(),
+        home: Home(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,

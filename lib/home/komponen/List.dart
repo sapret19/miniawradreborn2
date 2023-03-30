@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
 
 class ListHome extends StatefulWidget {
-  const ListHome({super.key});
+  ListHome({super.key});
 
   @override
   State<ListHome> createState() => _ListHomeState();
@@ -24,11 +24,13 @@ class _ListHomeState extends State<ListHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Scrollbar(
-        showTrackOnHover: true,
-        isAlwaysShown: _isAlwaysShown,
         controller: _scrollController,
+        trackVisibility: true,
+        // isAlwaysShown: true,
+
+        thumbVisibility: true,
         child: ListView(
-          // controller: _scrollController,
+          controller: _scrollController,
           scrollDirection: Axis.horizontal,
           children: [
             Row(

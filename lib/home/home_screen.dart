@@ -20,6 +20,7 @@ class _HomeState extends State<Home> {
         centerTitle: true,
       ),
       body: body(),
+      
     );
   }
 }
