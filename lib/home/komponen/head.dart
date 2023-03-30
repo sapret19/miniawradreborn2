@@ -10,8 +10,8 @@ class head extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30.h,
-      width: 100.h,
+      height: MediaQuery.of(context).size.height / 8,
+      width: MediaQuery.of(context).size.width,
       // ignore: prefer_const_constructors
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 84, 181, 246),
@@ -19,18 +19,19 @@ class head extends StatelessWidget {
             image: ExactAssetImage(
               'assets/images/gerbangdrone.jpg',
             ),
-            alignment: Alignment(0, -1),
-            opacity: 220,
-            fit: BoxFit.cover),
+            alignment: Alignment.center,
+            opacity: 180,
+            fit: BoxFit.fitWidth),
       ),
       child: Column(
         children: [
-          SizedBox(
-            height: 40,
-          ),
+          // SizedBox(
+          //   height: 40,
+          // ),
           Container(
-            height: 97,
-            width: 282,
+            height: MediaQuery.of(context).size.height / 9,
+            width: MediaQuery.of(context).size.width / 1.2,
+            transform: Matrix4.translationValues(0, 65, 10),
             // color:  Color.fromARGB(255, 84, 181, 246),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -51,8 +52,8 @@ class head extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  height: 62,
-                  width: 62,
+                  height: 70,
+                  width: 77,
                   margin: EdgeInsets.only(left: 15),
                   decoration: const BoxDecoration(
                     color: Colors.white,
@@ -64,14 +65,14 @@ class head extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: 10,
+                  width: 15,
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   // mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     SizedBox(
-                      height: 20,
+                      height: 22,
                     ),
                     Text(
                       'Pondok Pesantren',
@@ -79,17 +80,17 @@ class head extends StatelessWidget {
                         color: Colors.white,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w400,
-                        fontSize: 12,
+                        fontSize: 17,
                       ),
                     ),
                     // SizedBox(height: 13),
                     Text(
-                      'Annur II Al-Murtadlo',
+                      'Annur II  "Al-Murtadlo"',
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600,
-                        fontSize: 14,
+                        fontSize: 15,
                       ),
                     ),
                     Text(
@@ -97,8 +98,8 @@ class head extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w400,
-                        fontSize: 10,
+                        fontWeight: FontWeight.w200,
+                        fontSize: 14,
                       ),
                     )
                   ],

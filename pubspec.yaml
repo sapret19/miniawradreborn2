@@ -40,6 +40,7 @@ dependencies:
   pdfx: ^2.3.0
   syncfusion_flutter_pdfviewer: ^20.4.53
   shared_preferences: ^2.0.20
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:

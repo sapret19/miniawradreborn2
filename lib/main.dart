@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:miniawradreborn2/api.dart';
 import 'package:miniawradreborn2/api.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
+import 'package:miniawradreborn2/home/komponen/List.dart';
 import 'package:miniawradreborn2/maneh.dart';
 import 'package:miniawradreborn2/page/grid_page.dart';
 import 'package:miniawradreborn2/page/list_page.dart';
@@ -15,6 +16,7 @@ import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
 import 'package:miniawradreborn2/pdf.dart';
 import 'package:miniawradreborn2/per.dart';
 import 'package:miniawradreborn2/rute.dart';
+import 'package:miniawradreborn2/sizecoba.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
@@ -36,7 +38,7 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Mini Awrad Santri',
         theme: ThemeData(),
-        home: const Home(),
+        home: ScreenSize(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,

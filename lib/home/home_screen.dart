@@ -15,6 +15,10 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text("MINI AWRAD SANTRI"),
+        centerTitle: true,
+      ),
       body: body(),
     );
   }

@@ -4,14 +4,24 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
 import 'package:miniawradreborn2/home/komponen/head.dart';
 import 'package:miniawradreborn2/page/grid_page.dart';
+import 'package:miniawradreborn2/page/list_page.dart';
 import 'package:miniawradreborn2/page/page.dart';
 import 'package:miniawradreborn2/page/tabbar_sabul.dart';
 import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
 import 'package:sizer/sizer.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
+import '../../page/model_list.dart';
 
 class body extends StatefulWidget {
-  const body({super.key});
+  body({super.key});
+
+  final List<String> imgList = [
+    "assets/images/aishi.png",
+    "assets/images/lisan11.png",
+    "assets/images/purnama.png"
+  ];
 
   @override
   State<body> createState() => _bodyState();
@@ -22,18 +32,29 @@ class _bodyState extends State<body> {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const head(),
+          // const head(),
+          // SizedBox(
+          //   height: 80,
+          // ),
+          Container(
+            child: CarouselSlider(
+                items: widget.imgList.map((item) => Image.asset(item)).toList(),
+                options: CarouselOptions(
+                    aspectRatio: 16 / 7,
+                    viewportFraction: 1,
+                    autoPlay: true,
+                    // height: 500,
+                    pauseAutoPlayOnTouch: true)),
+          ),
           Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            transform: Matrix4.translationValues(0, -45, 1),
+            // transform: Matrix4.translationValues(0, -45, 1),
             decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(55),
-                    topRight: Radius.circular(55))),
+              color: Colors.white,
+            ),
             child: Container(
               margin: const EdgeInsets.only(top: 30),
               child: Column(
@@ -125,3 +146,9 @@ class _bodyState extends State<body> {
     );
   }
 }
+
+// List<String> imgList = [
+//   "assets/images/aishi.png",
+//   "assets/images/lisan11.png",
+//   "assets/images/purnama.png",
+// ];

@@ -34,20 +34,14 @@ class _bunderState extends State<bunder> {
             height: 73,
             // ignore: prefer_const_constructors
             decoration: BoxDecoration(
-                boxShadow: const [
-                  BoxShadow(
-                      offset: Offset(0, 0),
-                      color: Color.fromARGB(255, 84, 181, 246),
-                      blurRadius: 5,
-                      spreadRadius: 1)
-                ],
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      Color.fromARGB(255, 84, 181, 246),
-                      Color.fromARGB(255, 39, 110, 176),
-                    ]),
+                color: Color.fromARGB(225, 30, 117, 199),
+                // boxShadow: const [
+                //   BoxShadow(
+                //       offset: Offset(0, 0),
+                //       color: Color.fromARGB(255, 85, 84, 84),
+                //       blurRadius: 5,
+                //       spreadRadius: 1)
+                // ],
                 shape: BoxShape.circle),
             child: Image.asset(
               'assets/images/${widget.icon}',
