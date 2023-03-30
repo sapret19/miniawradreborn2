@@ -56,30 +56,6 @@ class _yasinanState extends State<yasinan> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   actions: [
-      //     IconButton(
-      //       icon: const Icon(Icons.font_download),
-      //       onPressed: () async {
-      //         final fontSize = await Navigator.push<double>(
-      //           context,
-      //           MaterialPageRoute(
-      //             builder: (context) => FontSettingPage(
-      //               initialFontSize: _fontSize,
-      //               onFontSizeChanged: _onFontSizeChanged,
-      //             ),
-      //           ),
-      //         );
-      //         if (fontSize != null) {
-      //           setState(() {
-      //             _fontSize = fontSize;
-      //           });
-      //           _saveFontSize(fontSize);
-      //         }
-      //       },
-      //     )
-      //   ],
-      // ),
       body: FutureBuilder(
         future: ReadJsonData(),
         builder: (context, data) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:get/get_utils/get_utils.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
 import 'package:miniawradreborn2/home/komponen/head.dart';
 import 'package:miniawradreborn2/page/grid_page.dart';
@@ -11,6 +12,7 @@ import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
 import 'package:sizer/sizer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../page/model_list.dart';
 
@@ -30,19 +32,42 @@ class body extends StatefulWidget {
 class _bodyState extends State<body> {
   @override
   Widget build(BuildContext context) {
+    double scale;
+
+    double aspectratio;
+    if (context.isTablet) {
+      aspectratio = 16 / 9;
+    } else if (context.isLargeTablet) {
+      aspectratio = 32 / 9;
+    } else {
+      aspectratio = 4 / 5;
+    }
+
+    //scale
+    if (context.isTablet) {
+      scale = 1;
+    } else {
+      scale = 10;
+    }
     return SingleChildScrollView(
       child: Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // const head(),
-          // SizedBox(
-          //   height: 80,
-          // ),
           Container(
+            height: 60.h,
+            // width: 100.w,
+            width: double.infinity,
             child: CarouselSlider(
-                items: widget.imgList.map((item) => Image.asset(item)).toList(),
+                items: widget.imgList
+                    .map((item) => Image.asset(
+                          item,
+                          fit: BoxFit.cover,
+                          height: double.infinity,
+                          width: double.infinity,
+                          scale: scale,
+                        ))
+                    .toList(),
                 options: CarouselOptions(
-                    aspectRatio: 16 / 7,
+                    aspectRatio: aspectratio,
                     viewportFraction: 1,
                     autoPlay: true,
                     // height: 500,
