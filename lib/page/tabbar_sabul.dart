@@ -129,7 +129,7 @@ class _Tabbar_pageState extends State<Tabbar_sabul> {
                     tabs: [
                       nama_tab(namatab: 'As-Sajdah'),
                       nama_tab(namatab: 'Yasin'),
-                      nama_tab(namatab: 'Fushilat'),
+                      nama_tab(namatab: 'fussilat'),
                       nama_tab(namatab: 'Ad-Dukhon'),
                       nama_tab(namatab: 'Al-Waqiah'),
                       nama_tab(namatab: 'Al-Hasyr'),
@@ -145,7 +145,7 @@ class _Tabbar_pageState extends State<Tabbar_sabul> {
                     children: [
                       page_tab(pagetab: 'Sajdah.pdf'),
                       page_tab(pagetab: 'Yasin.pdf'),
-                      page_tab(pagetab: 'Fushilat.pdf'),
+                      page_tab(pagetab: 'fussilat.pdf'),
                       page_tab(pagetab: 'Dukhon.pdf'),
                       page_tab(pagetab: 'Waqiah.pdf'),
                       page_tab(pagetab: 'Hasyr.pdf'),

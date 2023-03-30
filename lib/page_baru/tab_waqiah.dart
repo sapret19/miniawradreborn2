@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miniawradreborn2/page_baru/an_namatab.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -64,7 +65,7 @@ class _TabBarPageState extends State<Waqiahan>
         backgroundColor: Color.fromARGB(255, 68, 118, 218),
         centerTitle: true,
         title: const Text(
-          'Waqiah',
+          'Al-Waqiah',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
@@ -120,34 +121,9 @@ class _TabBarPageState extends State<Waqiahan>
                         ),
                         controller: tabController,
                         tabs: const [
-                          Tab(
-                            child: Text(
-                              'Waqiah',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Doa',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16),
-                            ),
-                          ),
-                          Tab(
-                            child: Text(
-                              'Doa Sholat hajat',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 15),
-                            ),
-                          ),
+                          nama_tab(namatab: 'Al-Waqiah'),
+                          nama_tab(namatab: 'Doa'),
+                          nama_tab(namatab: 'Doa Shalat Hajat')
                         ],
                       ),
                     ),
@@ -164,7 +140,9 @@ class _TabBarPageState extends State<Waqiahan>
                     yasinan(data: "waqiah.json", fontSize: _currentFontSize),
                     yasinan(
                         data: "doa_waqiah.json", fontSize: _currentFontSize),
-                    yasinan(data: "doa_tahlil.json", fontSize: _currentFontSize)
+                    yasinan(
+                        data: "doa_shalat_hajat.json",
+                        fontSize: _currentFontSize)
                   ],
                 ),
               )
@@ -175,3 +153,5 @@ class _TabBarPageState extends State<Waqiahan>
     );
   }
 }
+
+

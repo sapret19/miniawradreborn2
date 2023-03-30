@@ -4,15 +4,14 @@ import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Istighosah extends StatefulWidget {
-  const Istighosah({Key? key}) : super(key: key);
+class Diba extends StatefulWidget {
+  const Diba({Key? key}) : super(key: key);
 
   @override
   _TabBarPageState createState() => _TabBarPageState();
 }
 
-class _TabBarPageState extends State<Istighosah>
-    with SingleTickerProviderStateMixin {
+class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
   late TabController tabController;
   double _fontSize = 16;
   double _currentFontSize = 16;
@@ -65,7 +64,7 @@ class _TabBarPageState extends State<Istighosah>
         backgroundColor: Color.fromARGB(255, 68, 118, 218),
         centerTitle: true,
         title: const Text(
-          'Istighosah',
+          'Diba',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
@@ -120,7 +119,7 @@ class _TabBarPageState extends State<Istighosah>
                         ),
                         controller: tabController,
                         tabs: const [
-                          nama_tab(namatab: 'Istighosah'),
+                          nama_tab(namatab: 'Diba'),
                           nama_tab(namatab: 'Doa')
                         ],
                       ),
@@ -135,10 +134,8 @@ class _TabBarPageState extends State<Istighosah>
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    yasinan(
-                        data: "istighosah.json", fontSize: _currentFontSize),
-                    yasinan(
-                        data: "doa_istighosah.json", fontSize: _currentFontSize)
+                    yasinan(data: "diba1.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba2.json", fontSize: _currentFontSize)
                   ],
                 ),
               )

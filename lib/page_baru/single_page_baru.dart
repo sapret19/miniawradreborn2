@@ -56,7 +56,9 @@ class _single_page_baruState extends State<single_page_baru> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Color.fromARGB(255, 68, 118, 218),
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 68, 118, 218),
         title: Text("${widget.judul}"),
         centerTitle: true,
         actions: [
