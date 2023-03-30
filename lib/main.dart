@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:miniawradreborn2/api.dart';
 import 'package:miniawradreborn2/api.dart';
+import 'package:miniawradreborn2/home/Nav_bar.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
 import 'package:miniawradreborn2/home/komponen/List.dart';
 import 'package:miniawradreborn2/maneh.dart';
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Mini Awrad Santri',
         theme: ThemeData(),
-        home: ListHome(),
+        home: navbar(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,

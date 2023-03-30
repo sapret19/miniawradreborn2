@@ -53,7 +53,7 @@ class _bodyState extends State<body> {
       child: Column(
         children: [
           Container(
-            height: 60.h,
+            height: context.isPortrait ? 70.h : 30.h,
             // width: 100.w,
             width: double.infinity,
             child: CarouselSlider(
@@ -64,6 +64,7 @@ class _bodyState extends State<body> {
                           height: double.infinity,
                           width: double.infinity,
                           scale: scale,
+                          alignment: Alignment.center,
                         ))
                     .toList(),
                 options: CarouselOptions(
