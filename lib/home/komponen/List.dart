@@ -11,7 +11,8 @@ class ListHome extends StatefulWidget {
 }
 
 class _ListHomeState extends State<ListHome> {
-  late ScrollController _scrollController;
+  bool _isAlwaysShown = true;
+  late final ScrollController _scrollController;
   @override
   void initState() {
     // TODO: implement initState
@@ -23,9 +24,11 @@ class _ListHomeState extends State<ListHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Scrollbar(
+        showTrackOnHover: true,
+        isAlwaysShown: _isAlwaysShown,
         controller: _scrollController,
         child: ListView(
-          controller: _scrollController,
+          // controller: _scrollController,
           scrollDirection: Axis.horizontal,
           children: [
             Row(
