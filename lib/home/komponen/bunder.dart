@@ -30,8 +30,8 @@ class _bunderState extends State<bunder> {
             Get.toNamed("${widget.rute}");
           },
           child: Container(
-            width: 73,
-            height: 73,
+            width: 60,
+            height: 60,
             // ignore: prefer_const_constructors
             decoration: BoxDecoration(
                 color: Color.fromARGB(225, 30, 117, 199),
@@ -45,7 +45,7 @@ class _bunderState extends State<bunder> {
                 shape: BoxShape.circle),
             child: Image.asset(
               'assets/images/${widget.icon}',
-              scale: 12,
+              scale: 14,
             ),
           ),
         ),

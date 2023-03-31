@@ -42,7 +42,7 @@ class _bodyState extends State<body> {
     } else if (context.isLargeTablet) {
       aspectratio = 32 / 9;
     } else {
-      aspectratio = 4 / 5;
+      aspectratio = 2 / 3;
     }
 
     //scale
@@ -55,17 +55,18 @@ class _bodyState extends State<body> {
       child: Column(
         children: [
           Container(
-            height: 60.h,
-            // width: 100.w,
-            width: double.infinity,
+            height: context.isPortrait ? 480 : 35.h,
+            width: 100.w,
+            // width: double.infinity,
             child: CarouselSlider(
                 items: widget.imgList
                     .map((item) => Image.asset(
                           item,
-                          fit: BoxFit.cover,
+                          fit: BoxFit.fitWidth,
                           height: double.infinity,
                           width: double.infinity,
                           scale: scale,
+                          alignment: Alignment.center,
                         ))
                     .toList(),
                 options: CarouselOptions(
@@ -171,8 +172,8 @@ class _bodyState extends State<body> {
 
           Container(
             width: 95.w,
-            height: 30.h,
-            transform: Matrix4.translationValues(0, -20, 1),
+            height: 28.h,
+            transform: Matrix4.translationValues(0, -70, 1),
             decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -192,12 +193,12 @@ class _bodyState extends State<body> {
                 child: Column(
                   children: [
                     SizedBox(
-                      height: 10,
+                      height: 18,
                     ),
                     Row(
                       children: [
                         SizedBox(
-                          width: 5,
+                          width: 8,
                         ),
                         Column(
                           children: [
@@ -217,7 +218,7 @@ class _bodyState extends State<body> {
                           ],
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 13,
                         ),
                         Column(
                           children: [
@@ -225,6 +226,9 @@ class _bodyState extends State<body> {
                               icon: "tawassul.png",
                               text: "Tawassul",
                               rute: "/tawassul",
+                            ),
+                            SizedBox(
+                              height: 10,
                             ),
                             const bunder(
                               icon: "birrul.png",
@@ -234,7 +238,7 @@ class _bodyState extends State<body> {
                           ],
                         ),
                         SizedBox(
-                          width: 10,
+                          width: 13,
                         ),
                         Column(
                           children: [
@@ -242,6 +246,9 @@ class _bodyState extends State<body> {
                               icon: "tawassul.png",
                               text: "Tawassul",
                               rute: "/tawassul",
+                            ),
+                            SizedBox(
+                              height: 10,
                             ),
                             const bunder(
                               icon: "birrul.png",
@@ -250,12 +257,18 @@ class _bodyState extends State<body> {
                             ),
                           ],
                         ),
+                        SizedBox(
+                          width: 13,
+                        ),
                         Column(
                           children: [
                             const bunder(
                               icon: "tawassul.png",
                               text: "Tawassul",
                               rute: "/tawassul",
+                            ),
+                            SizedBox(
+                              height: 10,
                             ),
                             const bunder(
                               icon: "birrul.png",
@@ -264,12 +277,18 @@ class _bodyState extends State<body> {
                             ),
                           ],
                         ),
+                        SizedBox(
+                          width: 13,
+                        ),
                         Column(
                           children: [
                             const bunder(
                               icon: "tawassul.png",
                               text: "Tawassul",
                               rute: "/tawassul",
+                            ),
+                            SizedBox(
+                              height: 10,
                             ),
                             const bunder(
                               icon: "birrul.png",
