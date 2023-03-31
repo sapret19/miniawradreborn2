@@ -56,7 +56,7 @@ class _bodyState extends State<body> {
         children: [
           Container(
             height: context.isPortrait ? 480 : 35.h,
-            width: 100.w,
+            width: double.infinity,
             // width: double.infinity,
             child: CarouselSlider(
                 items: widget.imgList
@@ -172,7 +172,7 @@ class _bodyState extends State<body> {
 
           Container(
             width: 95.w,
-            height: 28.h,
+            height: 220,
             transform: Matrix4.translationValues(0, -70, 1),
             decoration: BoxDecoration(
                 color: Colors.white,
@@ -184,122 +184,141 @@ class _bodyState extends State<body> {
                       spreadRadius: 1,
                       blurRadius: 1),
                 ]),
-            child: Scrollbar(
-              controller: _firstcontroller,
-              // isAlwaysShown: true,
-              // thumbVisibility: true,
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 18,
-                    ),
-                    Row(
-                      children: [
-                        SizedBox(
-                          width: 8,
-                        ),
-                        Column(
-                          children: [
-                            const bunder(
-                              icon: "tawassul.png",
-                              text: "Tawassul",
-                              rute: "/tawassul",
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "birrul.png",
-                              text: "Birrul Walidayn",
-                              rute: "/birrul",
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 13,
-                        ),
-                        Column(
-                          children: [
-                            const bunder(
-                              icon: "tawassul.png",
-                              text: "Tawassul",
-                              rute: "/tawassul",
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "birrul.png",
-                              text: "Birrul Walidayn",
-                              rute: "/birrul",
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 13,
-                        ),
-                        Column(
-                          children: [
-                            const bunder(
-                              icon: "tawassul.png",
-                              text: "Tawassul",
-                              rute: "/tawassul",
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "birrul.png",
-                              text: "Birrul Walidayn",
-                              rute: "/birrul",
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 13,
-                        ),
-                        Column(
-                          children: [
-                            const bunder(
-                              icon: "tawassul.png",
-                              text: "Tawassul",
-                              rute: "/tawassul",
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "birrul.png",
-                              text: "Birrul Walidayn",
-                              rute: "/birrul",
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 13,
-                        ),
-                        Column(
-                          children: [
-                            const bunder(
-                              icon: "tawassul.png",
-                              text: "Tawassul",
-                              rute: "/tawassul",
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "birrul.png",
-                              text: "Birrul Walidayn",
-                              rute: "/birrul",
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ],
+            child: Padding(
+              padding: EdgeInsets.all(8),
+              child: Scrollbar(
+                controller: _firstcontroller,
+                isAlwaysShown: true,
+                // thumbVisibility: true,
+                interactive: true,
+                radius: Radius.circular(40),
+                thickness: 5,
+                child: SingleChildScrollView(
+                  controller: _firstcontroller,
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    children: [
+                      // SizedBox(
+                      //   height: 18,
+                      // ),
+                      Row(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        // crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 8,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const bunder(
+                                icon: "tawassul.png",
+                                text: "Tawassul",
+                                rute: "/tawassul",
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "birrul.png",
+                                text: "Birrul Walidayn",
+                                rute: "/birrul",
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 13,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const bunder(
+                                icon: "tawassul.png",
+                                text: "Tawassul",
+                                rute: "/tawassul",
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "birrul.png",
+                                text: "Birrul Walidayn",
+                                rute: "/birrul",
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 13,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const bunder(
+                                icon: "tawassul.png",
+                                text: "Tawassul",
+                                rute: "/tawassul",
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "birrul.png",
+                                text: "Birrul Walidayn",
+                                rute: "/birrul",
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 13,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const bunder(
+                                icon: "tawassul.png",
+                                text: "Tawassul",
+                                rute: "/tawassul",
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "birrul.png",
+                                text: "Birrul Walidayn",
+                                rute: "/birrul",
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            width: 13,
+                          ),
+                          Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const bunder(
+                                icon: "tawassul.png",
+                                text: "Tawassul",
+                                rute: "/tawassul",
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "birrul.png",
+                                text: "Birrul Walidayn",
+                                rute: "/birrul",
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

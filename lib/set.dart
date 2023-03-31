@@ -56,6 +56,7 @@ class _FontSettingPageState extends State<FontSettingPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Pengaturan Font"),
+        backgroundColor: Color.fromARGB(255, 39, 110, 176),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

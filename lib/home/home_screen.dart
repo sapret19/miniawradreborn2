@@ -16,11 +16,15 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("MINI AWRAD SANTRI"),
+        title: Text(
+          "MINI AWRAD SANTRI",
+          style:
+              TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.w400),
+        ),
         centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 39, 110, 176),
       ),
       body: body(),
-      
     );
   }
 }
