@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
+import 'package:miniawradreborn2/page/chat.dart';
+import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
 import 'package:miniawradreborn2/sizecoba.dart';
 import 'package:sizer/sizer.dart';
 
@@ -16,7 +19,11 @@ class navbar extends StatefulWidget {
 class _navbarState extends State<navbar> {
   int _yangdipilih = 0;
 
-  static List<Widget> _widgetOption = <Widget>[Home(), ScreenSize()];
+  static List<Widget> _widgetOption = <Widget>[
+    Home(),
+    ScreenSize(),
+    chatadmin()
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +50,7 @@ class _navbarState extends State<navbar> {
             padding: EdgeInsets.all(10),
             color: Color.fromARGB(167, 97, 97, 97),
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            gap: 1,
+            gap: 8,
             tabs: const [
               GButton(
                 icon: Icons.home,
@@ -52,6 +59,10 @@ class _navbarState extends State<navbar> {
               GButton(
                 icon: Icons.info,
                 text: "Tentang",
+              ),
+              GButton(
+                icon: FontAwesomeIcons.whatsapp,
+                text: "Chat Admin",
               ),
             ],
             selectedIndex: _yangdipilih,

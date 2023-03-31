@@ -59,9 +59,9 @@ class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 68, 118, 218),
+      backgroundColor: Color.fromARGB(255, 39, 110, 176),
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 68, 118, 218),
+        backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: const Text(
           'Diba',
@@ -114,7 +114,7 @@ class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
                         indicatorColor: Colors.white,
                         // indicatorWeight: 2,
                         indicator: BoxDecoration(
-                          color: Color.fromARGB(255, 68, 118, 218),
+                          color: Color.fromARGB(255, 39, 110, 176),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         controller: tabController,

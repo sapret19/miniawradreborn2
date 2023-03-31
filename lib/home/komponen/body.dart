@@ -235,83 +235,83 @@ class _bodyState extends State<body> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const bunder(
-                                icon: "tawassul.png",
-                                text: "Tawassul",
-                                rute: "/tawassul",
+                                icon: "yasin.png",
+                                text: "Yasin & Tahlil",
+                                rute: "/yasintahlil",
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               const bunder(
-                                icon: "birrul.png",
-                                text: "Birrul Walidayn",
-                                rute: "/birrul",
+                                icon: "istighosah.png",
+                                text: "Istighosah",
+                                rute: "/istighosah",
                               ),
                             ],
                           ),
                           SizedBox(
-                            width: 13,
+                            width: 35,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const bunder(
-                                icon: "tawassul.png",
-                                text: "Tawassul",
-                                rute: "/tawassul",
+                                icon: "waqiah.png",
+                                text: "Waqiah",
+                                rute: "/waqiah",
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               const bunder(
-                                icon: "birrul.png",
-                                text: "Birrul Walidayn",
-                                rute: "/birrul",
+                                icon: "burdah.png",
+                                text: "Burdah",
+                                rute: "/burdah",
                               ),
                             ],
                           ),
                           SizedBox(
-                            width: 13,
+                            width: 35,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const bunder(
-                                icon: "tawassul.png",
-                                text: "Tawassul",
-                                rute: "/tawassul",
+                                icon: "diba.png",
+                                text: "Diba",
+                                rute: "/diba",
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               const bunder(
-                                icon: "birrul.png",
-                                text: "Birrul Walidayn",
-                                rute: "/birrul",
+                                icon: "sabul.png",
+                                text: "Sabul Munjiyat",
+                                rute: "/sabul",
                               ),
                             ],
                           ),
                           SizedBox(
-                            width: 13,
+                            width: 35,
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const bunder(
-                                icon: "tawassul.png",
-                                text: "Tawassul",
-                                rute: "/tawassul",
+                                icon: "dalail.png",
+                                text: "dalail",
+                                rute: "/dalail",
                               ),
                               SizedBox(
                                 height: 10,
                               ),
                               const bunder(
-                                icon: "birrul.png",
-                                text: "Birrul Walidayn",
-                                rute: "/birrul",
+                                icon: "kitab.png",
+                                text: "Kitab-kitab ",
+                                rute: "/kitab",
                               ),
                             ],
                           ),

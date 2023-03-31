@@ -56,14 +56,17 @@ class _single_page_baruState extends State<single_page_baru> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color.fromARGB(255, 68, 118, 218),
+      // backgroundColor: Color.fromARGB(255, 39, 110, 176),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         title: Text("${widget.judul}"),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: const Icon(Icons.font_download),
+            icon: const Icon(
+              Icons.text_fields,
+              size: 25,
+            ),
             onPressed: () async {
               final fontSize = await Navigator.push<double>(
                 context,

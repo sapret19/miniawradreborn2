@@ -77,11 +77,11 @@ class _FontSettingPageState extends State<FontSettingPage> {
               style: TextStyle(fontSize: _fontSize),
               // Theme.of(context).textTheme.headline6,
             ),
-            ElevatedButton(
-                onPressed: () {
-                  _resetData;
-                },
-                child: Text('Reset Data'))
+            // ElevatedButton(
+            //     onPressed: () {
+            //       _resetData;
+            //     },
+            //     child: Text('Reset Data'))
           ],
         ),
       ),
