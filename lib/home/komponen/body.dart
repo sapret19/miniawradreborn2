@@ -11,6 +11,7 @@ import 'package:miniawradreborn2/page/page.dart';
 import 'package:miniawradreborn2/page/tabbar_sabul.dart';
 import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
+import 'package:miniawradreborn2/pdf.dart';
 import 'package:sizer/sizer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -322,7 +323,24 @@ class _bodyState extends State<body> {
                 ),
               ),
             ),
-          )
+          ),
+          Row(
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Container(
+                  transform: Matrix4.translationValues(0, -60, 1),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Ada yang baru",
+                      textAlign: TextAlign.left,
+                    ),
+                  )),
+            ],
+          ),
+          WordPressArticles()
         ],
       ),
     );
