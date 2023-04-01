@@ -6,6 +6,7 @@ import 'package:miniawradreborn2/home/Nav_bar.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
 import 'package:miniawradreborn2/home/komponen/List.dart';
 import 'package:miniawradreborn2/maneh.dart';
+import 'package:miniawradreborn2/new.dart';
 import 'package:miniawradreborn2/page/grid_page.dart';
 import 'package:miniawradreborn2/page/list_page.dart';
 import 'package:miniawradreborn2/page/page.dart';
@@ -39,7 +40,7 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Mini Awrad Santri',
         theme: ThemeData(),
-        home: PostList(),
+        home: navbar(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,

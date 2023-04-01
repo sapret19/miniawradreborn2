@@ -4,8 +4,8 @@ import 'package:http/http.dart' as http;
 import 'package:miniawradreborn2/detail.dart';
 
 Future<List<dynamic>> fetchPosts() async {
-  final response =
-      await http.get(Uri.parse('https://annur2.net/wp-json/wp/v2/posts'));
+  final response = await http
+      .get(Uri.parse('https://annur2.net/wp-json/wp/v2/posts?_embed'));
   if (response.statusCode == 200) {
     return json.decode(response.body);
   } else {
@@ -42,8 +42,14 @@ class _PostListState extends State<PostList> {
               itemBuilder: (context, index) {
                 final post = snapshot.data![index];
                 return ListTile(
-                  title: Text(post['title']['rendered']),
+                  title: Text(post['title']['rendered']
+                      .replaceAll(RegExp(r'<[^>]*>'), "")),
                   subtitle: Text(post['_embedded']['author'][0]['name']),
+                  // subtitle: Text(post['_embedded'] != null &&
+                  //         post['_embedded']['author'] != null
+                  //     ? post['_embedded']['author'][0]['name']
+                  //     : ''),
+
                   leading: Image.network(
                       post['_embedded']['wp:featuredmedia'][0]['source_url']),
                   onTap: () {

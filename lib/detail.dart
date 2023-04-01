@@ -9,14 +9,18 @@ class PostDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(post['title']['rendered']),
+        title:
+            Text(post['title']['rendered'].replaceAll(RegExp(r'<[^>]*>'), "")),
       ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Image.network(
-                post['_embedded']['wp:featuredmedia'][0]['source_url']),
+            post['_embedded'] != null &&
+                    post['_embedded']['wp:featuredmedia'] != null
+                ? Image.network(
+                    post['_embedded']['wp:featuredmedia'][0]['source_url'])
+                : SizedBox.shrink(),
             SizedBox(height: 16.0),
             Padding(
               padding: const EdgeInsets.all(16.0),
