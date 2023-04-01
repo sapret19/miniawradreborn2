@@ -1,30 +1,68 @@
-// import 'dart:async';
-// import 'package:firebase_storage/firebase_storage.dart';
-// import 'package:flutter/services.dart';
-// import 'package:path/path.dart';
-// import 'package:path_provider/path_provider.dart';
-// import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:miniawradreborn2/detail.dart';
 
-// import 'dart:io';
+Future<List<dynamic>> fetchPosts() async {
+  final response =
+      await http.get(Uri.parse('https://annur2.net/wp-json/wp/v2/posts'));
+  if (response.statusCode == 200) {
+    return json.decode(response.body);
+  } else {
+    throw Exception('Failed to load posts');
+  }
+}
 
-// class PDFApi {
-//   static Future<Future?> loadFirebase(String url) async {
-//     try {
-//       final refPDF = FirebaseStorage.instance.ref().child(url);
-//       final bytes = await refPDF.getData();
+class PostList extends StatefulWidget {
+  @override
+  _PostListState createState() => _PostListState();
+}
 
-//       return _storeFile(url, bytes!);
-//     } catch (e) {
-//       return null;
-//     }
-//   }
+class _PostListState extends State<PostList> {
+  late Future<List<dynamic>> futurePosts;
 
-//   static Future<File> _storeFile(String url, List<int> bytes) async {
-//     final filename = basename(url);
-//     final dir = await getApplicationDocumentsDirectory();
+  @override
+  void initState() {
+    super.initState();
+    futurePosts = fetchPosts();
+  }
 
-//     final file = File('${dir.path}/$filename');
-//     await file.writeAsBytes(bytes, flush: true);
-//     return file;
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('WordPress Posts'),
+      ),
+      body: FutureBuilder<List<dynamic>>(
+        future: futurePosts,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            return ListView.builder(
+              itemCount: snapshot.data!.length,
+              itemBuilder: (context, index) {
+                final post = snapshot.data![index];
+                return ListTile(
+                  title: Text(post['title']['rendered']),
+                  subtitle: Text(post['_embedded']['author'][0]['name']),
+                  leading: Image.network(
+                      post['_embedded']['wp:featuredmedia'][0]['source_url']),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PostDetail(post: post),
+                      ),
+                    );
+                  },
+                );
+              },
+            );
+          } else if (snapshot.hasError) {
+            return Text('${snapshot.error}');
+          }
+          return CircularProgressIndicator();
+        },
+      ),
+    );
+  }
+}
