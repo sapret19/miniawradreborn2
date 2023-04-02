@@ -281,7 +281,7 @@ class _bodyState extends State<body> {
                             children: [
                               const bunder(
                                 icon: "diba.png",
-                                text: "Diba",
+                                text: "Maulid Diba",
                                 rute: "/diba",
                               ),
                               SizedBox(
