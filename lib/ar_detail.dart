@@ -48,11 +48,14 @@ class _ArticleDetailState extends State<ArticleDetail> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 10),
                   Text(
                     widget.article['content']['rendered']
                         .replaceAll(RegExp(r'<[^>]*>'), ""),
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.w400),
                   ),
                 ],
               ),
