@@ -6,6 +6,7 @@ import 'package:miniawradreborn2/card.dart';
 import 'package:miniawradreborn2/home/komponen/List.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
 import 'package:miniawradreborn2/home/komponen/head.dart';
+import 'package:miniawradreborn2/home/komponen/more.dart';
 import 'package:miniawradreborn2/page/grid_page.dart';
 import 'package:miniawradreborn2/page/list_page.dart';
 import 'package:miniawradreborn2/page/page.dart';
@@ -172,7 +173,7 @@ class _bodyState extends State<body> {
           // ),
 
           Container(
-            width: 95.w,
+            width: 420,
             height: 220,
             transform: Matrix4.translationValues(0, -70, 1),
             decoration: BoxDecoration(
@@ -203,15 +204,12 @@ class _bodyState extends State<body> {
                       //   height: 18,
                       // ),
                       Row(
-                        // mainAxisAlignment: MainAxisAlignment.center,
-                        // crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SizedBox(
                             width: 8,
                           ),
                           Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const bunder(
                                 icon: "tawassul.png",
@@ -226,14 +224,13 @@ class _bodyState extends State<body> {
                                 text: "Birrul Walidayn",
                                 rute: "/birrul",
                               ),
+                              // more()
                             ],
                           ),
                           SizedBox(
-                            width: 13,
+                            width: 35,
                           ),
                           Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               const bunder(
                                 icon: "yasin.png",
@@ -254,68 +251,64 @@ class _bodyState extends State<body> {
                             width: 35,
                           ),
                           Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               const bunder(
                                 icon: "waqiah.png",
-                                text: "Al-Waqi`ah",
+                                text: "   Al-Waqi`ah",
                                 rute: "/waqiah",
                               ),
                               SizedBox(
                                 height: 10,
                               ),
-                              const bunder(
-                                icon: "burdah.png",
-                                text: "Qosidah Burdah",
-                                rute: "/burdah",
-                              ),
+                              const more()
                             ],
                           ),
-                          SizedBox(
-                            width: 35,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const bunder(
-                                icon: "diba.png",
-                                text: "Maulid Diba`",
-                                rute: "/diba",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "sabul.png",
-                                text: "Sab`ul Munjiyat",
-                                rute: "/sabul",
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 35,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              const bunder(
-                                icon: "dalail.png",
-                                text: "Dalailul Khairat",
-                                rute: "/dalail",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "kitab.png",
-                                text: "Kitab Syi`ir",
-                                rute: "/kitab",
-                              ),
-                            ],
-                          ),
+                          // SizedBox(
+                          //   width: 35,
+                          // ),
+                          // Column(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   crossAxisAlignment: CrossAxisAlignment.center,
+                          //   children: [
+                          //     const bunder(
+                          //       icon: "diba.png",
+                          //       text: "Maulid Diba`",
+                          //       rute: "/diba",
+                          //     ),
+                          //     SizedBox(
+                          //       height: 10,
+                          //     ),
+                          //     const bunder(
+                          //       icon: "sabul.png",
+                          //       text: "Sab`ul Munjiyat",
+                          //       rute: "/sabul",
+                          //     ),
+                          //   ],
+                          // ),
+                          // SizedBox(
+                          //   width: 35,
+                          // ),
+                          // Column(
+                          //   mainAxisAlignment: MainAxisAlignment.center,
+                          //   crossAxisAlignment: CrossAxisAlignment.center,
+                          //   children: [
+                          //     const bunder(
+                          //       icon: "dalail.png",
+                          //       text: "Dalailul Khairat",
+                          //       rute: "/dalail",
+                          //     ),
+                          //     SizedBox(
+                          //       height: 10,
+                          //     ),
+                          //     const bunder(
+                          //       icon: "kitab.png",
+                          //       text: "Kitab Syi`ir",
+                          //       rute: "/kitab",
+                          //     ),
+                          //   ],
+                          // ),
                         ],
                       ),
                     ],
@@ -330,11 +323,26 @@ class _bodyState extends State<body> {
                 width: 20,
               ),
               Container(
+                transform: Matrix4.translationValues(0, -60, 1),
+                width: 6,
+                height: 19,
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(70))),
+              ),
+              SizedBox(
+                width: 12,
+              ),
+              Container(
                   transform: Matrix4.translationValues(0, -60, 1),
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      "Ada yang baru",
+                      "Artikel Terbaru",
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
                       textAlign: TextAlign.left,
                     ),
                   )),
@@ -346,6 +354,8 @@ class _bodyState extends State<body> {
     );
   }
 }
+
+
 
 // List<String> imgList = [
 //   "assets/images/aishi.png",

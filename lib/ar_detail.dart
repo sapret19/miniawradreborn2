@@ -12,6 +12,7 @@ class ArticleDetail extends StatefulWidget {
 class _ArticleDetailState extends State<ArticleDetail> {
   @override
   Widget build(BuildContext context) {
+    List categories = widget.article['_embedded']['wp:term'][0];
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.article['title']['rendered']
@@ -21,39 +22,71 @@ class _ArticleDetailState extends State<ArticleDetail> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              height: 200,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(
-                    widget.article['_embedded']['wp:featuredmedia'][0]
-                            ['source_url']
-                        .replaceAll(RegExp(r'<[^>]*>'), ""),
+            // Row(
+            //   children: [
+            //     // Image.network(
+            //     //     widget.article['_embedded']['author'][0]['images']),
+            //     Text(widget.article['_embedded']['author'][0]['name']),
+            //   ],
+            // ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 250,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      widget.article['_embedded']['wp:featuredmedia'][0]
+                              ['source_url']
+                          .replaceAll(RegExp(r'<[^>]*>'), ""),
+                    ),
+                    fit: BoxFit.cover,
                   ),
-                  fit: BoxFit.cover,
                 ),
               ),
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: 10,
+                ),
+                Wrap(
+                  spacing: 8,
+                  children: categories
+                      .map((category) => Chip(
+                            backgroundColor: Colors.blue,
+                            label: Text(
+                              category['name'],
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontFamily: "Montserrat"),
+                            ),
+                          ))
+                      .toList(),
+                ),
+              ],
             ),
             Padding(
               padding: EdgeInsets.all(16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    widget.article['title']['rendered']
-                        .replaceAll(RegExp(r'<[^>]*>'), ""),
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  // Text(
+                  //   widget.article['title']['rendered']
+                  //       .replaceAll(RegExp(r'<[^>]*>'), ""),
+                  //   style: TextStyle(
+                  //     fontSize: 20,
+                  //     fontWeight: FontWeight.bold,
+                  //   ),
+                  // ),
                   SizedBox(height: 10),
-                  Text(
+                  SelectableText(
                     widget.article['content']['rendered']
-                        .replaceAll(RegExp(r'<[^>]*>'), ""),
+                        .replaceAll(RegExp('<[^>]*>'), ""),
                     style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 14,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.w400),
                   ),

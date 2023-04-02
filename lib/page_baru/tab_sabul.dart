@@ -4,6 +4,7 @@ import 'package:miniawradreborn2/page_baru/an_surat.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sizer/sizer.dart';
 
 class Sabul extends StatefulWidget {
   const Sabul({Key? key}) : super(key: key);
@@ -102,7 +103,7 @@ class _TabBarPageState extends State<Sabul>
               SizedBox(height: 10),
               Container(
                 // height: 50,
-                width: 300,
+                width: 80.w,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
