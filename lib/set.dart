@@ -72,11 +72,12 @@ class _FontSettingPageState extends State<FontSettingPage> {
               // divisions: 40,
               onChanged: _setFontSize,
             ),
-            Text(
-              "Contoh Tulisan",
-              style: TextStyle(fontSize: _fontSize),
-              // Theme.of(context).textTheme.headline6,
-            ),
+            Text("بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
+                style: TextStyle(
+                    fontSize: _fontSize,
+                    fontFamily: "KFGQPC Uthmanic Script HAFS",
+                    fontWeight: FontWeight.w500,
+                    height: 2)),
             // ElevatedButton(
             //     onPressed: () {
             //       _resetData;

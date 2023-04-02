@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:miniawradreborn2/home/about.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
 import 'package:miniawradreborn2/page/chat.dart';
 import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
@@ -17,13 +18,9 @@ class navbar extends StatefulWidget {
 }
 
 class _navbarState extends State<navbar> {
-  int _yangdipilih = 0;
+  int _yangdipilih = 1;
 
-  static List<Widget> _widgetOption = <Widget>[
-    Home(),
-    ScreenSize(),
-    chatadmin()
-  ];
+  static List<Widget> _widgetOption = <Widget>[about(), Home(), chatadmin()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,16 +50,16 @@ class _navbarState extends State<navbar> {
             gap: 8,
             tabs: const [
               GButton(
-                icon: Icons.home,
-                text: "Beranda",
-              ),
-              GButton(
                 icon: Icons.info,
                 text: "Tentang",
               ),
               GButton(
+                icon: Icons.home,
+                text: "Beranda",
+              ),
+              GButton(
                 icon: FontAwesomeIcons.whatsapp,
-                text: "Chat Admin",
+                text: "Admin Pesantren",
               ),
             ],
             selectedIndex: _yangdipilih,

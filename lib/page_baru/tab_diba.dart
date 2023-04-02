@@ -18,7 +18,7 @@ class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
 
   @override
   void initState() {
-    tabController = TabController(length: 2, vsync: this);
+    tabController = TabController(length: 28, vsync: this);
     super.initState();
     _loadFontSize();
   }
@@ -64,13 +64,13 @@ class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: const Text(
-          'Diba',
+          'Maulid Diba',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.font_download),
+            icon: const Icon(Icons.text_fields),
             onPressed: () async {
               final fontSize = await Navigator.push<double>(
                 context,
@@ -100,18 +100,20 @@ class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
               SizedBox(height: 10),
               Container(
                 // height: 50,
-                width: 300,
+                width: MediaQuery.of(context).size.width,
+                margin: EdgeInsets.only(left: 20, right: 20),
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(1),
                       child: TabBar(
                         unselectedLabelColor: Colors.black,
                         labelColor: Colors.white,
                         indicatorColor: Colors.white,
+                        isScrollable: true,
                         // indicatorWeight: 2,
                         indicator: BoxDecoration(
                           color: Color.fromARGB(255, 39, 110, 176),
@@ -119,8 +121,34 @@ class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
                         ),
                         controller: tabController,
                         tabs: const [
-                          nama_tab(namatab: 'Diba'),
-                          nama_tab(namatab: 'Doa')
+                          nama_tab(namatab: "Ya Rabbi shalli..."),
+                          nama_tab(namatab: 'Laqod jaakum...'),
+                          nama_tab(namatab: 'Ya Rasulallah...'),
+                          nama_tab(namatab: 'Al-hamdulillahil qawiyy...'),
+                          nama_tab(namatab: "Qila huwa adam..."),
+                          nama_tab(namatab: "Yub'atsu min tihamah..."),
+                          nama_tab(namatab: 'Tsumma ardudduhu...'),
+                          nama_tab(namatab: 'Shalatullahi ma lahat...'),
+                          nama_tab(namatab: "Fasubhanaman khashshahu..."),
+                          nama_tab(namatab: 'Awwalu ma nastaftihu...'),
+                          nama_tab(namatab: 'Al-haditsul awwal...'),
+                          nama_tab(namatab: 'Al-haditsul tsani...'),
+                          nama_tab(namatab: "Fayaqulul haqqu..."),
+                          nama_tab(namatab: 'Ahdliru qulubakum...'),
+                          nama_tab(namatab: 'Fahtazzal arsyu...'),
+                          nama_tab(namatab: 'Mahallul Qiyam...'),
+                          nama_tab(namatab: "Wawulida shallallahu..."),
+                          nama_tab(namatab: 'Qila man yakfulu...'),
+                          nama_tab(namatab: "Tsumma a'radla..."),
+                          nama_tab(namatab: "Fabainama huwa dzata..."),
+                          nama_tab(namatab: 'Faqolatil malaikatu...'),
+                          nama_tab(namatab: "Fabainama habibu..."),
+                          nama_tab(namatab: "Falamma ra'athu..."),
+                          nama_tab(namatab: 'Wa kana shallallahu...'),
+                          nama_tab(namatab: "Wa qila liba'dhihim..."),
+                          nama_tab(namatab: "Wa ma 'asa an yuqala..."),
+                          nama_tab(namatab: "Ya badratim..."),
+                          nama_tab(namatab: "Doa Maulid Diba'"),
                         ],
                       ),
                     ),
@@ -135,7 +163,33 @@ class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
                   controller: tabController,
                   children: [
                     yasinan(data: "diba1.json", fontSize: _currentFontSize),
-                    yasinan(data: "diba2.json", fontSize: _currentFontSize)
+                    yasinan(data: "diba2.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba3.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba4.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba5.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba6.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba7.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba8.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba9.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba10.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba11.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba12.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba13.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba14.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba15.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba16.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba17.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba18.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba19.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba20.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba21.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba22.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba23.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba24.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba25.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba26.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba27.json", fontSize: _currentFontSize),
+                    yasinan(data: "diba28.json", fontSize: _currentFontSize),
                   ],
                 ),
               )

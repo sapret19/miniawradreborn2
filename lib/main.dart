@@ -15,7 +15,6 @@ import 'package:miniawradreborn2/page/tabbar_sabul.dart';
 import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
 import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
-import 'package:miniawradreborn2/pdf.dart';
 import 'package:miniawradreborn2/per.dart';
 import 'package:miniawradreborn2/rute.dart';
 import 'package:miniawradreborn2/sizecoba.dart';

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniawradreborn2/page_baru/an_namatab.dart';
+import 'package:miniawradreborn2/page_baru/an_surat.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -71,7 +72,7 @@ class _TabBarPageState extends State<Waqiahan>
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.font_download),
+            icon: const Icon(Icons.text_fields),
             onPressed: () async {
               final fontSize = await Navigator.push<double>(
                 context,
@@ -108,7 +109,7 @@ class _TabBarPageState extends State<Waqiahan>
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(1),
                       child: TabBar(
                         isScrollable: true,
                         unselectedLabelColor: Colors.black,
@@ -122,7 +123,7 @@ class _TabBarPageState extends State<Waqiahan>
                         controller: tabController,
                         tabs: const [
                           nama_tab(namatab: 'Al-Waqiah'),
-                          nama_tab(namatab: 'Doa'),
+                          nama_tab(namatab: 'Doa Waqiah'),
                           nama_tab(namatab: 'Doa Shalat Hajat')
                         ],
                       ),
@@ -137,7 +138,7 @@ class _TabBarPageState extends State<Waqiahan>
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    yasinan(data: "waqiah.json", fontSize: _currentFontSize),
+                    Surat(data: "waqiah.json", fontSize: _currentFontSize),
                     yasinan(
                         data: "doa_waqiah.json", fontSize: _currentFontSize),
                     yasinan(

@@ -18,7 +18,13 @@ class list extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Dalailul Khoirot"),
+        backgroundColor: Color.fromARGB(255, 39, 110, 176),
+        centerTitle: true,
+        title: const Text(
+          'Dalailul Khoirot',
+          style:
+              TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -34,7 +40,7 @@ class list extends StatelessWidget {
                         leading: Text(
                           "${index + 1}",
                           style: const TextStyle(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Montserrat',
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
                               color: Colors.blue),
@@ -42,7 +48,7 @@ class list extends StatelessWidget {
                         title: Text(
                           Modellist[index].nama,
                           style: const TextStyle(
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Montserrat',
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
                               color: Colors.blue),

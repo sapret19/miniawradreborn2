@@ -18,7 +18,6 @@ import 'package:miniawradreborn2/page_baru/tab_istighosah.dart';
 import 'package:miniawradreborn2/page_baru/tab_sabul.dart';
 import 'package:miniawradreborn2/page_baru/tab_waqiah.dart';
 import 'package:miniawradreborn2/page_baru/tab_yasintahlil.dart';
-import 'package:miniawradreborn2/pdf.dart';
 import 'package:miniawradreborn2/per.dart';
 import 'package:miniawradreborn2/set.dart';
 

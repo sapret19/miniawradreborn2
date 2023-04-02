@@ -74,14 +74,6 @@ class _yasinanState extends State<yasinan> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        // Text(
-                        //   'Bismillah',
-                        //   style: TextStyle(
-                        //       fontSize: _fontSize,
-                        //       fontFamily: "KFGQPC Uthmanic Script HAFS",
-                        //       fontWeight: FontWeight.w500,
-                        //       height: 2.5),
-                        // ),
                         Padding(
                           padding: EdgeInsets.only(left: 15, right: 15),
                           child: SelectableText(
@@ -128,7 +120,7 @@ class _yasinanState extends State<yasinan> {
       //       _saveFontSize(fontSize);
       //     }
       //   },
-      //   child: const Icon(Icons.font_download),
+      //   child: const Icon(Icons.text_fields),
       // ),
     );
   }

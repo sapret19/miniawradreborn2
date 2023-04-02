@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sizer/sizer.dart';
 
 class chatadmin extends StatelessWidget {
   const chatadmin({super.key});
@@ -23,7 +25,31 @@ class chatadmin extends StatelessWidget {
               ),
             ),
           ),
-          ElevatedButton(onPressed: () {}, child: Text('Chat'))
+          SizedBox(
+            height: 20,
+          ),
+          ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                  shape: (RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(18.0),
+                    // side: BorderSide(color: Colors.red),
+                  ))),
+              onPressed: () {},
+              child: Container(
+                height: 4.h,
+                width: 10.h,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(FontAwesomeIcons.whatsapp),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    Text('Chat'),
+                  ],
+                ),
+              ))
         ],
       ),
     );

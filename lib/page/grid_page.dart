@@ -18,8 +18,13 @@ class _grid_pageState extends State<grid_page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Kitab-kitab"),
+        backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
+        title: const Text(
+          "Kitab Syi'ir",
+          style:
+              TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -173,7 +178,7 @@ class kitab_kanan extends StatelessWidget {
                 '${nama_kitab_kanan}',
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Montserrat',
                   fontSize: 12,
                   fontWeight: FontWeight.w400,
                   color: Colors.white,

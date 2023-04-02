@@ -71,7 +71,7 @@ class _TabBarPageState extends State<Istighosah>
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.font_download),
+            icon: const Icon(Icons.text_fields),
             onPressed: () async {
               final fontSize = await Navigator.push<double>(
                 context,
@@ -108,7 +108,7 @@ class _TabBarPageState extends State<Istighosah>
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(1),
                       child: TabBar(
                         unselectedLabelColor: Colors.black,
                         labelColor: Colors.white,

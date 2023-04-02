@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get_utils/get_utils.dart';
+import 'package:miniawradreborn2/card.dart';
 import 'package:miniawradreborn2/home/komponen/List.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
 import 'package:miniawradreborn2/home/komponen/head.dart';
@@ -11,7 +12,6 @@ import 'package:miniawradreborn2/page/page.dart';
 import 'package:miniawradreborn2/page/tabbar_sabul.dart';
 import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
 import 'package:miniawradreborn2/page/tabbar_yasin.dart';
-import 'package:miniawradreborn2/pdf.dart';
 import 'package:sizer/sizer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -303,7 +303,7 @@ class _bodyState extends State<body> {
                             children: [
                               const bunder(
                                 icon: "dalail.png",
-                                text: "dalail",
+                                text: "Dalailul Khoirot",
                                 rute: "/dalail",
                               ),
                               SizedBox(
@@ -311,7 +311,7 @@ class _bodyState extends State<body> {
                               ),
                               const bunder(
                                 icon: "kitab.png",
-                                text: "Kitab-kitab ",
+                                text: "Kitab Syi'ir",
                                 rute: "/kitab",
                               ),
                             ],

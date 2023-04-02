@@ -32,31 +32,35 @@ class _single_listState extends State<single_list> {
       document: PdfDocument.openAsset(widget.Modelpdf[widget.index].pdf!),
     );
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 39, 110, 176),
+        centerTitle: true,
+        title: Text(
+          widget.Modellist[widget.index].nama,
+          style:
+              TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
+        ),
+      ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            AppBar_normalpage(judul: widget.Modellist[widget.index].nama),
-            Container(
-              decoration: BoxDecoration(color: Colors.white),
-              width: MediaQuery.of(context).size.width,
-              height: 600,
-              margin: EdgeInsets.all(20),
-              // padding: EdgeInsets.all(20),
-              child: Container(
-                  child: PdfView(
-                controller: pdfController,
-                scrollDirection: Axis.vertical,
-              )
-                  // SfPdfViewer.asset(
-                  //   widget.Modelpdf[widget.index].pdf!,
-                  //   enableDoubleTapZooming: true,
-                  //   pageSpacing: 0,
-                  //   initialZoomLevel: 0,
-                  //   pageLayoutMode: PdfPageLayoutMode.continuous,
-                  // ),
-                  ),
-            )
-          ],
+        child: Container(
+          decoration: BoxDecoration(color: Colors.white),
+          width: MediaQuery.of(context).size.width,
+          height: 600,
+          margin: EdgeInsets.all(20),
+          // padding: EdgeInsets.all(20),
+          child: Container(
+              child: PdfView(
+            controller: pdfController,
+            scrollDirection: Axis.vertical,
+          )
+              // SfPdfViewer.asset(
+              //   widget.Modelpdf[widget.index].pdf!,
+              //   enableDoubleTapZooming: true,
+              //   pageSpacing: 0,
+              //   initialZoomLevel: 0,
+              //   pageLayoutMode: PdfPageLayoutMode.continuous,
+              // ),
+              ),
         ),
       ),
     );

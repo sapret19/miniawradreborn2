@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniawradreborn2/page_baru/an_namatab.dart';
+import 'package:miniawradreborn2/page_baru/an_surat.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -71,7 +72,7 @@ class _TabBarPageState extends State<Sabul>
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.font_download),
+            icon: const Icon(Icons.text_fields),
             onPressed: () async {
               final fontSize = await Navigator.push<double>(
                 context,
@@ -108,7 +109,7 @@ class _TabBarPageState extends State<Sabul>
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(1),
                       child: TabBar(
                         isScrollable: true,
                         unselectedLabelColor: Colors.black,
@@ -141,13 +142,13 @@ class _TabBarPageState extends State<Sabul>
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    yasinan(data: "sajdah.json", fontSize: _currentFontSize),
-                    yasinan(data: "yasin.json", fontSize: _currentFontSize),
-                    yasinan(data: "fussilat.json", fontSize: _currentFontSize),
-                    yasinan(data: "dukhon.json", fontSize: _currentFontSize),
-                    yasinan(data: "waqiah.json", fontSize: _currentFontSize),
-                    yasinan(data: "hasyr.json", fontSize: _currentFontSize),
-                    yasinan(data: "mulk.json", fontSize: _currentFontSize)
+                    Surat(data: "sajdah.json", fontSize: _currentFontSize),
+                    Surat(data: "yasin.json", fontSize: _currentFontSize),
+                    Surat(data: "fussilat.json", fontSize: _currentFontSize),
+                    Surat(data: "dukhon.json", fontSize: _currentFontSize),
+                    Surat(data: "waqiah.json", fontSize: _currentFontSize),
+                    Surat(data: "hasyr.json", fontSize: _currentFontSize),
+                    Surat(data: "mulk.json", fontSize: _currentFontSize)
                   ],
                 ),
               )

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniawradreborn2/page_baru/an_namatab.dart';
+import 'package:miniawradreborn2/page_baru/an_surat.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -65,13 +66,13 @@ class _TabBarPageState extends State<YasinTahlil>
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: const Text(
-          'Yasin dan Tahlil',
+          'Yasin & Tahlil',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.font_download),
+            icon: const Icon(Icons.text_fields),
             onPressed: () async {
               final fontSize = await Navigator.push<double>(
                 context,
@@ -101,15 +102,16 @@ class _TabBarPageState extends State<YasinTahlil>
               SizedBox(height: 10),
               Container(
                 // height: 50,
-                width: 300,
+                width: 265,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(5),
+                      padding: EdgeInsets.all(1),
                       child: TabBar(
+                        isScrollable: true,
                         unselectedLabelColor: Colors.black,
                         labelColor: Colors.white,
                         indicatorColor: Colors.white,
@@ -122,7 +124,7 @@ class _TabBarPageState extends State<YasinTahlil>
                         tabs: [
                           nama_tab(namatab: 'Yasin'),
                           nama_tab(namatab: 'Tahlil'),
-                          nama_tab(namatab: 'Doa')
+                          nama_tab(namatab: 'Doa Tahlil')
                         ],
                       ),
                     ),
@@ -136,7 +138,7 @@ class _TabBarPageState extends State<YasinTahlil>
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    yasinan(data: "yasin.json", fontSize: _currentFontSize),
+                    Surat(data: 'yasin.json', fontSize: _currentFontSize),
                     yasinan(data: "tahlil.json", fontSize: _currentFontSize),
                     yasinan(data: "doa_tahlil.json", fontSize: _currentFontSize)
                   ],

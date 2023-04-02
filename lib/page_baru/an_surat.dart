@@ -9,16 +9,16 @@ import 'package:miniawradreborn2/page_baru/model_json.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class single_page_baru extends StatefulWidget {
-  final String judul;
+class Surat extends StatefulWidget {
+  // final String judul;
   final String data;
-  single_page_baru({super.key, required this.judul, required this.data});
+  Surat({super.key, required this.data, required double fontSize});
 
   @override
-  State<single_page_baru> createState() => _single_page_baruState();
+  State<Surat> createState() => _SuratState();
 }
 
-class _single_page_baruState extends State<single_page_baru> {
+class _SuratState extends State<Surat> {
   Future<List<ModelJson>> ReadJsonData() async {
     final JsonData =
         await rootBundle.rootBundle.loadString("assets/json/${widget.data}");
@@ -56,37 +56,6 @@ class _single_page_baruState extends State<single_page_baru> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color.fromARGB(255, 39, 110, 176),
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 39, 110, 176),
-        title: Text("${widget.judul}"),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            icon: const Icon(
-              Icons.text_fields,
-              size: 25,
-            ),
-            onPressed: () async {
-              final fontSize = await Navigator.push<double>(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => FontSettingPage(
-                    initialFontSize: _fontSize,
-                    onFontSizeChanged: _onFontSizeChanged,
-                  ),
-                ),
-              );
-              if (fontSize != null) {
-                setState(() {
-                  _fontSize = fontSize;
-                });
-                _saveFontSize(fontSize);
-              }
-            },
-          )
-        ],
-      ),
       body: FutureBuilder(
         future: ReadJsonData(),
         builder: (context, data) {
@@ -102,9 +71,22 @@ class _single_page_baruState extends State<single_page_baru> {
                     decoration: BoxDecoration(color: Colors.white),
                     margin: EdgeInsets.symmetric(vertical: 1),
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      // mainAxisAlignment: MainAxisAlignment.end,
+                      // crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 15, right: 15),
+                          child: SelectableText(
+                            textDirection: TextDirection.rtl,
+                            textAlign: TextAlign.center,
+                            items[index].bismillah.toString(),
+                            style: TextStyle(
+                                fontSize: _fontSize,
+                                fontFamily: "KFGQPC Uthmanic Script HAFS",
+                                fontWeight: FontWeight.w500,
+                                height: 2),
+                          ),
+                        ),
                         Padding(
                           padding: EdgeInsets.only(left: 15, right: 15),
                           child: SelectableText(
