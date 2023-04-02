@@ -21,7 +21,7 @@ class _grid_pageState extends State<grid_page> {
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: const Text(
-          "Kitab Syi'ir",
+          "Kitab Syi`ir",
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
@@ -47,7 +47,7 @@ class _grid_pageState extends State<grid_page> {
                       nama_kitab_kanan: 'Lisanul Fata'),
                   input_kitab(
                       page_kitab_kiri: page(
-                          judulpage: "Maladzatul 'Aisy",
+                          judulpage: "Maladzatul `Aisy",
                           pdfpage: 'maladzatul.pdf'),
                       cover_kitab_kiri: 'aishi.png',
                       nama_kitab_kiri: "Maladzatul 'Aisy",
@@ -57,13 +57,13 @@ class _grid_pageState extends State<grid_page> {
                       nama_kitab_kanan: 'Sang Purnama'),
                   input_kitab(
                       page_kitab_kiri: page(
-                          judulpage: "'Unwanul Hikam", pdfpage: 'unwanul.pdf'),
+                          judulpage: "`Unwanul Hikam", pdfpage: 'unwanul.pdf'),
                       cover_kitab_kiri: 'unwan.png',
                       nama_kitab_kiri: "'Unwanul Hikam",
                       page_kitab_kanan: page(
                           judulpage: "Hijrah Nabawi", pdfpage: 'nabawiyah.pdf'),
                       cover_kitab_kanan: 'nabawiyah.png',
-                      nama_kitab_kanan: "'Hijrah Nabawi"),
+                      nama_kitab_kanan: "Hijrah Nabawi"),
                   SizedBox(
                     height: 40,
                   )

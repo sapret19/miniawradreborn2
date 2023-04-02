@@ -66,7 +66,7 @@ class _TabBarPageState extends State<Waqiahan>
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: const Text(
-          'Al-Waqiah',
+          'Al-Waqi`ah',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
@@ -122,8 +122,8 @@ class _TabBarPageState extends State<Waqiahan>
                         ),
                         controller: tabController,
                         tabs: const [
-                          nama_tab(namatab: 'Al-Waqiah'),
-                          nama_tab(namatab: 'Doa Waqiah'),
+                          nama_tab(namatab: 'Al-Waqi`ah'),
+                          nama_tab(namatab: 'Doa Waqi`ah'),
                           nama_tab(namatab: 'Doa Shalat Hajat')
                         ],
                       ),

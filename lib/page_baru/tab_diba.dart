@@ -64,7 +64,7 @@ class _TabBarPageState extends State<Diba> with SingleTickerProviderStateMixin {
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: const Text(
-          'Maulid Diba',
+          'Maulid Diba`',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),

@@ -21,7 +21,7 @@ class list extends StatelessWidget {
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: const Text(
-          'Dalailul Khoirot',
+          'Dalailul Khairat',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),
@@ -80,13 +80,13 @@ class list extends StatelessWidget {
 }
 
 List<String> nama = [
-  "Dalail Ahad",
-  "Dalail Senin",
-  "Dalail Selasa",
-  "Dalail Rabu",
-  "Dalail Kamis",
-  "Dalail Jum'at",
-  "Dalail Sabtu",
+  "Dalailul Khairat Ahad",
+  "Dalailul Khairat Senin",
+  "Dalailul Khairat Selasa",
+  "Dalailul Khairat Rabu",
+  "Dalailul Khairat Kamis",
+  "Dalailul Khairat Jum'at",
+  "Dalailul Khairat Sabtu",
 ];
 
 List<String> pdf = [

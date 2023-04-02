@@ -126,7 +126,7 @@ class _TabBarPageState extends State<Sabul>
                           nama_tab(namatab: 'Yasin'),
                           nama_tab(namatab: 'Fussilat'),
                           nama_tab(namatab: 'Ad-Dukhan'),
-                          nama_tab(namatab: 'Al-Waqiah'),
+                          nama_tab(namatab: 'Al-Waqi`ah'),
                           nama_tab(namatab: 'Al-Hasyr'),
                           nama_tab(namatab: 'Al-Mulk')
                         ],

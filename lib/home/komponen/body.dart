@@ -259,7 +259,7 @@ class _bodyState extends State<body> {
                             children: [
                               const bunder(
                                 icon: "waqiah.png",
-                                text: "Waqiah",
+                                text: "Al-Waqi`ah",
                                 rute: "/waqiah",
                               ),
                               SizedBox(
@@ -267,7 +267,7 @@ class _bodyState extends State<body> {
                               ),
                               const bunder(
                                 icon: "burdah.png",
-                                text: "Burdah",
+                                text: "Qosidah Burdah",
                                 rute: "/burdah",
                               ),
                             ],
@@ -281,7 +281,7 @@ class _bodyState extends State<body> {
                             children: [
                               const bunder(
                                 icon: "diba.png",
-                                text: "Maulid Diba",
+                                text: "Maulid Diba`",
                                 rute: "/diba",
                               ),
                               SizedBox(
@@ -289,7 +289,7 @@ class _bodyState extends State<body> {
                               ),
                               const bunder(
                                 icon: "sabul.png",
-                                text: "Sabul Munjiyat",
+                                text: "Sab`ul Munjiyat",
                                 rute: "/sabul",
                               ),
                             ],
@@ -303,7 +303,7 @@ class _bodyState extends State<body> {
                             children: [
                               const bunder(
                                 icon: "dalail.png",
-                                text: "Dalailul Khoirot",
+                                text: "Dalailul Khairat",
                                 rute: "/dalail",
                               ),
                               SizedBox(
@@ -311,7 +311,7 @@ class _bodyState extends State<body> {
                               ),
                               const bunder(
                                 icon: "kitab.png",
-                                text: "Kitab Syi'ir",
+                                text: "Kitab Syi`ir",
                                 rute: "/kitab",
                               ),
                             ],
