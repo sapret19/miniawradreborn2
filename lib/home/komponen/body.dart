@@ -23,9 +23,10 @@ class body extends StatefulWidget {
   body({super.key});
 
   final List<String> imgList = [
-    "assets/images/aishi.png",
-    "assets/images/lisan11.png",
-    "assets/images/purnama.png"
+    "assets/images/slide1a.png",
+    "assets/images/slide2.png",
+    // "assets/images/slide3.png",
+    // "assets/images/slide4.png"
   ];
 
   @override
@@ -38,14 +39,14 @@ class _bodyState extends State<body> {
   Widget build(BuildContext context) {
     double scale;
 
-    double aspectratio;
-    if (context.isTablet) {
-      aspectratio = 16 / 9;
-    } else if (context.isLargeTablet) {
-      aspectratio = 32 / 9;
-    } else {
-      aspectratio = 2 / 3;
-    }
+    // double aspectratio;
+    // if (context.isTablet) {
+    //   aspectratio = 16 / 9;
+    // } else if (context.isLargeTablet) {
+    //   aspectratio = 32 / 9;
+    // } else {
+    //   aspectratio = 4 / 5;
+    // }
 
     //scale
     if (context.isTablet) {
@@ -57,7 +58,7 @@ class _bodyState extends State<body> {
       child: Column(
         children: [
           Container(
-            height: context.isPortrait ? 480 : 35.h,
+            height: context.isPortrait ? 500 : 35.h,
             width: double.infinity,
             // width: double.infinity,
             child: CarouselSlider(
@@ -72,7 +73,7 @@ class _bodyState extends State<body> {
                         ))
                     .toList(),
                 options: CarouselOptions(
-                    aspectRatio: aspectratio,
+                    aspectRatio: 4 / 5,
                     viewportFraction: 1,
                     autoPlay: true,
                     // height: 500,

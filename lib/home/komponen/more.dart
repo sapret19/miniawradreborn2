@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
+import 'package:sizer/sizer.dart';
 
 class more extends StatelessWidget {
   const more({
@@ -11,11 +12,12 @@ class more extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         showModalBottomSheet(
+            enableDrag: true,
             backgroundColor: Color.fromARGB(0, 255, 255, 255),
             context: context,
             builder: (BuildContext context) {
               return Container(
-                height: 600,
+                height: 50.h,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -45,23 +47,26 @@ class more extends StatelessWidget {
                         SizedBox(
                           width: 8,
                         ),
-                        Column(
-                          children: [
-                            const bunder(
-                              icon: "tawassul.png",
-                              text: "Tawassul",
-                              rute: "/tawassul",
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "birrul.png",
-                              text: "Birrul Walidayn",
-                              rute: "/birrul",
-                            ),
-                            // more()
-                          ],
+                        Container(
+                          margin: EdgeInsets.fromLTRB(12, 12, 12, 12),
+                          child: Column(
+                            children: [
+                              const bunder(
+                                icon: "tawassul.png",
+                                text: "Tawassul",
+                                rute: "/tawassul",
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "birrul.png",
+                                text: "Birrul Walidayn",
+                                rute: "/birrul",
+                              ),
+                              // more()
+                            ],
+                          ),
                         ),
                         SizedBox(
                           width: 35,
@@ -86,20 +91,27 @@ class more extends StatelessWidget {
                         SizedBox(
                           width: 35,
                         ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            const bunder(
-                              icon: "waqiah.png",
-                              text: "   Al-Waqi`ah",
-                              rute: "/waqiah",
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const more()
-                          ],
+                        Container(
+                          margin: EdgeInsets.fromLTRB(12, 12, 12, 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const bunder(
+                                icon: "waqiah.png",
+                                text: "   Al-Waqi`ah",
+                                rute: "/waqiah",
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "burdah.png",
+                                text: "Burdah",
+                                rute: "/burdah",
+                              ),
+                            ],
+                          ),
                         ),
                         // SizedBox(
                         //   width: 35,
@@ -148,66 +160,69 @@ class more extends StatelessWidget {
                       ],
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          width: 60,
+                          width: 25,
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "diba.png",
-                              text: "Maulid Diba`",
-                              rute: "/diba",
-                            ),
-                            SizedBox(
-                              height: 97,
-                            )
-                          ],
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Container(
+                          margin: EdgeInsets.fromLTRB(12, 12, 12, 12),
+                          child: const bunder(
+                            icon: "diba.png",
+                            text: "Maulid Diba`",
+                            rute: "/diba",
+                          ),
                         ),
                         SizedBox(
                           width: 35,
                         ),
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "dalail.png",
-                              text: "Dalailul Khairat",
-                              rute: "/dalail",
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
-                              icon: "kitab.png",
-                              text: "Kitab Syi`ir",
-                              rute: "/kitab",
-                            ),
-                          ],
+                        Container(
+                          // margin: EdgeInsets.fromLTRB(12, 7, 12, 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "dalail.png",
+                                text: "Dalailul Khairat",
+                                rute: "/dalail",
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              const bunder(
+                                icon: "kitab.png",
+                                text: "Kitab Syi`ir",
+                                rute: "/kitab",
+                              ),
+                            ],
+                          ),
                         ),
-                        SizedBox(width: 30),
-                        Column(
-                          // mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const bunder(
-                              icon: "sabul.png",
-                              text: "Sab`ul Munjiyat",
-                              rute: "/sabul",
-                            ),
-                            SizedBox(
-                              height: 90,
-                            )
-                          ],
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Container(
+                          margin: EdgeInsets.fromLTRB(12, 12, 12, 12),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              const bunder(
+                                icon: "sabul.png",
+                                text: "Sab`ul Munjiyat",
+                                rute: "/sabul",
+                              ),
+                              SizedBox(
+                                height: 90,
+                              )
+                            ],
+                          ),
                         )
                       ],
                     )

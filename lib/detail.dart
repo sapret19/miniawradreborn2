@@ -12,6 +12,7 @@ class PostDetail extends StatelessWidget {
         title:
             Text(post['title']['rendered'].replaceAll(RegExp(r'<[^>]*>'), "")),
       ),
+      backgroundColor: Color.fromARGB(255, 39, 110, 176),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
