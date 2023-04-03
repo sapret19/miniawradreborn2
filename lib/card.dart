@@ -40,7 +40,7 @@ class _WordPressArticlesState extends State<WordPressArticles> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      transform: Matrix4.translationValues(0, -56, 1),
+      transform: Matrix4.translationValues(0, -45, 1),
       height: 300,
       width: context.isPortrait ? 90.w : 98.w,
       child: isLoading
@@ -72,10 +72,10 @@ class _WordPressArticlesState extends State<WordPressArticles> {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.withOpacity(0.5),
-                            spreadRadius: 3,
-                            blurRadius: 5,
-                            offset: Offset(0, 3),
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 2,
+                            blurRadius: 2,
+                            offset: Offset(0, 0),
                           ),
                         ],
                       ),

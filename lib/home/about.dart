@@ -81,11 +81,7 @@ class about extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.text_fields,
-                    size: 50,
-                    color: Color.fromARGB(255, 39, 110, 176),
-                  ),
+                  Image.asset('assets/images/hand.png', scale: 10),
                   SizedBox(
                     width: 20,
                   ),
@@ -106,11 +102,7 @@ class about extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 children: [
-                  Icon(
-                    Icons.text_fields,
-                    size: 50,
-                    color: Color.fromARGB(255, 39, 110, 176),
-                  ),
+                  Image.asset('assets/images/hand1.png', scale: 10),
                   SizedBox(
                     width: 20,
                   ),

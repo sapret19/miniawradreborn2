@@ -15,6 +15,7 @@ class _ArticleDetailState extends State<ArticleDetail> {
     List categories = widget.article['_embedded']['wp:term'][0];
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 39, 110, 176),
         title: Text(widget.article['title']['rendered']
             .replaceAll(RegExp(r'<[^>]*>'), "")),
       ),
@@ -56,7 +57,7 @@ class _ArticleDetailState extends State<ArticleDetail> {
                   spacing: 8,
                   children: categories
                       .map((category) => Chip(
-                            backgroundColor: Colors.blue,
+                            backgroundColor: Color.fromARGB(255, 39, 110, 176),
                             label: Text(
                               category['name'],
                               style: TextStyle(

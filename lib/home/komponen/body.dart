@@ -324,7 +324,7 @@ class _bodyState extends State<body> {
                 width: 20,
               ),
               Container(
-                transform: Matrix4.translationValues(0, -60, 1),
+                transform: Matrix4.translationValues(0, -55, 1),
                 width: 6,
                 height: 19,
                 decoration: BoxDecoration(
@@ -335,7 +335,7 @@ class _bodyState extends State<body> {
                 width: 12,
               ),
               Container(
-                  transform: Matrix4.translationValues(0, -60, 1),
+                  transform: Matrix4.translationValues(0, -55, 1),
                   child: Align(
                     alignment: Alignment.topLeft,
                     child: Text(
