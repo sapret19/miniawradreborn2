@@ -68,8 +68,6 @@ class _FontSettingPageState extends State<FontSettingPage> {
               value: _fontSize,
               min: 10.0,
               max: 40.0,
-              // label: _fontSize.round().toString(),
-              // divisions: 40,
               onChanged: _setFontSize,
             ),
             Text("بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ",
@@ -78,11 +76,6 @@ class _FontSettingPageState extends State<FontSettingPage> {
                     fontFamily: "KFGQPC Uthmanic Script HAFS",
                     fontWeight: FontWeight.w500,
                     height: 2)),
-            // ElevatedButton(
-            //     onPressed: () {
-            //       _resetData;
-            //     },
-            //     child: Text('Reset Data'))
           ],
         ),
       ),

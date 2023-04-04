@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:miniawradreborn2/home/komponen/body.dart';
-import 'package:sizer/sizer.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

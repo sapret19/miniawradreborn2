@@ -95,7 +95,6 @@ class _TabBarPageState extends State<Istighosah>
       body: Container(
         child: Container(
           height: MediaQuery.of(context).size.height,
-          // transform: Matrix4.translationValues(0, -50, 1),
           child: Column(
             children: [
               SizedBox(height: 10),

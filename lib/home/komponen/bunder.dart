@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:miniawradreborn2/page/grid_page.dart';
-import 'package:miniawradreborn2/page/page.dart';
 
 // ignore: camel_case_types
 class bunder extends StatefulWidget {
@@ -35,13 +33,6 @@ class _bunderState extends State<bunder> {
             // ignore: prefer_const_constructors
             decoration: BoxDecoration(
                 color: Color.fromARGB(225, 30, 117, 199),
-                // boxShadow: const [
-                //   BoxShadow(
-                //       offset: Offset(0, 0),
-                //       color: Color.fromARGB(255, 85, 84, 84),
-                //       blurRadius: 5,
-                //       spreadRadius: 1)
-                // ],
                 shape: BoxShape.circle),
             child: Image.asset(
               'assets/images/${widget.icon}',

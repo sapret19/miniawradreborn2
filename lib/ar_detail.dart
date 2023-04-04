@@ -23,13 +23,6 @@ class _ArticleDetailState extends State<ArticleDetail> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Row(
-            //   children: [
-            //     // Image.network(
-            //     //     widget.article['_embedded']['author'][0]['images']),
-            //     Text(widget.article['_embedded']['author'][0]['name']),
-            //   ],
-            // ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
@@ -74,14 +67,6 @@ class _ArticleDetailState extends State<ArticleDetail> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Text(
-                  //   widget.article['title']['rendered']
-                  //       .replaceAll(RegExp(r'<[^>]*>'), ""),
-                  //   style: TextStyle(
-                  //     fontSize: 20,
-                  //     fontWeight: FontWeight.bold,
-                  //   ),
-                  // ),
                   SizedBox(height: 10),
                   SelectableText(
                     widget.article['content']['rendered']

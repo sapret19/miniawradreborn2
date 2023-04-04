@@ -46,12 +46,6 @@ class _TabBarPageState extends State<YasinTahlil>
     _saveFontSize(value);
   }
 
-  // @override
-  // void initState() {
-  //   tabController = TabController(length: 3, vsync: this);
-  //   super.initState();
-  // }
-
   @override
   void dispose() {
     tabController.dispose();
@@ -96,7 +90,6 @@ class _TabBarPageState extends State<YasinTahlil>
       body: Container(
         child: Container(
           height: MediaQuery.of(context).size.height,
-          // transform: Matrix4.translationValues(0, -50, 1),
           child: Column(
             children: [
               SizedBox(height: 10),

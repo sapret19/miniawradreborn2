@@ -28,7 +28,6 @@ class PostDetail extends StatelessWidget {
               child: Text(
                 post['content']['rendered'].replaceAll(RegExp(r'<[^>]*>'), ""),
                 style: TextStyle(fontSize: 16),
-                // customTextStyle: {'p': Style(fontSize: FontSize(18.0))},
               ),
             ),
           ],

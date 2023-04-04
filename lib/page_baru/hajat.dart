@@ -221,26 +221,6 @@ class _HajatState extends State<Hajat> {
           }
         },
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () async {
-      //     final fontSize = await Navigator.push<double>(
-      //       context,
-      //       MaterialPageRoute(
-      //         builder: (context) => FontSettingPage(
-      //           initialFontSize: _fontSize,
-      //           onFontSizeChanged: _onFontSizeChanged,
-      //         ),
-      //       ),
-      //     );
-      //     if (fontSize != null) {
-      //       setState(() {
-      //         _fontSize = fontSize;
-      //       });
-      //       _saveFontSize(fontSize);
-      //     }
-      //   },
-      //   child: const Icon(Icons.text_fields),
-      // ),
     );
   }
 }

@@ -45,11 +45,6 @@ class _PostListState extends State<PostList> {
                   title: Text(post['title']['rendered']
                       .replaceAll(RegExp(r'<[^>]*>'), "")),
                   subtitle: Text(post['_embedded']['author'][0]['name']),
-                  // subtitle: Text(post['_embedded'] != null &&
-                  //         post['_embedded']['author'] != null
-                  //     ? post['_embedded']['author'][0]['name']
-                  //     : ''),
-
                   leading: Image.network(
                       post['_embedded']['wp:featuredmedia'][0]['source_url']),
                   onTap: () {

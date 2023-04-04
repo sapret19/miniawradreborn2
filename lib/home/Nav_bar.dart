@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:miniawradreborn2/home/about.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
 import 'package:miniawradreborn2/page/chat.dart';
-import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
-import 'package:miniawradreborn2/sizecoba.dart';
-import 'package:sizer/sizer.dart';
 
 class navbar extends StatefulWidget {
   const navbar({super.key});

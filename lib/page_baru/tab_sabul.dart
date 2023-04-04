@@ -47,12 +47,6 @@ class _TabBarPageState extends State<Sabul>
     _saveFontSize(value);
   }
 
-  // @override
-  // void initState() {
-  //   tabController = TabController(length: 3, vsync: this);
-  //   super.initState();
-  // }
-
   @override
   void dispose() {
     tabController.dispose();
