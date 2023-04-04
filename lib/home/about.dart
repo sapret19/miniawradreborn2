@@ -102,7 +102,7 @@ class about extends StatelessWidget {
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 children: [
-                  Image.asset('assets/images/hand1.png', scale: 10),
+                  Image.asset('assets/images/hands1.png', scale: 10),
                   SizedBox(
                     width: 20,
                   ),

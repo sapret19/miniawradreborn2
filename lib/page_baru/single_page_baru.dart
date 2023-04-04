@@ -59,7 +59,11 @@ class _single_page_baruState extends State<single_page_baru> {
       // backgroundColor: Color.fromARGB(255, 39, 110, 176),
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
-        title: Text("${widget.judul}"),
+        title: Text(
+          "${widget.judul}",
+          style:
+              TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
+        ),
         centerTitle: true,
         actions: [
           IconButton(

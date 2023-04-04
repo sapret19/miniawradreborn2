@@ -23,10 +23,11 @@ class body extends StatefulWidget {
   body({super.key});
 
   final List<String> imgList = [
-    "assets/images/slide1a.png",
-    "assets/images/slide2.png",
-    // "assets/images/slide3.png",
-    // "assets/images/slide4.png"
+    "assets/images/1.png",
+    // "assets/images/2.png",
+    "assets/images/3.png",
+    "assets/images/4.png",
+    "assets/images/5.png",
   ];
 
   @override
@@ -38,16 +39,24 @@ class _bodyState extends State<body> {
   @override
   Widget build(BuildContext context) {
     double scale;
+    Alignment gambar;
+    double aspectratio;
 
-    // double aspectratio;
-    // if (context.isTablet) {
-    //   aspectratio = 16 / 9;
-    // } else if (context.isLargeTablet) {
-    //   aspectratio = 32 / 9;
-    // } else {
-    //   aspectratio = 4 / 5;
-    // }
+    if (context.isTablet) {
+      aspectratio = 16 / 9;
+    } else if (context.isLargeTablet) {
+      aspectratio = 32 / 9;
+    } else {
+      aspectratio = 9 / 16;
+    }
 
+    if (context.isTablet) {
+      gambar = Alignment.center;
+    } else if (context.isLargeTablet) {
+      gambar = Alignment.center;
+    } else {
+      gambar = Alignment.bottomCenter;
+    }
     //scale
     if (context.isTablet) {
       scale = 1;
@@ -58,22 +67,22 @@ class _bodyState extends State<body> {
       child: Column(
         children: [
           Container(
-            height: context.isPortrait ? 500 : 35.h,
+            height: context.isPortrait ? 75.h : 35.h,
             width: double.infinity,
             // width: double.infinity,
             child: CarouselSlider(
                 items: widget.imgList
                     .map((item) => Image.asset(
                           item,
-                          fit: BoxFit.fitWidth,
+                          fit: BoxFit.cover,
                           height: double.infinity,
                           width: double.infinity,
                           scale: scale,
-                          alignment: Alignment.center,
+                          alignment: gambar,
                         ))
                     .toList(),
                 options: CarouselOptions(
-                    aspectRatio: 4 / 5,
+                    aspectRatio: aspectratio,
                     viewportFraction: 1,
                     autoPlay: true,
                     // height: 500,
@@ -174,21 +183,21 @@ class _bodyState extends State<body> {
           // ),
 
           Container(
-            width: 420,
+            width: 88.w,
             height: 220,
             transform: Matrix4.translationValues(0, -70, 1),
             decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.all(Radius.circular(30)),
+                borderRadius: BorderRadius.all(Radius.circular(10)),
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.grey,
+                      color: Color.fromARGB(108, 158, 158, 158),
                       offset: Offset(0, 0),
                       spreadRadius: 1,
                       blurRadius: 1),
                 ]),
             child: Padding(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.all(17),
               child: Scrollbar(
                 controller: _firstcontroller,
                 isAlwaysShown: true,
@@ -207,64 +216,64 @@ class _bodyState extends State<body> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            width: 8,
+                          Container(
+                            width: 27.w,
+                            child: Column(
+                              children: [
+                                const bunder(
+                                  icon: "tawassul.png",
+                                  text: "Tawassul",
+                                  rute: "/tawassul",
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                const bunder(
+                                  icon: "birrul.png",
+                                  text: "Birrul Walidayn",
+                                  rute: "/birrul",
+                                ),
+                                // more()
+                              ],
+                            ),
                           ),
-                          Column(
-                            children: [
-                              const bunder(
-                                icon: "tawassul.png",
-                                text: "Tawassul",
-                                rute: "/tawassul",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "birrul.png",
-                                text: "Birrul Walidayn",
-                                rute: "/birrul",
-                              ),
-                              // more()
-                            ],
+
+                          Container(
+                            width: 27.w,
+                            child: Column(
+                              children: [
+                                const bunder(
+                                  icon: "yasin.png",
+                                  text: "Yasin & Tahlil",
+                                  rute: "/yasintahlil",
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                const bunder(
+                                  icon: "istighosah.png",
+                                  text: "Istighosah",
+                                  rute: "/istighosah",
+                                ),
+                              ],
+                            ),
                           ),
-                          SizedBox(
-                            width: 35,
-                          ),
-                          Column(
-                            children: [
-                              const bunder(
-                                icon: "yasin.png",
-                                text: "Yasin & Tahlil",
-                                rute: "/yasintahlil",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "istighosah.png",
-                                text: "Istighosah",
-                                rute: "/istighosah",
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            width: 35,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              const bunder(
-                                icon: "waqiah.png",
-                                text: "   Al-Waqi`ah",
-                                rute: "/waqiah",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const more()
-                            ],
+
+                          Container(
+                            width: 27.w,
+                            child: Column(
+                              children: [
+                                const bunder(
+                                  icon: "waqiah.png",
+                                  text: "   Al-Waqi`ah",
+                                  rute: "/waqiah",
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                const more()
+                              ],
+                            ),
                           ),
                           // SizedBox(
                           //   width: 35,

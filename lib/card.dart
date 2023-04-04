@@ -24,7 +24,7 @@ class _WordPressArticlesState extends State<WordPressArticles> {
 
   fetchArticles() async {
     var url =
-        Uri.parse('https://annur2.net/wp-json/wp/v2/posts?_embed&per_page=7');
+        Uri.parse('https://annur2.net/wp-json/wp/v2/posts?_embed&per_page=5');
     var response = await http.get(url);
     if (response.statusCode == 200) {
       var jsonResponse = jsonDecode(response.body);

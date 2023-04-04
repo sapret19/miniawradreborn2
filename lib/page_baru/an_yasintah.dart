@@ -74,17 +74,19 @@ class _yasinanState extends State<yasinan> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.only(left: 15, right: 15),
-                          child: SelectableText(
-                            textDirection: TextDirection.rtl,
-                            textAlign: TextAlign.justify,
-                            items[index].arab.toString(),
-                            style: TextStyle(
-                                fontSize: _fontSize,
-                                fontFamily: "KFGQPC Uthmanic Script HAFS",
-                                fontWeight: FontWeight.w500,
-                                height: 2),
+                        Center(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 15, right: 15),
+                            child: SelectableText(
+                              textDirection: TextDirection.rtl,
+                              textAlign: TextAlign.justify,
+                              items[index].arab.toString(),
+                              style: TextStyle(
+                                  fontSize: _fontSize,
+                                  fontFamily: "KFGQPC Uthmanic Script HAFS",
+                                  fontWeight: FontWeight.w500,
+                                  height: 2),
+                            ),
                           ),
                         ),
                         const SizedBox(

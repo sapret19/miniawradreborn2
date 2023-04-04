@@ -17,216 +17,134 @@ class more extends StatelessWidget {
             context: context,
             builder: (BuildContext context) {
               return Container(
-                height: 50.h,
+                height: MediaQuery.of(context).size.height / 2,
+                width: 400,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(40),
                         topRight: Radius.circular(40))),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: 10,
-                    ),
-                    Center(
-                      child: Container(
-                        width: 100,
-                        height: 5,
-                        decoration: BoxDecoration(
-                            color: Colors.grey,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(70))),
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: 10,
                       ),
-                    ),
-                    SizedBox(
-                      height: 30,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 8,
+                      Center(
+                        child: Container(
+                          width: 100,
+                          height: 5,
+                          decoration: BoxDecoration(
+                              color: Colors.grey,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(70))),
                         ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(12, 12, 12, 12),
-                          child: Column(
-                            children: [
-                              const bunder(
-                                icon: "tawassul.png",
-                                text: "Tawassul",
-                                rute: "/tawassul",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "birrul.png",
-                                text: "Birrul Walidayn",
-                                rute: "/birrul",
-                              ),
-                              // more()
-                            ],
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
+                              icon: "tawassul.png",
+                              text: "Tawassul",
+                              rute: "/tawassul",
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 35,
-                        ),
-                        Column(
-                          children: [
-                            const bunder(
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
+                              icon: "birrul.png",
+                              text: "Birrul Walidayn",
+                              rute: "/birrul",
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
                               icon: "yasin.png",
                               text: "Yasin & Tahlil",
                               rute: "/yasintahlil",
                             ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            const bunder(
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 13,
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
                               icon: "istighosah.png",
                               text: "Istighosah",
                               rute: "/istighosah",
                             ),
-                          ],
-                        ),
-                        SizedBox(
-                          width: 35,
-                        ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(12, 12, 12, 12),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              const bunder(
-                                icon: "waqiah.png",
-                                text: "   Al-Waqi`ah",
-                                rute: "/waqiah",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "burdah.png",
-                                text: "Burdah",
-                                rute: "/burdah",
-                              ),
-                            ],
                           ),
-                        ),
-                        // SizedBox(
-                        //   width: 35,
-                        // ),
-                        // Column(
-                        //   mainAxisAlignment: MainAxisAlignment.center,
-                        //   crossAxisAlignment: CrossAxisAlignment.center,
-                        //   children: [
-                        //     const bunder(
-                        //       icon: "diba.png",
-                        //       text: "Maulid Diba`",
-                        //       rute: "/diba",
-                        //     ),
-                        //     SizedBox(
-                        //       height: 10,
-                        //     ),
-                        //     const bunder(
-                        //       icon: "sabul.png",
-                        //       text: "Sab`ul Munjiyat",
-                        //       rute: "/sabul",
-                        //     ),
-                        //   ],
-                        // ),
-                        // SizedBox(
-                        //   width: 35,
-                        // ),
-                        // Column(
-                        //   mainAxisAlignment: MainAxisAlignment.center,
-                        //   crossAxisAlignment: CrossAxisAlignment.center,
-                        //   children: [
-                        //     const bunder(
-                        //       icon: "dalail.png",
-                        //       text: "Dalailul Khairat",
-                        //       rute: "/dalail",
-                        //     ),
-                        //     SizedBox(
-                        //       height: 10,
-                        //     ),
-                        //     const bunder(
-                        //       icon: "kitab.png",
-                        //       text: "Kitab Syi`ir",
-                        //       rute: "/kitab",
-                        //     ),
-                        //   ],
-                        // ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 25,
-                        ),
-                        SizedBox(
-                          width: 8,
-                        ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(12, 12, 12, 12),
-                          child: const bunder(
-                            icon: "diba.png",
-                            text: "Maulid Diba`",
-                            rute: "/diba",
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
+                              icon: "waqiah.png",
+                              text: "Al-Waqiah",
+                              rute: "/waqiah",
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 35,
-                        ),
-                        Container(
-                          // margin: EdgeInsets.fromLTRB(12, 7, 12, 12),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "dalail.png",
-                                text: "Dalailul Khairat",
-                                rute: "/dalail",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "kitab.png",
-                                text: "Kitab Syi`ir",
-                                rute: "/kitab",
-                              ),
-                            ],
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
+                              icon: "burdah.png",
+                              text: "Qasidah Burdah",
+                              rute: "/burdah",
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          width: 25,
-                        ),
-                        Container(
-                          margin: EdgeInsets.fromLTRB(12, 12, 12, 12),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              const bunder(
-                                icon: "sabul.png",
-                                text: "Sab`ul Munjiyat",
-                                rute: "/sabul",
-                              ),
-                              SizedBox(
-                                height: 90,
-                              )
-                            ],
+                        ],
+                      ),
+                      SizedBox(
+                        height: 13,
+                      ),
+                      Row(
+                        children: [
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
+                              icon: "diba.png",
+                              text: "Maulid Diba",
+                              rute: "/diba",
+                            ),
                           ),
-                        )
-                      ],
-                    )
-                  ],
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
+                              icon: "sabul.png",
+                              text: "Sabul Munjiyat",
+                              rute: "/sabul",
+                            ),
+                          ),
+                          Container(
+                            width: MediaQuery.of(context).size.width / 3,
+                            child: bunder(
+                              icon: "dalail.png",
+                              text: "Dalailul Khoirot",
+                              rute: "/dalail",
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 13,
+                      ),
+                      Center(
+                        child: bunder(
+                          icon: "kitab.png",
+                          text: "Kitab Syair",
+                          rute: "/kitab",
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               );
             });
@@ -257,7 +175,7 @@ class more extends StatelessWidget {
           ),
           Text("Menu Lengkap",
               style: const TextStyle(
-                color: Colors.blue,
+                color: Colors.black,
                 fontFamily: 'Poppins',
                 fontWeight: FontWeight.w500,
                 fontSize: 12,
