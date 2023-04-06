@@ -41,10 +41,11 @@ class about extends StatelessWidget {
                   alignment: Alignment.center,
                   child: Text("Annur 2 App",
                       style: TextStyle(
-                          fontWeight: FontWeight.w400,
+                          fontWeight: FontWeight.bold,
                           fontFamily: 'Montserrat',
                           fontSize: 20))),
             ),
+
             Container(
               child: Align(
                   alignment: Alignment.center,
@@ -52,6 +53,21 @@ class about extends StatelessWidget {
                       style:
                           TextStyle(fontFamily: 'Montserrat', fontSize: 16))),
             ),
+            Container(
+              child: Align(
+                  alignment: Alignment.center,
+                  child: Text("Divisi Cyber MediaTech An-Nur II",
+                      style:
+                          TextStyle(fontFamily: 'Montserrat', fontSize: 11))),
+            ),
+            Container(
+              child: Align(
+                  alignment: Alignment.center,
+                  child: Text("© Copyright_2023",
+                      style:
+                          TextStyle(fontFamily: 'Montserrat', fontSize: 11))),
+            ),
+            // © annur2malang
             SizedBox(
               height: 70,
             ),
