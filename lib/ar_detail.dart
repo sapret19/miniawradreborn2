@@ -16,8 +16,12 @@ class _ArticleDetailState extends State<ArticleDetail> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
-        title: Text(widget.article['title']['rendered']
-            .replaceAll(RegExp(r'<[^>]*>'), "")),
+        title: Text(
+          widget.article['title']['rendered']
+              .replaceAll(RegExp(r'<[^>]*>'), ""),
+          maxLines: 4,
+        ),
+        // toolbarHeight: 70,
       ),
       body: SingleChildScrollView(
         child: Column(

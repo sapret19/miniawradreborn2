@@ -65,7 +65,7 @@ class _bodyState extends State<body> {
       child: Column(
         children: [
           Container(
-            height: context.isPortrait ? 75.h : 50.h,
+            height: context.isPortrait ? 67.h : 50.h,
             width: double.infinity,
             // width: double.infinity,
             child: CarouselSlider(
@@ -177,38 +177,38 @@ class _bodyState extends State<body> {
               ),
             ),
           ),
-          // Row(
-          //   children: [
-          //     SizedBox(
-          //       width: 20,
-          //     ),
-          //     Container(
-          //       transform: Matrix4.translationValues(0, -55, 1),
-          //       width: 6,
-          //       height: 19,
-          //       decoration: BoxDecoration(
-          //           color: Colors.blue,
-          //           borderRadius: BorderRadius.all(Radius.circular(70))),
-          //     ),
-          //     SizedBox(
-          //       width: 12,
-          //     ),
-          //     Container(
-          //         transform: Matrix4.translationValues(0, -55, 1),
-          //         child: Align(
-          //           alignment: Alignment.topLeft,
-          //           child: Text(
-          //             "Artikel Terbaru",
-          //             style: TextStyle(
-          //                 fontFamily: 'Montserrat',
-          //                 fontWeight: FontWeight.bold,
-          //                 fontSize: 16),
-          //             textAlign: TextAlign.left,
-          //           ),
-          //         )),
-          //   ],
-          // ),
-          // WordPressArticles()
+          Row(
+            children: [
+              SizedBox(
+                width: 20,
+              ),
+              Container(
+                transform: Matrix4.translationValues(0, -55, 1),
+                width: 6,
+                height: 19,
+                decoration: BoxDecoration(
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(70))),
+              ),
+              SizedBox(
+                width: 12,
+              ),
+              Container(
+                  transform: Matrix4.translationValues(0, -55, 1),
+                  child: Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      "Artikel Terbaru",
+                      style: TextStyle(
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16),
+                      textAlign: TextAlign.left,
+                    ),
+                  )),
+            ],
+          ),
+          WordPressArticles()
         ],
       ),
     );

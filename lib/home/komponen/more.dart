@@ -172,8 +172,8 @@ class more extends StatelessWidget {
                 color: Color.fromARGB(225, 30, 117, 199),
                 shape: BoxShape.circle),
             child: Image.asset(
-              'assets/images/bulat.png',
-              scale: 25,
+              'assets/images/boll.png',
+              scale: 35,
             ),
           ),
           SizedBox(

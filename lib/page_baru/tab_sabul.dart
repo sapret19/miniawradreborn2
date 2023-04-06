@@ -16,7 +16,7 @@ class Sabul extends StatefulWidget {
 class _TabBarPageState extends State<Sabul>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
-  double _fontSize = 16;
+  double _fontSize = 20.0;
   double _currentFontSize = 16;
 
   @override

@@ -16,7 +16,7 @@ class Waqiahan extends StatefulWidget {
 class _TabBarPageState extends State<Waqiahan>
     with SingleTickerProviderStateMixin {
   late TabController tabController;
-  double _fontSize = 16;
+  double _fontSize = 20.0;
   double _currentFontSize = 16;
 
   @override

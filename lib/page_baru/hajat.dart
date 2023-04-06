@@ -26,7 +26,7 @@ class _HajatState extends State<Hajat> {
     return list.map((e) => ModelJson.fromJson(e)).toList();
   }
 
-  double _fontSize = 16;
+  double _fontSize = 16.0;
 
   @override
   void initState() {
@@ -81,8 +81,9 @@ class _HajatState extends State<Hajat> {
                               Align(
                                 alignment: Alignment.topLeft,
                                 child: Text(
-                                    "  Tata cara sholat hajat adalah sebagai berikut:",
+                                    "  Tata cara salat hajat adalah sebagai berikut:",
                                     style: TextStyle(
+                                        fontSize: 18,
                                         fontFamily: 'Montserrat',
                                         fontWeight: FontWeight.bold)),
                               ),
@@ -91,8 +92,9 @@ class _HajatState extends State<Hajat> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 11.0),
                                   child: Text(
-                                      "1) Takbirotul ihram dengan niat salat sunnah hajat",
+                                      "1) Takbiratulihram dengan niat salat sunah hajat",
                                       style: TextStyle(
+                                          fontSize: 15,
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.bold)),
                                 ),
@@ -102,7 +104,7 @@ class _HajatState extends State<Hajat> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Text(
-                                      "> Rokaat pertama membaca Al Fatihah, Al Ikhlas 10 x",
+                                      "> Rakaat pertama membaca Al Fatihah, Al Ikhlas 10 x",
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.w400)),
@@ -113,7 +115,7 @@ class _HajatState extends State<Hajat> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Text(
-                                      "> Rokaat kedua membaca Al Fatihah, Al Ikhlas 20 x",
+                                      "> Rakaat kedua membaca Al Fatihah, Al Ikhlas 20 x",
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.w400)),
@@ -134,8 +136,9 @@ class _HajatState extends State<Hajat> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 11.0),
                                   child: Text(
-                                      "2) Takbirotul Ihram dengan niat Sholat Sunnah Hajat",
+                                      "2) Takbiratulihram dengan niat salat sunah hajat",
                                       style: TextStyle(
+                                          fontSize: 15,
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.bold)),
                                 ),
@@ -145,7 +148,7 @@ class _HajatState extends State<Hajat> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Text(
-                                      "> Rokaat pertama membaca Al Fatihah, Al Ikhlas 30 x",
+                                      "> Rakaat pertama membaca Al Fatihah, Al Ikhlas 30 x",
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.w400)),
@@ -156,7 +159,7 @@ class _HajatState extends State<Hajat> {
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 30.0),
                                   child: Text(
-                                      "> Rokaat kedua membaca Al Fatihah, Al Ikhlas 40 x",
+                                      "> Rakaat kedua membaca Al Fatihah, Al Ikhlas 40 x",
                                       style: TextStyle(
                                           fontFamily: 'Montserrat',
                                           fontWeight: FontWeight.w400)),
@@ -176,13 +179,14 @@ class _HajatState extends State<Hajat> {
                                 alignment: Alignment.topLeft,
                                 child: Text("Lalu Membaca doa salat hajat",
                                     style: TextStyle(
+                                        fontSize: 15,
                                         fontFamily: 'Montserrat',
                                         fontWeight: FontWeight.bold)),
                               ),
                               Align(
                                   alignment: Alignment.topLeft,
                                   child: Text(
-                                    "NB : Sholat Hajat apabila dilaksanakan di siang hari maka sunnahnya adalah 4 rokaat satu kali salam, sedangkan untuk malam hari adalah 4 rokaat dua kali salam.",
+                                    "NB : Salat Hajat apabila dilaksanakan di siang hari maka sunahnya adalah 4 rakaat satu kali salam, sedangkan untuk malam hari adalah 4 rakaat dua kali salam.",
                                     style: TextStyle(
                                         fontFamily: 'Montserrat',
                                         fontWeight: FontWeight.w400),

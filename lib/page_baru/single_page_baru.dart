@@ -26,7 +26,7 @@ class _single_page_baruState extends State<single_page_baru> {
     return list.map((e) => ModelJson.fromJson(e)).toList();
   }
 
-  double _fontSize = 16;
+  double _fontSize = 20.0;
 
   @override
   void initState() {

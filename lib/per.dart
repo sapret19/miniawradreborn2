@@ -10,7 +10,7 @@ class FontSizeScreen extends StatefulWidget {
 
 class _FontSizeScreenState extends State<FontSizeScreen> {
   late SharedPreferences _prefs;
-  double _fontSize = 16.0;
+  double _fontSize = 20.0;
 
   @override
   void initState() {

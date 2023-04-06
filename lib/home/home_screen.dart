@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniawradreborn2/home/komponen/body.dart';
+import 'package:sizer/sizer.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -15,11 +16,25 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text(
-          "MINI AWRAD SANTRI",
-          style:
-              TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.w400),
+        title: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Container(
+            width: 88.w,
+            height: 60,
+            decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.all(Radius.circular(8))),
+            child: Image.asset(
+              'assets/images/title.png',
+              scale: 3,
+            ),
+          ),
         ),
+        // title: Text(
+        //   "MINI AWRAD SANTRI",
+        //   style:
+        //       TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.w400),
+        // ),
         // title: Container(
         //   // height: 10.h,
         //   child: Column(children: [
@@ -37,7 +52,7 @@ class _HomeState extends State<Home> {
         //     ),
         //   ]),
         // ),
-        // toolbarHeight: 10.h,
+        toolbarHeight: 80,
 
         centerTitle: true,
         backgroundColor: Color.fromARGB(255, 39, 110, 176),

@@ -28,7 +28,10 @@ class about extends StatelessWidget {
             Container(
               child: Align(
                   alignment: Alignment.center,
-                  child: Image.asset("assets/images/head.png")),
+                  child: Image.asset(
+                    "assets/images/icon12.png",
+                    scale: 2,
+                  )),
             ),
             SizedBox(
               height: 10,
@@ -36,7 +39,7 @@ class about extends StatelessWidget {
             Container(
               child: Align(
                   alignment: Alignment.center,
-                  child: Text("Mini Awrad Santri",
+                  child: Text("Annur 2 Apps",
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontFamily: 'Montserrat',
@@ -86,11 +89,26 @@ class about extends StatelessWidget {
                     width: 20,
                   ),
                   Text(
-                    'Cubit melebar/mengecil untuk\nmemperbesar/memperkecil layar*',
+                    'Cubit melebar/mengecil untuk\nmemperbesar/memperkecil layar',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 16,
                         fontWeight: FontWeight.w400),
+                  ),
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        '*',
+                        style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            color: Colors.red,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ],
                   )
                 ],
               ),
@@ -107,26 +125,72 @@ class about extends StatelessWidget {
                     width: 20,
                   ),
                   Text(
-                    'Doble tap juga bisa untuk\nmeperbesar/memperkecil layar*',
+                    'Doble tap juga bisa untuk\nmeperbesar/memperkecil layar',
                     style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontSize: 16,
                         fontWeight: FontWeight.w400),
                   ),
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 15,
+                      ),
+                      Text(
+                        '*',
+                        style: TextStyle(
+                            fontFamily: 'Montserrat',
+                            color: Colors.red,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
             SizedBox(
               height: 30,
             ),
+            // SizedBox(
+            //   height: 15,
+            // ),
+            // Text(
+            //   '*',
+            //   style: TextStyle(
+            //       fontFamily: 'Montserrat',
+            //       color: Colors.red,
+            //       fontSize: 16,
+            //       fontWeight: FontWeight.w400),
+            // ),
             Padding(
               padding: const EdgeInsets.only(left: 30, right: 20),
-              child: Text(
-                '*Khusus pada Qosidah Burdah,Dalailul Khairat,\ndan Kitab Syi`ir',
-                style: TextStyle(
-                    fontFamily: 'Montserrat',
-                    fontSize: 15,
-                    fontWeight: FontWeight.normal),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  RichText(
+                    text: TextSpan(
+                      text: '*',
+                      style: TextStyle(
+                          color: Colors.red,
+                          fontFamily: 'Montserrat',
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal),
+                    ),
+                  ),
+                  RichText(
+                    text: TextSpan(
+                      text:
+                          'Khusus pada Qosidah Burdah,Dalailul Khairat,\ndan Kitab Syi`ir',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Montserrat',
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal),
+                    ),
+                  ),
+                ],
               ),
             )
           ],

@@ -13,7 +13,6 @@ class Screen extends StatefulWidget {
 class _ScreenState extends State<Screen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     splashscreenStart();
   }
@@ -21,9 +20,9 @@ class _ScreenState extends State<Screen> {
   splashscreenStart() async {
     var duration = const Duration(seconds: 3);
     return Timer(duration, () {
-      Navigator.push(
+      Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => navbar()),
+        MaterialPageRoute(builder: (context) => const navbar()),
       );
     });
   }

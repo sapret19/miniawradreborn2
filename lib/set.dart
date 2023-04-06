@@ -15,7 +15,7 @@ class FontSettingPage extends StatefulWidget {
 }
 
 class _FontSettingPageState extends State<FontSettingPage> {
-  double _fontSize = 16.0;
+  double _fontSize = 20.0;
   late SharedPreferences _prefs;
   final String _key = "font_size";
 
