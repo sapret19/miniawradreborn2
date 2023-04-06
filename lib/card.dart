@@ -42,7 +42,7 @@ class _WordPressArticlesState extends State<WordPressArticles> {
     return Container(
       transform: Matrix4.translationValues(0, -45, 1),
       height: 300,
-      width: context.isPortrait ? 90.w : 98.w,
+      width: context.isPortrait ? 89.w : 98.w,
       child: isLoading
           ? Center(
               child: CircularProgressIndicator(),
@@ -62,7 +62,8 @@ class _WordPressArticlesState extends State<WordPressArticles> {
                     );
                   },
                   child: Padding(
-                    padding: EdgeInsets.all(8.0),
+                    padding:
+                        EdgeInsets.only(left: 8, right: 8, top: 8, bottom: 8),
                     child: Container(
                       width: 200,
                       height: 140,
@@ -73,8 +74,8 @@ class _WordPressArticlesState extends State<WordPressArticles> {
                         boxShadow: [
                           BoxShadow(
                             color: Colors.grey.withOpacity(0.2),
-                            spreadRadius: 2,
-                            blurRadius: 2,
+                            spreadRadius: 1,
+                            blurRadius: 1,
                             offset: Offset(0, 0),
                           ),
                         ],

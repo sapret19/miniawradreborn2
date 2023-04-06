@@ -87,7 +87,7 @@ class _bodyState extends State<body> {
                     pauseAutoPlayOnTouch: true)),
           ),
           Container(
-            width: 88.w,
+            width: 85.w,
             height: 220,
             transform: Matrix4.translationValues(0, -70, 1),
             decoration: BoxDecoration(
@@ -101,7 +101,7 @@ class _bodyState extends State<body> {
                       blurRadius: 1),
                 ]),
             child: Padding(
-              padding: EdgeInsets.all(17),
+              padding: EdgeInsets.only(top: 15, bottom: 15, left: 3, right: 3),
               child: SingleChildScrollView(
                 controller: _firstcontroller,
                 scrollDirection: Axis.horizontal,
