@@ -182,7 +182,7 @@ class about extends StatelessWidget {
                   RichText(
                     text: TextSpan(
                       text:
-                          'Khusus pada Qosidah Burdah,Dalailul Khairat,\ndan Kitab Syi`ir',
+                          'Khusus pada Qosidah Burdah, Dalailul Khairat,\ndan Kitab Syi`ir',
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Montserrat',

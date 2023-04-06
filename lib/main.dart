@@ -22,7 +22,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return GetMaterialApp(
-        title: 'Mini Awrad Santri',
+        title: 'Annur 2 App',
         theme: ThemeData(),
         home: const Screen(),
         debugShowCheckedModeBanner: false,
