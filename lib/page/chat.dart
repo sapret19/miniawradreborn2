@@ -19,10 +19,10 @@ class chatadmin extends StatelessWidget {
         children: [
           Center(
             child: Text(
-              "Hubungi Admin\nPondok Pesantren Wisata\nAn-Nur II Al-Murtadlo\nMelalui Nomor WhatsApp berikut",
+              "Hubungi Admin Induk\nPP. An-Nur II 'Al-Murtadlo'\nuntuk kritik, saran, dan informasi\nseputar podok pesantren.",
               textAlign: TextAlign.center,
               style: TextStyle(
-                fontFamily: "Poppins",
+                fontFamily: "Montserrat",
                 fontSize: 17,
               ),
             ),
@@ -50,7 +50,13 @@ class chatadmin extends StatelessWidget {
                     SizedBox(
                       width: 8,
                     ),
-                    Text('Chat'),
+                    Text(
+                      'Chat',
+                      style: TextStyle(
+                        fontFamily: "Montserrat",
+                        fontSize: 14,
+                      ),
+                    ),
                   ],
                 ),
               ))
