@@ -223,7 +223,7 @@ class _bodyState extends State<body> {
                           spreadRadius: 1,
                           blurRadius: 1),
                     ]),
-                child: Image.asset('assets/images/banner.png')),
+                child: Image.asset('assets/images/bannerbaru.png')),
           )
         ],
       ),

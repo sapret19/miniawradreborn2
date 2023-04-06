@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:miniawradreborn2/page_baru/an_namatab.dart';
 import 'package:miniawradreborn2/page_baru/an_surat.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
+import 'package:miniawradreborn2/page_baru/cara_hajat.dart';
+import 'package:miniawradreborn2/page_baru/doa_waqiah.dart';
 import 'package:miniawradreborn2/page_baru/hajat.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -21,7 +23,7 @@ class _TabBarPageState extends State<Waqiahan>
 
   @override
   void initState() {
-    tabController = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 4, vsync: this);
     super.initState();
     _loadFontSize();
   }
@@ -119,7 +121,10 @@ class _TabBarPageState extends State<Waqiahan>
                         tabs: const [
                           nama_tab(namatab: 'Al-Waqi`ah'),
                           nama_tab(namatab: 'Doa Waqi`ah'),
-                          nama_tab(namatab: 'Shalat Hajat')
+                          nama_tab(namatab: 'Shalat Hajat'),
+                          nama_tab(
+                            namatab: 'Doa Shalat Hajat',
+                          )
                         ],
                       ),
                     ),
@@ -134,8 +139,8 @@ class _TabBarPageState extends State<Waqiahan>
                   controller: tabController,
                   children: [
                     Surat(data: "waqiah.json", fontSize: _currentFontSize),
-                    yasinan(
-                        data: "doa_waqiah.json", fontSize: _currentFontSize),
+                    Doawaqiah(fontSize: _currentFontSize),
+                    cara_hajat(fontSize: _currentFontSize),
                     Hajat(fontSize: _currentFontSize)
                   ],
                 ),

@@ -9,19 +9,19 @@ import 'package:miniawradreborn2/page_baru/model_json.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class yasinan extends StatefulWidget {
+class Doawaqiah extends StatefulWidget {
   // final String judul;
-  final String data;
-  yasinan({super.key, required this.data, required double fontSize});
+
+  Doawaqiah({super.key, required double fontSize});
 
   @override
-  State<yasinan> createState() => _yasinanState();
+  State<Doawaqiah> createState() => _DoawaqiahState();
 }
 
-class _yasinanState extends State<yasinan> {
+class _DoawaqiahState extends State<Doawaqiah> {
   Future<List<ModelJson>> ReadJsonData() async {
     final JsonData =
-        await rootBundle.rootBundle.loadString("assets/json/${widget.data}");
+        await rootBundle.rootBundle.loadString("assets/json/doa_waqiah.json");
     final list = json.decode(JsonData) as List<dynamic>;
     return list.map((e) => ModelJson.fromJson(e)).toList();
   }
@@ -74,6 +74,35 @@ class _yasinanState extends State<yasinan> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
+                        Center(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 15, right: 15),
+                            child: SelectableText(
+                              "وصب علي الرزق صبة رحمة",
+                              style: TextStyle(
+                                  fontSize: _fontSize,
+                                  fontFamily: "KFGQPC Uthmanic Script HAFS",
+                                  fontWeight: FontWeight.w500,
+                                  height: 2),
+                            ),
+                          ),
+                        ),
+                        Center(
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 15, right: 15),
+                            child: SelectableText(
+                              "فأنت رجا قلب يسير من الخبت",
+                              style: TextStyle(
+                                  fontSize: _fontSize,
+                                  fontFamily: "KFGQPC Uthmanic Script HAFS",
+                                  fontWeight: FontWeight.w500,
+                                  height: 2),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 7,
+                        ),
                         Center(
                           child: Padding(
                             padding: EdgeInsets.only(left: 15, right: 15),

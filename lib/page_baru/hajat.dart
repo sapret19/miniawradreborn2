@@ -74,127 +74,134 @@ class _HajatState extends State<Hajat> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Text(
-                                    "  Tata cara salat hajat adalah sebagai berikut:",
-                                    style: TextStyle(
-                                        fontSize: 18,
-                                        fontFamily: 'Montserrat',
-                                        fontWeight: FontWeight.bold)),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 11.0),
-                                  child: Text(
-                                      "1) Takbiratulihram dengan niat salat sunah hajat",
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.bold)),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 30.0),
-                                  child: Text(
-                                      "> Rakaat pertama membaca Al Fatihah, Al Ikhlas 10 x",
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.w400)),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 30.0),
-                                  child: Text(
-                                      "> Rakaat kedua membaca Al Fatihah, Al Ikhlas 20 x",
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.w400)),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 30.0),
-                                  child: Text("> Salam",
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.w400)),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 11.0),
-                                  child: Text(
-                                      "2) Takbiratulihram dengan niat salat sunah hajat",
-                                      style: TextStyle(
-                                          fontSize: 15,
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.bold)),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 30.0),
-                                  child: Text(
-                                      "> Rakaat pertama membaca Al Fatihah, Al Ikhlas 30 x",
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.w400)),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 30.0),
-                                  child: Text(
-                                      "> Rakaat kedua membaca Al Fatihah, Al Ikhlas 40 x",
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.w400)),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Padding(
-                                  padding: const EdgeInsets.only(left: 30.0),
-                                  child: Text("> Salam",
-                                      style: TextStyle(
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.w400)),
-                                ),
-                              ),
-                              Align(
-                                alignment: Alignment.topLeft,
-                                child: Text("Lalu Membaca doa salat hajat",
-                                    style: TextStyle(
-                                        fontSize: 15,
-                                        fontFamily: 'Montserrat',
-                                        fontWeight: FontWeight.bold)),
-                              ),
-                              Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Text(
-                                    "NB : Salat Hajat apabila dilaksanakan di siang hari maka sunahnya adalah 4 rakaat satu kali salam, sedangkan untuk malam hari adalah 4 rakaat dua kali salam.",
-                                    style: TextStyle(
-                                        fontFamily: 'Montserrat',
-                                        fontWeight: FontWeight.w400),
-                                    textAlign: TextAlign.justify,
-                                  ))
-                            ],
-                          ),
-                        ),
+                        // Padding(
+                        //   padding: const EdgeInsets.all(8.0),
+                        //   child: Column(
+                        //     children: [
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Text(
+                        //             "  Tata cara salat hajat adalah sebagai berikut:",
+                        //             style: TextStyle(
+                        //                 fontSize: _fontSize,
+                        //                 fontFamily: 'Montserrat',
+                        //                 fontWeight: FontWeight.bold)),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Padding(
+                        //           padding: const EdgeInsets.only(left: 11.0),
+                        //           child: Text(
+                        //               "1) Takbiratulihram dengan niat salat sunah hajat",
+                        //               style: TextStyle(
+                        //                   fontSize: _fontSize,
+                        //                   fontFamily: 'Montserrat',
+                        //                   fontWeight: FontWeight.bold)),
+                        //         ),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Padding(
+                        //           padding: const EdgeInsets.only(left: 30.0),
+                        //           child: Text(
+                        //               "> Rakaat pertama membaca Al Fatihah, Al Ikhlas 10 x",
+                        //               style: TextStyle(
+                        //                   fontSize: _fontSize,
+                        //                   fontFamily: 'Montserrat',
+                        //                   fontWeight: FontWeight.w400)),
+                        //         ),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Padding(
+                        //           padding: const EdgeInsets.only(left: 30.0),
+                        //           child: Text(
+                        //               "> Rakaat kedua membaca Al Fatihah, Al Ikhlas 20 x",
+                        //               style: TextStyle(
+                        //                   fontSize: _fontSize,
+                        //                   fontFamily: 'Montserrat',
+                        //                   fontWeight: FontWeight.w400)),
+                        //         ),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Padding(
+                        //           padding: const EdgeInsets.only(left: 30.0),
+                        //           child: Text("> Salam",
+                        //               style: TextStyle(
+                        //                   fontSize: _fontSize,
+                        //                   fontFamily: 'Montserrat',
+                        //                   fontWeight: FontWeight.w400)),
+                        //         ),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Padding(
+                        //           padding: const EdgeInsets.only(left: 11.0),
+                        //           child: Text(
+                        //               "2) Takbiratulihram dengan niat salat sunah hajat",
+                        //               style: TextStyle(
+                        //                   fontSize: _fontSize,
+                        //                   fontFamily: 'Montserrat',
+                        //                   fontWeight: FontWeight.bold)),
+                        //         ),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Padding(
+                        //           padding: const EdgeInsets.only(left: 30.0),
+                        //           child: Text(
+                        //               "> Rakaat pertama membaca Al Fatihah, Al Ikhlas 30 x",
+                        //               style: TextStyle(
+                        //                   fontSize: _fontSize,
+                        //                   fontFamily: 'Montserrat',
+                        //                   fontWeight: FontWeight.w400)),
+                        //         ),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Padding(
+                        //           padding: const EdgeInsets.only(left: 30.0),
+                        //           child: Text(
+                        //               "> Rakaat kedua membaca Al Fatihah, Al Ikhlas 40 x",
+                        //               style: TextStyle(
+                        //                   fontSize: _fontSize,
+                        //                   fontFamily: 'Montserrat',
+                        //                   fontWeight: FontWeight.w400)),
+                        //         ),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Padding(
+                        //           padding: const EdgeInsets.only(left: 30.0),
+                        //           child: Text("> Salam",
+                        //               style: TextStyle(
+                        //                   fontSize: _fontSize,
+                        //                   fontFamily: 'Montserrat',
+                        //                   fontWeight: FontWeight.w400)),
+                        //         ),
+                        //       ),
+                        //       Align(
+                        //         alignment: Alignment.topLeft,
+                        //         child: Text("Lalu Membaca doa salat hajat",
+                        //             style: TextStyle(
+                        //                 fontSize: _fontSize,
+                        //                 fontFamily: 'Montserrat',
+                        //                 fontWeight: FontWeight.bold)),
+                        //       ),
+                        //       Align(
+                        //           alignment: Alignment.topLeft,
+                        //           child: Text(
+                        //             "NB : Salat Hajat apabila dilaksanakan di siang hari maka sunahnya adalah 4 rakaat satu kali salam, sedangkan untuk malam hari adalah 4 rakaat dua kali salam.",
+                        //             style: TextStyle(
+                        //                 fontSize: _fontSize,
+                        //                 fontFamily: 'Montserrat',
+                        //                 fontWeight: FontWeight.w400),
+                        //             textAlign: TextAlign.justify,
+                        //           ))
+                        //     ],
+                        //   ),
+                        // ),
                         Center(
                           child: Padding(
                             padding: EdgeInsets.only(left: 15, right: 15),
