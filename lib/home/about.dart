@@ -39,7 +39,7 @@ class about extends StatelessWidget {
             Container(
               child: Align(
                   alignment: Alignment.center,
-                  child: Text("Annur 2 Apps",
+                  child: Text("Annur 2 App",
                       style: TextStyle(
                           fontWeight: FontWeight.w400,
                           fontFamily: 'Montserrat',
