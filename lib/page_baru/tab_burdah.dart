@@ -63,7 +63,7 @@ class _TabBarPageState extends State<Burdahan>
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: const Text(
-          'Yasin & Tahlil',
+          'Burdah',
           style:
               TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.bold),
         ),

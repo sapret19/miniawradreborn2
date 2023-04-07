@@ -1,17 +1,7 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
-import 'package:miniawradreborn2/maneh.dart';
-import 'package:miniawradreborn2/new.dart';
-import 'package:miniawradreborn2/page/grid_page.dart';
-import 'package:miniawradreborn2/page/list_page.dart';
-import 'package:miniawradreborn2/page/page.dart';
-import 'package:miniawradreborn2/page/tabbar_diba.dart';
-import 'package:miniawradreborn2/page/tabbar_sabul.dart';
-import 'package:miniawradreborn2/page/tabbar_waqiah.dart';
-import 'package:miniawradreborn2/page/tabbar_yasin.dart';
-import 'package:miniawradreborn2/page/single_list.dart';
+import 'package:miniawradreborn2/grid_page.dart';
+import 'package:miniawradreborn2/page_baru/list_page.dart';
 import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
 import 'package:miniawradreborn2/page_baru/tab_burdah.dart';
 import 'package:miniawradreborn2/page_baru/tab_diba.dart';
@@ -19,10 +9,6 @@ import 'package:miniawradreborn2/page_baru/tab_istighosah.dart';
 import 'package:miniawradreborn2/page_baru/tab_sabul.dart';
 import 'package:miniawradreborn2/page_baru/tab_waqiah.dart';
 import 'package:miniawradreborn2/page_baru/tab_yasintahlil.dart';
-import 'package:miniawradreborn2/per.dart';
-import 'package:miniawradreborn2/set.dart';
-
-import 'api.dart';
 
 Map<String, WidgetBuilder> get rute {
   return <String, WidgetBuilder>{
