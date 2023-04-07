@@ -1,4 +1,4 @@
-package com.example.miniawradreborn2
+package com.miniawradsantri.awrad
 
 import io.flutter.embedding.android.FlutterActivity
 

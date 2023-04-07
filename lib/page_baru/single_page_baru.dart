@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/services.dart' as rootBundle;
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:get/get_navigation/src/routes/default_transitions.dart';
 import 'package:miniawradreborn2/page_baru/model_json.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';

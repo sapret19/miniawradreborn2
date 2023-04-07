@@ -4,7 +4,6 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:miniawradreborn2/page/appbar_page.dart';
 import 'package:get/get.dart';
 import 'package:miniawradreborn2/page/page.dart';
-import 'package:miniawradreborn2/page/tabbar_yasin.dart';
 
 class grid_page extends StatefulWidget {
   const grid_page({super.key});

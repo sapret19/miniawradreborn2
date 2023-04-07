@@ -55,7 +55,7 @@ class _cara_hajatState extends State<cara_hajat> {
                       child: Text(
                           "Tata cara salat hajat adalah sebagai berikut:",
                           style: TextStyle(
-                              fontSize: _fontSize,
+                              fontSize: 17,
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.bold)),
                     ),
@@ -66,7 +66,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         child: Text(
                             "1) Takbiratulihram dengan niat salat sunah hajat",
                             style: TextStyle(
-                                fontSize: _fontSize,
+                                fontSize: 17,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold)),
                       ),
@@ -78,7 +78,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         child: Text(
                             "> Rakaat pertama membaca Al Fatihah, Al Ikhlas 10 x",
                             style: TextStyle(
-                                fontSize: _fontSize,
+                                fontSize: 17,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w400)),
                       ),
@@ -90,7 +90,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         child: Text(
                             "> Rakaat kedua membaca Al Fatihah, Al Ikhlas 20 x",
                             style: TextStyle(
-                                fontSize: _fontSize,
+                                fontSize: 17,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w400)),
                       ),
@@ -101,7 +101,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         padding: const EdgeInsets.only(left: 30.0),
                         child: Text("> Salam",
                             style: TextStyle(
-                                fontSize: _fontSize,
+                                fontSize: 17,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w400)),
                       ),
@@ -113,7 +113,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         child: Text(
                             "2) Takbiratulihram dengan niat salat sunah hajat",
                             style: TextStyle(
-                                fontSize: _fontSize,
+                                fontSize: 17,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold)),
                       ),
@@ -125,7 +125,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         child: Text(
                             "> Rakaat pertama membaca Al Fatihah, Al Ikhlas 30 x",
                             style: TextStyle(
-                                fontSize: _fontSize,
+                                fontSize: 17,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w400)),
                       ),
@@ -137,7 +137,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         child: Text(
                             "> Rakaat kedua membaca Al Fatihah, Al Ikhlas 40 x",
                             style: TextStyle(
-                                fontSize: _fontSize,
+                                fontSize: 17,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w400)),
                       ),
@@ -148,7 +148,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         padding: const EdgeInsets.only(left: 30.0),
                         child: Text("> Salam",
                             style: TextStyle(
-                                fontSize: _fontSize,
+                                fontSize: 17,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.w400)),
                       ),
@@ -157,7 +157,7 @@ class _cara_hajatState extends State<cara_hajat> {
                       alignment: Alignment.topLeft,
                       child: Text("Lalu Membaca doa salat hajat",
                           style: TextStyle(
-                              fontSize: _fontSize,
+                              fontSize: 17,
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.bold)),
                     ),
@@ -166,7 +166,7 @@ class _cara_hajatState extends State<cara_hajat> {
                         child: Text(
                           "NB : Salat Hajat apabila dilaksanakan di siang hari maka sunahnya adalah 4 rakaat satu kali salam, sedangkan untuk malam hari adalah 4 rakaat dua kali salam.",
                           style: TextStyle(
-                              fontSize: _fontSize,
+                              fontSize: 17,
                               fontFamily: 'Montserrat',
                               fontWeight: FontWeight.w400),
                           textAlign: TextAlign.justify,

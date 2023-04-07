@@ -91,7 +91,7 @@ class _DoawaqiahState extends State<Doawaqiah> {
                           child: Padding(
                             padding: EdgeInsets.only(left: 15, right: 15),
                             child: SelectableText(
-                              "فأنت رجا قلب يسير من الخبت",
+                              "فأنت رجا قلبي الكَسير من الخبت",
                               style: TextStyle(
                                   fontSize: _fontSize,
                                   fontFamily: "KFGQPC Uthmanic Script HAFS",

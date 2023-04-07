@@ -98,7 +98,7 @@ class more extends StatelessWidget {
                                   width: MediaQuery.of(context).size.width / 3,
                                   child: bunder(
                                     icon: "waqiah.png",
-                                    text: "Al-Waqiah",
+                                    text: "Al-Waqi'ah",
                                     rute: "/waqiah",
                                   ),
                                 ),
@@ -121,7 +121,7 @@ class more extends StatelessWidget {
                                   width: MediaQuery.of(context).size.width / 3,
                                   child: bunder(
                                     icon: "diba.png",
-                                    text: "Maulid Diba",
+                                    text: "Maulid Diba'",
                                     rute: "/diba",
                                   ),
                                 ),
@@ -129,7 +129,7 @@ class more extends StatelessWidget {
                                   width: MediaQuery.of(context).size.width / 3,
                                   child: bunder(
                                     icon: "sabul.png",
-                                    text: "Sabul Munjiyat",
+                                    text: "Sab'ul Munjiyat",
                                     rute: "/sabul",
                                   ),
                                 ),
@@ -137,7 +137,7 @@ class more extends StatelessWidget {
                                   width: MediaQuery.of(context).size.width / 3,
                                   child: bunder(
                                     icon: "dalail.png",
-                                    text: "Dalailul Khoirot",
+                                    text: "Dalailul Khairat",
                                     rute: "/dalail",
                                   ),
                                 ),
@@ -149,7 +149,7 @@ class more extends StatelessWidget {
                             Center(
                               child: bunder(
                                 icon: "kitab.png",
-                                text: "Kitab Syair",
+                                text: "Kitab Syi'ir",
                                 rute: "/kitab",
                               ),
                             ),

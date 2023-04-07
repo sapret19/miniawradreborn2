@@ -209,7 +209,7 @@ class _Burdah1State extends State<Burdah1> {
                             padding: EdgeInsets.only(left: 15, right: 15),
                             child: SelectableText(
                               textDirection: TextDirection.rtl,
-                              textAlign: TextAlign.justify,
+                              textAlign: TextAlign.center,
                               items[index].arabic.toString(),
                               style: TextStyle(
                                 fontSize: _fontSize,

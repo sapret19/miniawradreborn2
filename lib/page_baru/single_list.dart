@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:miniawradreborn2/page/appbar_page.dart';
-import 'package:miniawradreborn2/page/model_list.dart';
+import 'package:miniawradreborn2/model_list.dart';
 import 'package:pdfx/pdfx.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
-
-import 'list_page.dart';
 
 class single_list extends StatefulWidget {
   final List<Model_list> Modellist;

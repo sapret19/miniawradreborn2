@@ -160,7 +160,7 @@ class _bodyState extends State<body> {
                             children: [
                               const bunder(
                                 icon: "waqiah.png",
-                                text: "   Al-Waqi`ah",
+                                text: "Al-Waqi'ah",
                                 rute: "/waqiah",
                               ),
                               SizedBox(

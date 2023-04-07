@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:miniawradreborn2/page/appbar_page.dart';
 import 'package:pdfx/pdfx.dart';
 
 //-- or --//
@@ -20,9 +19,9 @@ class PDP extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            AppBar_normalpage(
-              judul: 'Dalail',
-            ),
+            // AppBar_normalpage(
+            //   judul: 'Dalail',
+            // ),
             // SizedBox(
             //   height: 30,
             // ),

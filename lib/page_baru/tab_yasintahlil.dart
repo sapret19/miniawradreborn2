@@ -95,7 +95,7 @@ class _TabBarPageState extends State<YasinTahlil>
               SizedBox(height: 10),
               Container(
                 // height: 50,
-                width: 265,
+                width: 248,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10)),
