@@ -19,7 +19,7 @@ class chatadmin extends StatelessWidget {
         children: [
           Center(
             child: Text(
-              "Hubungi Admin Induk\nPP. An-Nur II 'Al-Murtadlo'\nuntuk kritik, saran, dan informasi\nseputar podok pesantren.",
+              'Hubungi Admin Induk\nPP. An-Nur II "Al-Murtadlo"\nuntuk kritik, saran, dan informasi\nseputar podok pesantren.',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontFamily: "Montserrat",
