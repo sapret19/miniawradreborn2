@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Annur2App',
         theme: ThemeData(),
-        home: Screen(),
+        home: Slidee(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,
