@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:miniawradreborn2/home/Nav_bar.dart';
 import 'package:miniawradreborn2/home/splash.dart';
 import 'package:miniawradreborn2/rute.dart';
+import 'package:miniawradreborn2/slider.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Annur2App',
         theme: ThemeData(),
-        home: const Screen(),
+        home: Slidee(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,

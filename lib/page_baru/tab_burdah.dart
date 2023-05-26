@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:miniawradreborn2/Burdah/dua.dart';
 import 'package:miniawradreborn2/Burdah/satu.dart';
-import 'package:miniawradreborn2/Burdah/tiga.dart';
 import 'package:miniawradreborn2/page_baru/an_namatab.dart';
 import 'package:miniawradreborn2/page_baru/an_surat.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';

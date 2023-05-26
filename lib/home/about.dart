@@ -18,33 +18,34 @@ class about extends StatelessWidget {
       //   backgroundColor: Color.fromARGB(255, 39, 110, 176),
       // ),
       body: Container(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 60,
-            ),
-            Container(
-              child: Align(
-                  alignment: Alignment.center,
-                  child: Image.asset(
-                    "assets/images/icon12.png",
-                    scale: 2,
-                  )),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Container(
-              child: Align(
-                  alignment: Alignment.center,
-                  child: Text("Annur2App",
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Montserrat',
-                          fontSize: 20))),
-            ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 60,
+              ),
+              Container(
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Image.asset(
+                      "assets/images/icon12.png",
+                      scale: 2,
+                    )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Text("Annur2App",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Montserrat',
+                            fontSize: 20))),
+              ),
 
             Container(
               child: Align(
@@ -211,7 +212,7 @@ class about extends StatelessWidget {
             )
           ],
         ),
-      ),
+      ),)
     );
   }
 }

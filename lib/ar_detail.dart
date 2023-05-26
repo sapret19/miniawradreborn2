@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class ArticleDetail extends StatefulWidget {
   final Map article;
@@ -16,10 +17,10 @@ class _ArticleDetailState extends State<ArticleDetail> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
-        title: Text(
+        title: AutoSizeText(
           widget.article['title']['rendered']
               .replaceAll(RegExp(r'<[^>]*>'), ""),
-          maxLines: 4,
+          maxLines: 2,
         ),
         // toolbarHeight: 70,
       ),
