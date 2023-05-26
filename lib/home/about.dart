@@ -49,7 +49,7 @@ class about extends StatelessWidget {
             Container(
               child: Align(
                   alignment: Alignment.center,
-                  child: Text("v2.0.0",
+                  child: Text("v2.0.1",
                       style:
                           TextStyle(fontFamily: 'Montserrat', fontSize: 16))),
             ),
@@ -198,7 +198,7 @@ class about extends StatelessWidget {
                   RichText(
                     text: TextSpan(
                       text:
-                          'Khusus pada Qasidah Burdah, Dalailul Khairat,\ndan Kitab Syi`ir',
+                          'Khusus pada Dalailul Khairat dan Kitab Syi`ir',
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Montserrat',
