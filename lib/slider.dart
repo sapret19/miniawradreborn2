@@ -6,14 +6,15 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:http/http.dart' as http;
 
 class Slidee extends StatefulWidget {
-  const Slidee({super.key});
+  Slidee({super.key});
 
   @override
   State<Slidee> createState() => _SlideeState();
 }
 
 class _SlideeState extends State<Slidee> {
-  List gambar = [];
+  Map<String, dynamic> gambar = {};
+  bool isBenar = false;
 
   @override
   void initState() {
@@ -23,13 +24,14 @@ class _SlideeState extends State<Slidee> {
   }
 
   AmbilArtikel() async {
-    var url = Uri.parse("https://annur2.net/wp-json/wp/v2/posts?_embed");
+    var url = Uri.parse("https://annur2.net/wp-json/wp/v2/pages/18507");
         
     var response = await http.get(url);
     if (response.statusCode == 200 ) {
       var jsonResponse = jsonDecode(response.body);
       setState(() {
         gambar = jsonResponse;
+        isBenar = false;
       });
     } else {
       print("Gagal");
@@ -46,8 +48,14 @@ class _SlideeState extends State<Slidee> {
         itemCount: gambar.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(image: gambar[index])
+            child: Column(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(image: NetworkImage(gambar['content']['rendered']))
+                  ),
+                ),
+              ],
             ),
           );
         }
