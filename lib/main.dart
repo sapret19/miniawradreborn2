@@ -26,7 +26,9 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Annur2App',
         theme: ThemeData(),
-        home: WordPressArticles(),
+
+        home: Screen(),
+
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,

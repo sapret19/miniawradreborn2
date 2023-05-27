@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1078765675204",
+    "project_id": "annur2app",
+    "storage_bucket": "annur2app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078765675204:android:472c06f84ead7eb8041f91",
+        "android_client_info": {
+          "package_name": "com.miniawradsantri.awrad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcCmTQtI3Z0z7Ss2_5FTc8KYlzFtG2Mq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
