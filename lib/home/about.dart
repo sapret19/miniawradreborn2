@@ -50,7 +50,7 @@ class about extends StatelessWidget {
             Container(
               child: Align(
                   alignment: Alignment.center,
-                  child: Text("v2.0.1",
+                  child: Text("v2.0.2",
                       style:
                           TextStyle(fontFamily: 'Montserrat', fontSize: 16))),
             ),
