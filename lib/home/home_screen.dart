@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniawradreborn2/home/komponen/body.dart';
+import 'package:miniawradreborn2/notification_services.dart';
 import 'package:sizer/sizer.dart';
 
 class Home extends StatefulWidget {
@@ -11,6 +12,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  NotificationServices notificationServices = NotificationServices();
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    notificationServices.requestNoticationPermission();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
