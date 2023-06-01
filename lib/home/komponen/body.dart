@@ -4,6 +4,7 @@ import 'package:get/get_utils/get_utils.dart';
 import 'package:miniawradreborn2/card.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
 import 'package:miniawradreborn2/home/komponen/more.dart';
+import 'package:miniawradreborn2/slider/slider_widget.dart';
 import 'package:sizer/sizer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -64,28 +65,7 @@ class _bodyState extends State<body> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Container(
-            height: context.isPortrait ? 67.h : 50.h,
-            width: double.infinity,
-            // width: double.infinity,
-            child: CarouselSlider(
-                items: widget.imgList
-                    .map((item) => Image.asset(
-                          item,
-                          fit: BoxFit.cover,
-                          height: double.infinity,
-                          width: double.infinity,
-                          scale: scale,
-                          alignment: gambar,
-                        ))
-                    .toList(),
-                options: CarouselOptions(
-                    aspectRatio: aspectratio,
-                    viewportFraction: 1,
-                    autoPlay: true,
-                    // height: 500,
-                    pauseAutoPlayOnTouch: true)),
-          ),
+          sliderBuilder(),
           Container(
             width: 85.w,
             height: 220,
@@ -107,9 +87,6 @@ class _bodyState extends State<body> {
                 scrollDirection: Axis.horizontal,
                 child: Column(
                   children: [
-                    // SizedBox(
-                    //   height: 18,
-                    // ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -224,7 +201,7 @@ class _bodyState extends State<body> {
                           blurRadius: 1),
                     ]),
                 child: Image.asset('assets/images/bannerbaru.png')),
-          )
+          ),
         ],
       ),
     );
