@@ -65,7 +65,8 @@ class _bodyState extends State<body> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          sliderBuilder(),
+          Container(
+              height: 57.h, width: double.infinity, child: sliderBuilder()),
           Container(
             width: 85.w,
             height: 220,
