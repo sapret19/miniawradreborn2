@@ -8,7 +8,7 @@ class APIService {
   static Future<List<SliderModel>?> getSliderData() async {
     Map<String, String> requestHeaders = {'Content-type': 'application/json'};
 
-    Uri url = new Uri.http(
+    final Uri url = Uri.http(
         apiURL, "/wp-json/wp/v2/slider-images", {"slider_id": "18576"});
 
     var response = await client.get(url, headers: requestHeaders);

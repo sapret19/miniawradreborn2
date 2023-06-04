@@ -34,8 +34,7 @@ Widget sliderBuilder() {
         (BuildContext context, AsyncSnapshot<List<SliderModel>?> sliderModel) {
       if (sliderModel.hasData && sliderModel.data != null) {
         return Container(
-            width: MediaQuery.of(context).size.width,
-            child: imageCarousel(sliderModel.data!));
+            width: MediaQuery.of(context).size.width, child: Coba());
       }
 
       return Center(
@@ -70,4 +69,67 @@ Widget imageCarousel(List<SliderModel> sliderList) {
         autoPlayAnimationDuration: Duration(milliseconds: 800),
         viewportFraction: 1),
   );
+}
+
+class Coba extends StatefulWidget {
+  const Coba({Key? key});
+
+  @override
+  State<Coba> createState() => _CobaState();
+}
+
+class _CobaState extends State<Coba> {
+  List<SliderModel> responsemodel = [];
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    fetchresponsemodel();
+  }
+
+  Future<void> fetchresponsemodel() async {
+    try {
+      final List<SliderModel>? urls = await APIService.getSliderData();
+      setState(() {
+        responsemodel = urls!;
+      });
+    } catch (e) {
+      return null;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return CSlider(responsemodel);
+  }
+
+  Widget CSlider(List<SliderModel> sliderList) {
+    if (sliderList.isEmpty) {
+      return CircularProgressIndicator();
+    } else {
+      return CarouselSlider(
+        items: sliderList.map((model) {
+          return CachedNetworkImage(
+            imageUrl: model.url,
+            imageBuilder: (context, imageProvider) {
+              return Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: imageProvider,
+                        fit: BoxFit.cover,
+                        alignment: Alignment.bottomCenter)),
+              );
+            },
+          );
+        }).toList(),
+        options: CarouselOptions(
+            autoPlay: true,
+            aspectRatio: 12.5 / 16,
+            autoPlayCurve: Curves.decelerate,
+            enableInfiniteScroll: true,
+            autoPlayAnimationDuration: Duration(milliseconds: 800),
+            viewportFraction: 1),
+      );
+    }
+  }
 }

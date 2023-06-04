@@ -17,6 +17,7 @@ class _navbarState extends State<navbar> {
   int _yangdipilih = 1;
 
   static List<Widget> _widgetOption = <Widget>[about(), Home(), chatadmin()];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

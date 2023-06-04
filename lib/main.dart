@@ -10,9 +10,22 @@ import 'package:miniawradreborn2/slider/slider_widget.dart';
 import 'package:sizer/sizer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:in_app_update/in_app_update.dart';
+import 'package:in_app_update/in_app_update.dart' as appUpdate;
+
+// void checkVersiAplikasi() async {
+//   await appUpdate.InAppUpdate.checkForUpdate().then((info) {
+//     if (info.updateAvailability == true) {
+//       appUpdate.InAppUpdate.startFlexibleUpdate().catchError((e) {
+
+//       });
+//     }
+//   });
+// }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // checkVersiAplikasi();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

@@ -3,6 +3,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniawradreborn2/home/komponen/body.dart';
 import 'package:miniawradreborn2/notification_services.dart';
 import 'package:sizer/sizer.dart';
+import 'package:in_app_update/in_app_update.dart';
+import 'package:in_app_update/in_app_update.dart' as appUpdate;
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -12,11 +14,22 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  void checkVersiAplikasi() async {
+    await appUpdate.InAppUpdate.checkForUpdate().then((info) {
+      if (info.updateAvailability == true) {
+        appUpdate.InAppUpdate.startFlexibleUpdate().catchError((e) {});
+      }
+    });
+  }
+
   NotificationServices notificationServices = NotificationServices();
   @override
   void initState() {
     // TODO: implement initState
+    // checkVersiAplikasi();
+
     super.initState();
+
     notificationServices.requestNoticationPermission();
   }
 

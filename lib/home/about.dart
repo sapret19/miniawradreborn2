@@ -8,49 +8,49 @@ class about extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text(
-      //     "MINI AWRAD SANTRI",
-      //     style:
-      //         TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.w400),
-      //   ),
-      //   centerTitle: true,
-      //   backgroundColor: Color.fromARGB(255, 39, 110, 176),
-      // ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(
-                height: 60,
-              ),
-              Container(
-                child: Align(
-                    alignment: Alignment.center,
-                    child: Image.asset(
-                      "assets/images/icon12.png",
-                      scale: 2,
-                    )),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Container(
-                child: Align(
-                    alignment: Alignment.center,
-                    child: Text("Annur2App",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Montserrat',
-                            fontSize: 20))),
-              ),
+        // appBar: AppBar(
+        //   title: Text(
+        //     "MINI AWRAD SANTRI",
+        //     style:
+        //         TextStyle(fontFamily: 'Montserrat', fontWeight: FontWeight.w400),
+        //   ),
+        //   centerTitle: true,
+        //   backgroundColor: Color.fromARGB(255, 39, 110, 176),
+        // ),
+        body: Container(
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(
+              height: 60,
+            ),
+            Container(
+              child: Align(
+                  alignment: Alignment.center,
+                  child: Image.asset(
+                    "assets/images/icon12.png",
+                    scale: 2,
+                  )),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              child: Align(
+                  alignment: Alignment.center,
+                  child: Text("Annur2App",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Montserrat',
+                          fontSize: 20))),
+            ),
 
             Container(
               child: Align(
                   alignment: Alignment.center,
-                  child: Text("v2.0.2",
+                  child: Text("v2.0.3",
                       style:
                           TextStyle(fontFamily: 'Montserrat', fontSize: 16))),
             ),
@@ -198,8 +198,7 @@ class about extends StatelessWidget {
                   ),
                   RichText(
                     text: TextSpan(
-                      text:
-                          'Khusus pada Dalailul Khairat dan Kitab Syi`ir',
+                      text: 'Khusus pada Dalailul Khairat dan Kitab Syi`ir',
                       style: TextStyle(
                           color: Colors.black,
                           fontFamily: 'Montserrat',
@@ -212,7 +211,7 @@ class about extends StatelessWidget {
             )
           ],
         ),
-      ),)
-    );
+      ),
+    ));
   }
 }
