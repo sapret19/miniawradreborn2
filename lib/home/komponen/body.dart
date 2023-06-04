@@ -6,7 +6,6 @@ import 'package:miniawradreborn2/home/komponen/bunder.dart';
 import 'package:miniawradreborn2/home/komponen/more.dart';
 import 'package:miniawradreborn2/slider/slider_widget.dart';
 import 'package:sizer/sizer.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
 class body extends StatefulWidget {
   body({super.key});

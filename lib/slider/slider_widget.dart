@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:miniawradreborn2/slider/api_service_slider.dart';
 import 'package:miniawradreborn2/slider/slider_model.dart';
 import 'package:sizer/sizer.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class slider_widget extends StatefulWidget {
   const slider_widget({super.key});
@@ -56,11 +57,13 @@ Widget sliderBuilder() {
 Widget imageCarousel(List<SliderModel> sliderList) {
   return CarouselSlider(
     items: sliderList.map((model) {
-      return Image.network(
-        model.url,
+      return CachedNetworkImage(
+        imageUrl: model.url,
         fit: BoxFit.cover,
         width: 100.w,
         alignment: Alignment.bottomCenter,
+        placeholder: (context, url) => Placeholder(),
+        errorWidget: (context, url, error) => Icon(Icons.error),
       );
     }).toList(),
     options: CarouselOptions(

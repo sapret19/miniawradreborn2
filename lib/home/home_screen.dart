@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     // TODO: implement initState
-    checkVersiAplikasi();
+    // checkVersiAplikasi();
 
     super.initState();
 
