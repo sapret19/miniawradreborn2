@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:miniawradreborn2/slider/api_service_slider.dart';
 import 'package:miniawradreborn2/slider/slider_model.dart';
 import 'package:sizer/sizer.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class slider_widget extends StatefulWidget {
   const slider_widget({super.key});
@@ -17,15 +18,6 @@ class slider_widget extends StatefulWidget {
 class _slider_widgetState extends State<slider_widget> {
   @override
   Widget build(BuildContext context) {
-    double aspectratio;
-
-    if (context.isTablet) {
-      aspectratio = 16 / 9;
-    } else if (context.isLargeTablet) {
-      aspectratio = 32 / 9;
-    } else {
-      aspectratio = 9 / 16;
-    }
     return Scaffold(
       appBar: AppBar(
         title: Text('Slider'),
@@ -56,11 +48,18 @@ Widget sliderBuilder() {
 Widget imageCarousel(List<SliderModel> sliderList) {
   return CarouselSlider(
     items: sliderList.map((model) {
-      return Image.network(
-        model.url,
-        fit: BoxFit.cover,
-        width: 100.w,
-        alignment: Alignment.bottomCenter,
+      return CachedNetworkImage(
+        imageUrl: model.url,
+        // placeholder: (context, url) => CircularProgressIndicator(),
+        imageBuilder: (context, imageProvider) {
+          return Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: imageProvider,
+                    fit: BoxFit.cover,
+                    alignment: Alignment.bottomCenter)),
+          );
+        },
       );
     }).toList(),
     options: CarouselOptions(

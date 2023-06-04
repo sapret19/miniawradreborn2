@@ -46,6 +46,7 @@ dependencies:
   sizer: ^2.0.15
   syncfusion_flutter_pdfviewer: ^20.4.53
   url_launcher: ^6.1.10
+  cached_network_image: ^3.2.3
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
