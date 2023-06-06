@@ -4,8 +4,12 @@ import 'package:get/get_utils/get_utils.dart';
 import 'package:miniawradreborn2/card.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
 import 'package:miniawradreborn2/home/komponen/more.dart';
+import 'package:miniawradreborn2/slide/api_service.dart';
+import 'package:miniawradreborn2/slider/cache_slider.dart';
 import 'package:miniawradreborn2/slider/slider_widget.dart';
 import 'package:sizer/sizer.dart';
+
+import '../../slider/slider_model.dart';
 
 class body extends StatefulWidget {
   body({super.key});
@@ -22,6 +26,14 @@ class body extends StatefulWidget {
 }
 
 class _bodyState extends State<body> {
+ List<SliderModel> images = [];
+ @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    // fetchImages();
+  }
+
   final ScrollController _firstcontroller = ScrollController();
   @override
   Widget build(BuildContext context) {
@@ -61,11 +73,12 @@ class _bodyState extends State<body> {
     } else {
       scale = 10;
     }
+
     return SingleChildScrollView(
       child: Column(
         children: [
           Container(
-              height: 57.h, width: double.infinity, child: sliderBuilder()),
+              height: 57.h, width: double.infinity, child: ImageCarousel()),
           Container(
             width: 85.w,
             height: 220,

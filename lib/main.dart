@@ -5,6 +5,7 @@ import 'package:miniawradreborn2/card.dart';
 import 'package:miniawradreborn2/home/Nav_bar.dart';
 import 'package:miniawradreborn2/home/splash.dart';
 import 'package:miniawradreborn2/rute.dart';
+import 'package:miniawradreborn2/slide/api_service.dart';
 import 'package:miniawradreborn2/slider.dart';
 import 'package:miniawradreborn2/slider/slider_widget.dart';
 import 'package:sizer/sizer.dart';
