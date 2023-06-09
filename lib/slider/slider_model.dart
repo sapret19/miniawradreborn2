@@ -5,8 +5,11 @@ List<SliderModel> sliderfromJSON(String strJson) => List<SliderModel>.from(
 
 class SliderModel {
   late String url;
+  String? image;
+  String? localImagePath;
 
-  SliderModel(this.url);
+
+  SliderModel(this.url,  );
 
   SliderModel.fromJson(Map<String, dynamic> json) {
     url = json['url'];
