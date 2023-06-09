@@ -78,7 +78,7 @@ class _bodyState extends State<body> {
       child: Column(
         children: [
           Container(
-              height: 57.h, width: double.infinity, child: ImageCarousel()),
+              height: 57.h, width: double.infinity, child: ),
           Container(
             width: 85.w,
             height: 220,
