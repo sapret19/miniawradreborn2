@@ -6,6 +6,7 @@ import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:get/get.dart';
 import 'package:miniawradreborn2/slider/api_service_slider.dart';
 import 'package:miniawradreborn2/slider/slider_model.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -14,6 +15,11 @@ class slider_widget extends StatefulWidget {
 
   @override
   State<slider_widget> createState() => _slider_widgetState();
+}
+
+Future<void> saveSliderData(List<String> sliderUrls) async {
+  final prefs = await SharedPreferences.getInstance();
+  prefs.setStringList('sliderUrls', sliderUrls);
 }
 
 class _slider_widgetState extends State<slider_widget> {
@@ -40,20 +46,37 @@ class _slider_widgetState extends State<slider_widget> {
 Widget sliderBuilder() {
   return FutureBuilder<List<SliderModel>?>(
     future: APIService.getSliderData(),
-    builder:
-        (BuildContext context, AsyncSnapshot<List<SliderModel>?> sliderModel) {
-      if (sliderModel.hasData && sliderModel.data != null) {
-        return Container(
+    builder: (BuildContext context, AsyncSnapshot<List<SliderModel>?> sliderModel) {
+      if (sliderModel.connectionState == ConnectionState.done) {
+        if (sliderModel.hasData && sliderModel.data != null) {
+          // Simpan data slider secara lokal
+          final sliderUrls = sliderModel.data!.map((model) => model.url).toList();
+          saveSliderData(sliderUrls);
+
+          return Container(
             width: MediaQuery.of(context).size.width,
-            child: imageCarousel(sliderModel.data!));
+            child: imageCarousel(sliderModel.data!),
+          );
+        } else {
+          // Mengambil data slider dari penyimpanan lokal
+          return Container(
+            width: MediaQuery.of(context).size.width,
+            child: offlineImageCarousel(),
+          );
+        }
       }
 
       return Center(
-        child: CircularProgressIndicator(),
+        child: Container(
+            width: MediaQuery.of(context).size.width,
+            child: offlineImageCarousel(),
+          )
       );
     },
   );
 }
+
+
 
 Widget imageCarousel(List<SliderModel> sliderList) {
   return CarouselSlider(
@@ -63,9 +86,8 @@ Widget imageCarousel(List<SliderModel> sliderList) {
         fit: BoxFit.cover,
         width: 100.w,
         alignment: Alignment.bottomCenter,
-        placeholder: (context, url) => Placeholder(),
+        placeholder: (context, url) => Container(color: Colors.black38,),
         errorWidget: (context, url, error) => Icon(Icons.error),
-        cacheManager: DefaultCacheManager(),
       );
     }).toList(),
     options: CarouselOptions(
@@ -76,4 +98,31 @@ Widget imageCarousel(List<SliderModel> sliderList) {
         autoPlayAnimationDuration: Duration(milliseconds: 800),
         viewportFraction: 1),
   );
+}
+
+
+Widget offlineImageCarousel() {
+  return FutureBuilder<List<String>>(
+    future: getOfflineSliderData(),
+    builder: (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
+      if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
+        final sliderUrls = snapshot.data!;
+        if (sliderUrls.isNotEmpty) {
+          return imageCarousel(
+            sliderUrls.map((url) => SliderModel(url)).toList(),
+          );
+        } else {
+          return Text('Tidak ada data slider yang tersimpan.');
+        }
+      }
+
+      return Placeholder();
+    },
+  );
+}
+
+Future<List<String>> getOfflineSliderData() async {
+  final prefs = await SharedPreferences.getInstance();
+  final sliderUrls = prefs.getStringList('sliderUrls');
+  return sliderUrls ?? [];
 }
