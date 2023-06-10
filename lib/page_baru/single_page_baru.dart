@@ -52,6 +52,14 @@ class _single_page_baruState extends State<single_page_baru> {
     _saveFontSize(value);
   }
 
+  void _resetData() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.remove("font_size");
+    setState(() {
+      _fontSize = 16.0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

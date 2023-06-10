@@ -26,8 +26,8 @@ class body extends StatefulWidget {
 }
 
 class _bodyState extends State<body> {
- List<SliderModel> images = [];
- @override
+  List<SliderModel> images = [];
+  @override
   void initState() {
     // TODO: implement initState
     super.initState();
@@ -78,7 +78,7 @@ class _bodyState extends State<body> {
       child: Column(
         children: [
           Container(
-              height: 57.h, width: double.infinity, child: ),
+              height: 57.h, width: double.infinity, child: sliderBuilder()),
           Container(
             width: 85.w,
             height: 220,

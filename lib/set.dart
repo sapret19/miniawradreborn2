@@ -7,7 +7,8 @@ class FontSettingPage extends StatefulWidget {
   const FontSettingPage(
       {Key? key,
       required this.onFontSizeChanged,
-      required double initialFontSize})
+      required double initialFontSize,
+      })
       : super(key: key);
 
   @override
@@ -44,11 +45,12 @@ class _FontSettingPageState extends State<FontSettingPage> {
   }
 
   void _resetData() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.remove('font_size');
+    await _prefs.remove("font_size");
     setState(() {
       _fontSize = 16.0;
     });
+
+    // loadFontSize();
   }
 
   @override
@@ -76,6 +78,7 @@ class _FontSettingPageState extends State<FontSettingPage> {
                     fontFamily: "KFGQPC Uthmanic Script HAFS",
                     fontWeight: FontWeight.w500,
                     height: 2)),
+            // ElevatedButton(onPressed: _resetData, child: Text("Reset Data"))
           ],
         ),
       ),

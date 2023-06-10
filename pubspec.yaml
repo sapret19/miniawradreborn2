@@ -48,7 +48,11 @@ dependencies:
   url_launcher: ^6.1.10
   cached_network_image: ^3.2.3
   in_app_update: ^4.0.1
-  flutter_cache_manager: ^3.3.0
+  
+  dio: ^5.2.0
+  path_provider: ^2.0.15
+  flutter_cache_manager: ^3.1.2
+  permission_handler: ^10.3.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
