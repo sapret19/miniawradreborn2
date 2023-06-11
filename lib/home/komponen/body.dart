@@ -4,22 +4,15 @@ import 'package:get/get_utils/get_utils.dart';
 import 'package:miniawradreborn2/card.dart';
 import 'package:miniawradreborn2/home/komponen/bunder.dart';
 import 'package:miniawradreborn2/home/komponen/more.dart';
-import 'package:miniawradreborn2/slide/api_service.dart';
-import 'package:miniawradreborn2/slider/cache_slider.dart';
+import 'package:miniawradreborn2/slider/slider_pengumuman.dart';
 import 'package:miniawradreborn2/slider/slider_widget.dart';
 import 'package:sizer/sizer.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../slider/slider_model.dart';
 
 class body extends StatefulWidget {
   body({super.key});
-
-  final List<String> imgList = [
-    "assets/images/4.png",
-    "assets/images/1.png",
-    "assets/images/3.png",
-    "assets/images/5.png",
-  ];
 
   @override
   State<body> createState() => _bodyState();
@@ -77,8 +70,7 @@ class _bodyState extends State<body> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Container(
-              height: 57.h, width: double.infinity, child: sliderBuilder()),
+          Container(child: sliderBuilder().animate().moveY(delay: 100.ms, duration: 700.ms)),
           Container(
             width: 85.w,
             height: 220,
@@ -163,9 +155,16 @@ class _bodyState extends State<body> {
                       ],
                     ),
                   ],
-                ),
+                ).animate().moveX(delay: 100.ms, duration: 700.ms)
               ),
             ),
+          ),
+          Container(
+            transform: Matrix4.translationValues(0, -55, 1),
+            child: bannerpeng(),
+          ).animate().moveY(delay: 700.ms, duration: 500.ms),
+          SizedBox(
+            height: 20,
           ),
           Row(
             children: [
