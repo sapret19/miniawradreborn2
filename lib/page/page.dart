@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
-import 'package:miniawradreborn2/page/appbar_page.dart';
 import 'package:pdfx/pdfx.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
