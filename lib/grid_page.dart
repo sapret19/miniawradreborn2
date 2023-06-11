@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:miniawradreborn2/page/appbar_page.dart';
 import 'package:get/get.dart';
 import 'package:miniawradreborn2/page/page.dart';
 
