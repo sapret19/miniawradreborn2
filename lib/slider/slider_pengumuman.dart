@@ -9,20 +9,22 @@ import 'package:miniawradreborn2/slider/slider_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sizer/sizer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class slider_widget extends StatefulWidget {
-  const slider_widget({super.key});
+class ban_pengumuman extends StatefulWidget {
+  ban_pengumuman({super.key});
+  
 
   @override
-  State<slider_widget> createState() => _slider_widgetState();
+  State<ban_pengumuman> createState() => _ban_pengumumanState();
 }
 
-Future<void> saveSliderData(List<String> sliderUrls) async {
+Future<void> simpanSlide(List<String> slidelinks) async {
   final prefs = await SharedPreferences.getInstance();
-  prefs.setStringList('sliderUrls', sliderUrls);
+  prefs.setStringList('slidelinks', slidelinks);
 }
 
-class _slider_widgetState extends State<slider_widget> {
+class _ban_pengumumanState extends State<ban_pengumuman> {
   @override
   Widget build(BuildContext context) {
     double aspectratio;
@@ -38,24 +40,27 @@ class _slider_widgetState extends State<slider_widget> {
       appBar: AppBar(
         title: Text('Slider'),
       ),
-      body: sliderBuilder(),
+      body: bannerpeng(),
     );
   }
 }
 
-Widget sliderBuilder() {
+Widget bannerpeng() {
   return FutureBuilder<List<SliderModel>?>(
-    future: APIService(idslider: "18576").getSliderData(),
+    future: APIService(idslider: "18633").getSliderData(),
     builder: (BuildContext context, AsyncSnapshot<List<SliderModel>?> sliderModel) {
       if (sliderModel.connectionState == ConnectionState.done) {
         if (sliderModel.hasData && sliderModel.data != null) {
           // Simpan data slider secara lokal
-          final sliderUrls = sliderModel.data!.map((model) => model.url).toList();
-          saveSliderData(sliderUrls);
+          final slidelinks = sliderModel.data!.map((model) => model.url).toList();
+          simpanSlide(slidelinks);
 
           return Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50)
+            ),
             width: MediaQuery.of(context).size.width,
-            child: imageCarousel(sliderModel.data!),
+            child: gambarbanner(sliderModel.data!),
           );
         } 
       }
@@ -63,7 +68,7 @@ Widget sliderBuilder() {
       return Center(
         child: Container(
             width: MediaQuery.of(context).size.width,
-            child: offlineImageCarousel(),
+            child: BannerOffline(),
           )
       );
     },
@@ -72,38 +77,50 @@ Widget sliderBuilder() {
 
 
 
-Widget imageCarousel(List<SliderModel> sliderList) {
+Widget gambarbanner(List<SliderModel> sliderList) {
+  final Uri _link = Uri.parse('https://annur2.net/psb/');
   return CarouselSlider(
     items: sliderList.map((model) {
-      return CachedNetworkImage(
-        imageUrl: model.url,
-        fit: BoxFit.cover,
-        width: 100.w,
-        alignment: Alignment.bottomCenter,
-        placeholder: (context, url) => Container(color: Colors.black38,),
-        errorWidget: (context, url, error) => Icon(Icons.error),
+      return GestureDetector(
+        onTap: () {
+          launchUrl(_link, mode: LaunchMode.externalApplication);
+        },
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(6),
+          child: CachedNetworkImage(
+            imageUrl: model.url,
+            fit: BoxFit.cover,
+            width: 80.w,
+            
+            alignment: Alignment.bottomCenter,
+            placeholder: (context, url) => Container(color: Colors.black38,),
+            errorWidget: (context, url, error) => Icon(Icons.error),
+          ),
+        ),
       );
     }).toList(),
     options: CarouselOptions(
+
+      enlargeCenterPage: true,
         autoPlay: true,
-        aspectRatio: 12.5 / 16,
+        aspectRatio: 6 / 1,
         autoPlayCurve: Curves.decelerate,
         enableInfiniteScroll: true,
         autoPlayAnimationDuration: Duration(milliseconds: 800),
-        viewportFraction: 1),
+        viewportFraction: .8),
   );
 }
 
 
-Widget offlineImageCarousel() {
+Widget BannerOffline() {
   return FutureBuilder<List<String>>(
-    future: getOfflineSliderData(),
+    future: ambilOffline(),
     builder: (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
       if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
-        final sliderUrls = snapshot.data!;
-        if (sliderUrls.isNotEmpty) {
-          return imageCarousel(
-            sliderUrls.map((url) => SliderModel(url)).toList(),
+        final slidelinks = snapshot.data!;
+        if (slidelinks.isNotEmpty) {
+          return gambarbanner(
+            slidelinks.map((url) => SliderModel(url)).toList(),
           );
         } else {
           return Text('Tidak ada data slider yang tersimpan.');
@@ -115,8 +132,8 @@ Widget offlineImageCarousel() {
   );
 }
 
-Future<List<String>> getOfflineSliderData() async {
+Future<List<String>> ambilOffline() async {
   final prefs = await SharedPreferences.getInstance();
-  final sliderUrls = prefs.getStringList('sliderUrls');
-  return sliderUrls ?? [];
+  final slidelinks = prefs.getStringList('slidelinks');
+  return slidelinks ?? [];
 }
