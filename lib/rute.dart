@@ -13,7 +13,7 @@ import 'package:miniawradreborn2/page_baru/tab_yasintahlil.dart';
 Map<String, WidgetBuilder> get rute {
   return <String, WidgetBuilder>{
     "/home": (BuildContext context) => const Home(),
-    "/kitab": (BuildContext context) => const grid_page(),
+    "/kitab": (BuildContext context) => grid_page(),
     "/tawassul": (BuildContext context) =>
         single_page_baru(judul: "Tawassul", data: "tawassul.json"),
     "/birrul": (BuildContext context) =>

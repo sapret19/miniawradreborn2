@@ -3,15 +3,28 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 import 'package:miniawradreborn2/page/page.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
+import 'package:firebase_core/firebase_core.dart';
+
 
 class grid_page extends StatefulWidget {
-  const grid_page({super.key});
 
+
+  grid_page({super.key});
+  
+
+
+  firebase_storage.Reference storageRef = firebase_storage.FirebaseStorage.instance
+    .ref()
+    .child('gs://annur2app.appspot.com/dalail/dalail_ahad.pdf');
+
+  
   @override
   State<grid_page> createState() => _grid_pageState();
 }
 
 class _grid_pageState extends State<grid_page> {
+  String storage = "gs://annur2app.appspot.com/dalail/dalail_ahad.pdf";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
