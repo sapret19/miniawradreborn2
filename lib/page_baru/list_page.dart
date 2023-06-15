@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:miniawradreborn2/model_list.dart';
 import 'package:miniawradreborn2/page_baru/single_list.dart';
 
@@ -40,7 +41,7 @@ class list extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
                               color: Colors.blue),
-                        ),
+                        ).animate().slideY(duration: 500.ms,).fadeIn(),
                         title: Text(
                           Modellist[index].nama,
                           style: const TextStyle(
