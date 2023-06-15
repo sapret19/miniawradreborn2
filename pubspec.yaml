@@ -41,7 +41,6 @@ dependencies:
   google_nav_bar: ^5.0.6
   http: ^0.13.5
   pdfx: ^2.3.0
-  responsive_builder: ^0.6.4
   shared_preferences: ^2.0.20
   sizer: ^2.0.15
   syncfusion_flutter_pdfviewer: ^20.4.53

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miniawradreborn2/Dalaill/dalailul.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
 import 'package:miniawradreborn2/grid_page.dart';
 import 'package:miniawradreborn2/page_baru/list_page.dart';
@@ -24,7 +25,7 @@ Map<String, WidgetBuilder> get rute {
     "/burdah": (BuildContext context) => Burdahan(),
     "/diba": (BuildContext context) => Diba(),
     "/sabul": (BuildContext context) => Sabul(),
-    "/dalail": (BuildContext context) => list()
+    "/dalail": (BuildContext context) => DalailPage()
   };
 }
 

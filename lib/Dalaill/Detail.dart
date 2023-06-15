@@ -1,40 +1,38 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
-
-class Dor extends StatefulWidget {
-
-  Dor({super.key});
+class DetailDalail extends StatefulWidget {
+  final String storagePath;
+  final String NamaHari;
+  const DetailDalail({super.key, 
+  required this.storagePath,
+  required this.NamaHari
+  });
 
   @override
-  State<Dor> createState() => _DorState();
+  State<DetailDalail> createState() => _DetailDalailState();
 }
 
-Future<void> saveSliderData(List<String> pdflink) async {
-  final prefs = await SharedPreferences.getInstance();
-  prefs.setStringList('pdflink', pdflink);
-}
+class _DetailDalailState extends State<DetailDalail> {
+//  final String storagePath = 'dalail/dalail_ahad.pdf';
 
-class _DorState extends State<Dor> {
-  final String storagePath = 'dalail/dalail_ahad.pdf';
   Future<String> getDownloadURL() async {
     final firebase_storage.Reference ref =
-        firebase_storage.FirebaseStorage.instance.ref().child(storagePath);
+        firebase_storage.FirebaseStorage.instance.ref().child(widget.storagePath);
     final String downloadURL = await ref.getDownloadURL();
     return downloadURL;
   }
 
-    Future<String> downloadPDF(String url) async {
+  Future<String> downloadPDF(String url) async {
     final file = await DefaultCacheManager().getSingleFile(url);
     return file.path;
   }
- @override
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
@@ -42,7 +40,7 @@ class _DorState extends State<Dor> {
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: Text(
-          'Coba',
+          '${widget.NamaHari}',
           style: TextStyle(
             fontFamily: 'Montserrat',
             fontWeight: FontWeight.bold,
@@ -80,12 +78,12 @@ class _DorState extends State<Dor> {
               ),
             );
           } else {
-            return SizedBox.shrink();
+            return Container(
+              decoration: BoxDecoration(color: Colors.black12),
+            );
           }
         },
       ),
-      
-    
     );
   }
 }
