@@ -15,8 +15,6 @@ import 'firebase_options.dart';
 import 'package:in_app_update/in_app_update.dart';
 import 'package:in_app_update/in_app_update.dart' as appUpdate;
 
-
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(

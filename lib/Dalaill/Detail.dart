@@ -8,10 +8,8 @@ import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 class DetailDalail extends StatefulWidget {
   final String storagePath;
   final String NamaHari;
-  const DetailDalail({super.key, 
-  required this.storagePath,
-  required this.NamaHari
-  });
+  const DetailDalail(
+      {super.key, required this.storagePath, required this.NamaHari});
 
   @override
   State<DetailDalail> createState() => _DetailDalailState();
@@ -21,8 +19,10 @@ class _DetailDalailState extends State<DetailDalail> {
 //  final String storagePath = 'dalail/dalail_ahad.pdf';
 
   Future<String> getDownloadURL() async {
-    final firebase_storage.Reference ref =
-        firebase_storage.FirebaseStorage.instance.ref().child(widget.storagePath);
+    final firebase_storage.Reference ref = firebase_storage
+        .FirebaseStorage.instance
+        .ref()
+        .child(widget.storagePath);
     final String downloadURL = await ref.getDownloadURL();
     return downloadURL;
   }
@@ -78,9 +78,7 @@ class _DetailDalailState extends State<DetailDalail> {
               ),
             );
           } else {
-            return Container(
-              decoration: BoxDecoration(color: Colors.black12),
-            );
+            return CircularProgressIndicator();
           }
         },
       ),
