@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:miniawradreborn2/Dalaill/dalailul.dart';
+import 'package:miniawradreborn2/Syair/syair_list.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
-import 'package:miniawradreborn2/grid_page.dart';
 import 'package:miniawradreborn2/page_baru/list_page.dart';
 import 'package:miniawradreborn2/page_baru/single_page_baru.dart';
 import 'package:miniawradreborn2/page_baru/tab_burdah.dart';
@@ -14,7 +14,7 @@ import 'package:miniawradreborn2/page_baru/tab_yasintahlil.dart';
 Map<String, WidgetBuilder> get rute {
   return <String, WidgetBuilder>{
     "/home": (BuildContext context) => const Home(),
-    "/kitab": (BuildContext context) => grid_page(),
+    "/kitab": (BuildContext context) => IniKitab(),
     "/tawassul": (BuildContext context) =>
         single_page_baru(judul: "Tawassul", data: "tawassul.json"),
     "/birrul": (BuildContext context) =>

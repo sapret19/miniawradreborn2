@@ -5,24 +5,24 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 
-class DetailDalail extends StatefulWidget {
-  final String storagePath;
-  final String NamaHari;
-  const DetailDalail(
-      {super.key, required this.storagePath, required this.NamaHari});
+class Detail_syair extends StatefulWidget {
+  final String path;
+  final String judul;
+   Detail_syair(
+      {super.key, required this.judul,required this.path});
 
   @override
-  State<DetailDalail> createState() => _DetailDalailState();
+  State<Detail_syair> createState() => _Detail_syairState();
 }
 
-class _DetailDalailState extends State<DetailDalail> {
+class _Detail_syairState extends State<Detail_syair> {
 //  final String storagePath = 'dalail/dalail_ahad.pdf';
 
   Future<String> getDownloadURL() async {
     final firebase_storage.Reference ref = firebase_storage
         .FirebaseStorage.instance
         .ref()
-        .child(widget.storagePath);
+        .child(widget.path);
     final String downloadURL = await ref.getDownloadURL();
     return downloadURL;
   }
@@ -40,7 +40,7 @@ class _DetailDalailState extends State<DetailDalail> {
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
         centerTitle: true,
         title: Text(
-          '${widget.NamaHari}',
+          '${widget.judul}',
           style: TextStyle(
             fontFamily: 'Montserrat',
             fontWeight: FontWeight.bold,

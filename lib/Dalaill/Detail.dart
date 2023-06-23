@@ -65,9 +65,7 @@ class _DetailDalailState extends State<DetailDalail> {
                     ),
                   );
                 } else {
-                  return Container(
-                    decoration: BoxDecoration(color: Colors.black12),
-                  );
+                  return Center(child: CircularProgressIndicator());
                 }
               },
             );
