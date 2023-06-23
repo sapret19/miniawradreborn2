@@ -2,6 +2,8 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:miniawradreborn2/Dalaill/dalailul.dart';
+import 'package:miniawradreborn2/Syair/Detail_syair.dart';
+import 'package:miniawradreborn2/Syair/syair_list.dart';
 import 'package:miniawradreborn2/card.dart';
 import 'package:miniawradreborn2/home/Nav_bar.dart';
 import 'package:miniawradreborn2/home/home_screen.dart';
@@ -39,7 +41,7 @@ class _MyAppState extends State<MyApp> {
       return GetMaterialApp(
         title: 'Annur2App',
         theme: ThemeData(),
-        home: navbar(),
+        home: Screen(),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
         routes: rute,
