@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get_utils/get_utils.dart';
@@ -8,6 +10,7 @@ import 'package:miniawradreborn2/slider/slider_pengumuman.dart';
 import 'package:miniawradreborn2/slider/slider_widget.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../slider/slider_model.dart';
 
@@ -20,6 +23,8 @@ class body extends StatefulWidget {
 
 class _bodyState extends State<body> {
   List<SliderModel> images = [];
+  final Uri _url = Uri.parse(
+      'https://api.whatsapp.com/send/?phone=6281358049894&text&type=phone_number&app_absent=0');
   @override
   void initState() {
     // TODO: implement initState
@@ -70,7 +75,10 @@ class _bodyState extends State<body> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Container(child: sliderBuilder().animate().moveY(delay: 100.ms, duration: 700.ms)),
+          Container(
+              child: sliderBuilder()
+                  .animate()
+                  .moveY(delay: 100.ms, duration: 700.ms)),
           Container(
             width: 85.w,
             height: 220,
@@ -88,75 +96,74 @@ class _bodyState extends State<body> {
             child: Padding(
               padding: EdgeInsets.only(top: 15, bottom: 15, left: 3, right: 3),
               child: SingleChildScrollView(
-                controller: _firstcontroller,
-                scrollDirection: Axis.horizontal,
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          width: size,
-                          child: Column(
-                            children: [
-                              const bunder(
-                                icon: "tawassul.png",
-                                text: "Tawassul",
-                                rute: "/tawassul",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "birrul.png",
-                                text: "Birrul Walidayn",
-                                rute: "/birrul",
-                              ),
-                              // more()
-                            ],
+                  controller: _firstcontroller,
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            width: size,
+                            child: Column(
+                              children: [
+                                const bunder(
+                                  icon: "tawassul.png",
+                                  text: "Tawassul",
+                                  rute: "/tawassul",
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                const bunder(
+                                  icon: "birrul.png",
+                                  text: "Birrul Walidayn",
+                                  rute: "/birrul",
+                                ),
+                                // more()
+                              ],
+                            ),
                           ),
-                        ),
-                        Container(
-                          width: size,
-                          child: Column(
-                            children: [
-                              const bunder(
-                                icon: "yasin.png",
-                                text: "Yasin & Tahlil",
-                                rute: "/yasintahlil",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const bunder(
-                                icon: "istighosah.png",
-                                text: "Istighosah",
-                                rute: "/istighosah",
-                              ),
-                            ],
+                          Container(
+                            width: size,
+                            child: Column(
+                              children: [
+                                const bunder(
+                                  icon: "yasin.png",
+                                  text: "Yasin & Tahlil",
+                                  rute: "/yasintahlil",
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                const bunder(
+                                  icon: "istighosah.png",
+                                  text: "Istighosah",
+                                  rute: "/istighosah",
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                        Container(
-                          width: size,
-                          child: Column(
-                            children: [
-                              const bunder(
-                                icon: "waqiah.png",
-                                text: "Al-Waqi'ah",
-                                rute: "/waqiah",
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              const more()
-                            ],
+                          Container(
+                            width: size,
+                            child: Column(
+                              children: [
+                                const bunder(
+                                  icon: "waqiah.png",
+                                  text: "Al-Waqi'ah",
+                                  rute: "/waqiah",
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                const more()
+                              ],
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ).animate().moveX(delay: 100.ms, duration: 700.ms)
-              ),
+                        ],
+                      ),
+                    ],
+                  ).animate().moveX(delay: 100.ms, duration: 700.ms)),
             ),
           ),
           Container(
@@ -198,6 +205,30 @@ class _bodyState extends State<body> {
             ],
           ),
           WordPressArticles(),
+          GestureDetector(
+            onTap: () {
+              launchUrl(_url, mode: LaunchMode.externalApplication);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: Container(
+                  transform: Matrix4.translationValues(0, -30, 1),
+                  width: 85.w,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color.fromARGB(45, 158, 158, 158),
+                            offset: Offset(0, 0),
+                            spreadRadius: 1,
+                            blurRadius: 1),
+                      ]),
+                  child: Image.asset('assets/images/awrad.png')),
+            ),
+          ),
+          SizedBox(
+            height: 12,
+          ),
           Padding(
             padding: const EdgeInsets.only(bottom: 8.0),
             child: Container(
