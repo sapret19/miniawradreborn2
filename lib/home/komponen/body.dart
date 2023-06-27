@@ -227,22 +227,22 @@ class _bodyState extends State<body> {
           SizedBox(
             height: 12,
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: Container(
-                transform: Matrix4.translationValues(0, -30, 1),
-                width: 85.w,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Color.fromARGB(45, 158, 158, 158),
-                          offset: Offset(0, 0),
-                          spreadRadius: 1,
-                          blurRadius: 1),
-                    ]),
-                child: Image.asset('assets/images/bannerbaru.png')),
-          ),
+          // Padding(
+          //   padding: const EdgeInsets.only(bottom: 8.0),
+          //   child: Container(
+          //       transform: Matrix4.translationValues(0, -30, 1),
+          //       width: 85.w,
+          //       decoration: BoxDecoration(
+          //           borderRadius: BorderRadius.all(Radius.circular(10)),
+          //           boxShadow: [
+          //             BoxShadow(
+          //                 color: Color.fromARGB(45, 158, 158, 158),
+          //                 offset: Offset(0, 0),
+          //                 spreadRadius: 1,
+          //                 blurRadius: 1),
+          //           ]),
+          //       child: Image.asset('assets/images/bannerbaru.png')),
+          // ),
         ],
       ),
     );

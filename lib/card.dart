@@ -2,9 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
 import 'package:http/http.dart' as http;
-import 'package:http/http.dart';
 import 'package:miniawradreborn2/ar_detail.dart';
-import 'package:miniawradreborn2/detail.dart';
 import 'package:sizer/sizer.dart';
 
 class WordPressArticles extends StatefulWidget {
