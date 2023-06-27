@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get_utils/get_utils.dart';
@@ -24,7 +22,7 @@ class body extends StatefulWidget {
 class _bodyState extends State<body> {
   List<SliderModel> images = [];
   final Uri _url = Uri.parse(
-      'https://api.whatsapp.com/send/?phone=6281358049894&text&type=phone_number&app_absent=0');
+      'https://api.whatsapp.com/send/?phone=6281358049894&text=Assalamualaikum%0ASaya%20pesan%20buku%20saku%20Awrad%20Santri%0A%0AAtas%20nama:%0AAlamat%20pengiriman:%0AJumlah:%0A%0ATerima%20kasih');
   @override
   void initState() {
     // TODO: implement initState
