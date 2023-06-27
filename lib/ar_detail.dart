@@ -17,11 +17,11 @@ class _ArticleDetailState extends State<ArticleDetail> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color.fromARGB(255, 39, 110, 176),
-        title: AutoSizeText(
-          widget.article['title']['rendered']
-              .replaceAll(RegExp(r'<[^>]*>'), ""),
-          maxLines: 2,
-        ),
+        // title: AutoSizeText(
+        //   widget.article['title']['rendered']
+        //       .replaceAll(RegExp(r'<[^>]*>'), ""),
+        //   maxLines: 2,
+        // ),
         // toolbarHeight: 70,
       ),
       body: SingleChildScrollView(
@@ -29,26 +29,20 @@ class _ArticleDetailState extends State<ArticleDetail> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Container(
-                height: 250,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      widget.article['_embedded']['wp:featuredmedia'][0]
-                              ['source_url']
-                          .replaceAll(RegExp(r'<[^>]*>'), ""),
-                    ),
-                    fit: BoxFit.cover,
-                  ),
-                ),
+              padding: EdgeInsets.all(25),
+              child: Text(
+                widget.article['title']['rendered']
+                    .replaceAll(RegExp(r'<[^>]*>'), ""),
+                style: TextStyle(
+                    fontFamily: 'Montserrat',
+                    fontSize: 24,
+                    fontWeight: FontWeight.w600),
               ),
             ),
             Row(
               children: [
                 SizedBox(
+                  height: 10,
                   width: 10,
                 ),
                 Wrap(
@@ -68,16 +62,35 @@ class _ArticleDetailState extends State<ArticleDetail> {
               ],
             ),
             Padding(
+              padding: const EdgeInsets.all(9.0),
+              child: Container(
+                height: 200,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      widget.article['_embedded']['wp:featuredmedia'][0]
+                              ['source_url']
+                          .replaceAll(RegExp(r'<[^>]*>'), ""),
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Padding(
               padding: EdgeInsets.all(16),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 10),
+                  // SizedBox(height: 1 ),
                   SelectableText(
                     widget.article['content']['rendered']
-                        .replaceAll(RegExp('<[^>]*>'), ""),
+                        .replaceAll(RegExp('<[^>]*>'), "")
+                        .replaceAll('\n\n\n', '\n'),
                     style: TextStyle(
-                        fontSize: 14,
+                        fontSize: 18,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.w400),
                   ),
