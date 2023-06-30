@@ -33,7 +33,7 @@ class _ScreenState extends State<Screen> {
       backgroundColor: Color.fromARGB(255, 39, 110, 176),
       body: Center(
         child: Image.asset(
-          'assets/images/splash.png',
+          'assets/images/splashbaru.png',
         ),
       ),
     );

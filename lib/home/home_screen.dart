@@ -48,8 +48,8 @@ class _HomeState extends State<Home> {
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(8))),
             child: Image.asset(
-              'assets/images/anyar.png',
-              scale: 3,
+              'assets/images/anyarlagi.png',
+              scale: 8 ,
             ),
           ),
         ),

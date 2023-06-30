@@ -5,6 +5,7 @@ import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
 import 'package:miniawradreborn2/page_baru/cara_hajat.dart';
 import 'package:miniawradreborn2/page_baru/doa_waqiah.dart';
 import 'package:miniawradreborn2/page_baru/hajat.dart';
+import 'package:miniawradreborn2/page_baru/page_count.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -138,7 +139,7 @@ class _TabBarPageState extends State<Waqiahan>
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    Surat(data: "waqiah.json", fontSize: _currentFontSize),
+                    page_count(data: "waqiah.json", fontSize: _currentFontSize, kunci: "waqiah", ),
                     Doawaqiah(fontSize: _currentFontSize),
                     cara_hajat(fontSize: _currentFontSize),
                     Hajat(fontSize: _currentFontSize)

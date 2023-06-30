@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:miniawradreborn2/page_baru/model_json.dart';
-import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Burdah1 extends StatefulWidget {

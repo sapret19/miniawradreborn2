@@ -2,9 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:get/get_utils/get_utils.dart';
 import 'package:http/http.dart' as http;
-import 'package:http/http.dart';
 import 'package:miniawradreborn2/ar_detail.dart';
-import 'package:miniawradreborn2/detail.dart';
 import 'package:sizer/sizer.dart';
 
 class WordPressArticles extends StatefulWidget {
@@ -44,8 +42,21 @@ class _WordPressArticlesState extends State<WordPressArticles> {
       height: 300,
       width: context.isPortrait ? 89.w : 98.w,
       child: isLoading
-          ? Center(
-              child: CircularProgressIndicator(),
+          ? SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 23.0, right: 23.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    loading(),
+                    loading(),
+                    loading(),
+                    loading(),
+                    loading(),
+                  ],
+                ),
+              ),
             )
           : ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -112,7 +123,8 @@ class _WordPressArticlesState extends State<WordPressArticles> {
                                 SizedBox(height: 8),
                                 Text(
                                   articles[index]['excerpt']['rendered']
-                                      .replaceAll(RegExp(r'<[^>]*>'), ""),
+                                      .replaceAll(RegExp(r'<[^>]*>'), "")
+                                      .replaceAll('&nbsp', ""),
                                   style: TextStyle(fontSize: 12),
                                   maxLines: 3,
                                   overflow: TextOverflow.ellipsis,
@@ -127,6 +139,74 @@ class _WordPressArticlesState extends State<WordPressArticles> {
                 );
               },
             ),
+    );
+  }
+}
+
+class loading extends StatelessWidget {
+  const loading({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(8),
+      height: 300,
+      width: 200,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(12)),
+        color: Color.fromARGB(255, 255, 255, 255),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.2),
+            spreadRadius: 1,
+            blurRadius: 1,
+            offset: Offset(0, 0),
+          ),
+        ],
+      ),
+      alignment: Alignment.centerLeft,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            kotak(
+              height: 120,
+              width: 98.w,
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            kotak(height: 40, width: 98.w),
+            SizedBox(
+              height: 8,
+            ),
+            kotak(height: 80, width: 98.w)
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class kotak extends StatelessWidget {
+  final double height;
+  final double width;
+  const kotak({
+    super.key,
+    required this.height,
+    required this.width,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: height,
+      width: width,
+      decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: Color.fromARGB(59, 230, 230, 230)),
     );
   }
 }

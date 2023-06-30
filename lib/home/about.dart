@@ -30,8 +30,8 @@ class about extends StatelessWidget {
               child: Align(
                   alignment: Alignment.center,
                   child: Image.asset(
-                    "assets/images/icon12.png",
-                    scale: 2,
+                    "assets/images/12.png",
+                    scale: 7,
                   )),
             ),
             SizedBox(

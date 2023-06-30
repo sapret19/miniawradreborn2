@@ -30,26 +30,10 @@ class list extends StatelessWidget {
             Container(
               margin: EdgeInsets.all(20),
               child: SizedBox(
-                height: 500,
+                height: MediaQuery.of(context).size.height,
                 child: ListView.separated(
                     itemBuilder: ((context, index) {
-                      return ListTile(
-                        leading: Text(
-                          "${index + 1}",
-                          style: const TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                              color: Colors.blue),
-                        ).animate().slideY(duration: 500.ms,).fadeIn(),
-                        title: Text(
-                          Modellist[index].nama,
-                          style: const TextStyle(
-                              fontFamily: 'Montserrat',
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                              color: Colors.blue),
-                        ),
+                      return GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => single_list(
@@ -57,14 +41,83 @@ class list extends StatelessWidget {
                                   index: index,
                                   Modelpdf: Modelpdf)));
                         },
+                        child: Container(
+                          height: 70,
+                          width: double.infinity,
+                          padding: EdgeInsets.only(left: 20),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 39, 110, 176),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(15))),
+                          child: Row(
+                            children: [
+                              Text(
+                                '${index + 1}',
+                                style: const TextStyle(
+                                    fontFamily: 'Monserrat',
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w700,
+                                    color: Colors.white),
+                              ),
+                              SizedBox(
+                                width: 20,
+                              ),
+                              Text(
+                                Modellist[index].nama,
+                                style: const TextStyle(
+                                    fontFamily: 'Monserrat',
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white),
+                              ),
+                              Spacer(),
+                              Image.asset(
+                                'assets/images/panah.png',
+                                color: Colors.white,
+                                scale: 17,
+                              ),
+                              SizedBox(
+                                width: 20,
+                              )
+                            ],
+                          ),
+                        ),
                       );
+                      // ListTile(
+                      //   leading: Text(
+                      //     "${index + 1}",
+                      //     style: const TextStyle(
+                      //         fontFamily: 'Montserrat',
+                      //         fontWeight: FontWeight.w500,
+                      //         fontSize: 16,
+                      //         color: Colors.blue),
+                      //   ).animate().slideY(duration: 500.ms,).fadeIn(),
+                      //   title: Text(
+                      //     Modellist[index].nama,
+                      //     style: const TextStyle(
+                      //         fontFamily: 'Montserrat',
+                      //         fontWeight: FontWeight.w500,
+                      //         fontSize: 16,
+                      //         color: Colors.blue),
+                      //   ),
+                      //   onTap: () {
+                      //     Navigator.of(context).push(MaterialPageRoute(
+                      //         builder: (context) => single_list(
+                      //             Modellist: Modellist,
+                      //             index: index,
+                      //             Modelpdf: Modelpdf)));
+                      //   },
+                      // );
                     }),
                     separatorBuilder: ((context, index) {
-                      return Container(
-                        height: 1,
-                        margin: const EdgeInsets.only(left: 20, right: 20),
-                        color: Colors.blue,
+                      return SizedBox(
+                        height: 20,
                       );
+                      //  Container(
+                      //   height: 1,
+                      //   margin: const EdgeInsets.only(left: 20, right: 20),
+                      //   color: Color.fromARGB(255, 19, 28, 36),
+                      // );
                     }),
                     itemCount: nama.length),
               ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:miniawradreborn2/page_baru/an_namatab.dart';
 import 'package:miniawradreborn2/page_baru/an_surat.dart';
 import 'package:miniawradreborn2/page_baru/an_yasintah.dart';
+import 'package:miniawradreborn2/page_baru/page_count.dart';
 import 'package:miniawradreborn2/set.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -131,7 +132,11 @@ class _TabBarPageState extends State<YasinTahlil>
                 child: TabBarView(
                   controller: tabController,
                   children: [
-                    Surat(data: 'yasin.json', fontSize: _currentFontSize),
+                    page_count(
+                      data: 'yasin.json',
+                      fontSize: _currentFontSize,
+                      kunci: 'yasin',
+                    ),
                     yasinan(data: "tahlil.json", fontSize: _currentFontSize),
                     yasinan(data: "doa_tahlil.json", fontSize: _currentFontSize)
                   ],
