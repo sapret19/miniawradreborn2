@@ -3,6 +3,7 @@ import 'package:miniawradreborn2/Dalaill/Detail.dart';
 
 class DalailPage extends StatelessWidget {
   // final String Harihari;
+  
 
   DalailPage({super.key});
 

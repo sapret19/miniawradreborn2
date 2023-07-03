@@ -81,7 +81,7 @@ class _bodyState extends State<body> {
             width: 85.w,
             height: 220,
             transform: Matrix4.translationValues(0, -70, 1),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(10)),
                 boxShadow: [
@@ -92,7 +92,8 @@ class _bodyState extends State<body> {
                       blurRadius: 1),
                 ]),
             child: Padding(
-              padding: EdgeInsets.only(top: 15, bottom: 15, left: 3, right: 3),
+              padding:
+                  const EdgeInsets.only(top: 15, bottom: 15, left: 3, right: 3),
               child: SingleChildScrollView(
                   controller: _firstcontroller,
                   scrollDirection: Axis.horizontal,
@@ -110,7 +111,7 @@ class _bodyState extends State<body> {
                                   text: "Tawassul",
                                   rute: "/tawassul",
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 const bunder(
@@ -131,7 +132,7 @@ class _bodyState extends State<body> {
                                   text: "Yasin & Tahlil",
                                   rute: "/yasintahlil",
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 const bunder(
@@ -151,7 +152,7 @@ class _bodyState extends State<body> {
                                   text: "Al-Waqi'ah",
                                   rute: "/waqiah",
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   height: 10,
                                 ),
                                 const more()
@@ -168,28 +169,28 @@ class _bodyState extends State<body> {
             transform: Matrix4.translationValues(0, -55, 1),
             child: bannerpeng(),
           ).animate().moveY(delay: 700.ms, duration: 500.ms),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
             children: [
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Container(
                 transform: Matrix4.translationValues(0, -55, 1),
                 width: 6,
                 height: 19,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     color: Colors.blue,
                     borderRadius: BorderRadius.all(Radius.circular(70))),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 12,
               ),
               Container(
                   transform: Matrix4.translationValues(0, -55, 1),
-                  child: Align(
+                  child: const Align(
                     alignment: Alignment.topLeft,
                     child: Text(
                       "Artikel Terbaru",
@@ -203,50 +204,49 @@ class _bodyState extends State<body> {
             ],
           ),
           WordPressArticles(),
-          // GestureDetector(
-          //   onTap: () {
-          //     launchUrl(_url, mode: LaunchMode.externalApplication);
-          //   },
-          //   child: Padding(
-          //     padding: const EdgeInsets.only(bottom: 8.0),
-          //     child: Container(
-          //         transform: Matrix4.translationValues(0, -30, 1),
-          //         width: 85.w,
-          //         decoration: BoxDecoration(
-          //             borderRadius: BorderRadius.all(Radius.circular(10)),
-          //             boxShadow: [
-          //               BoxShadow(
-          //                   color: Color.fromARGB(45, 158, 158, 158),
-          //                   offset: Offset(0, 0),
-          //                   spreadRadius: 1,
-          //                   blurRadius: 1),
-          //             ]),
-          //         child: Image.asset('assets/images/awrad.png')),
-          //   ),
-          // ),
+          GestureDetector(
+            onTap: () {
+              launchUrl(_url, mode: LaunchMode.externalApplication);
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(bottom: 8.0),
+              child: Container(
+                  transform: Matrix4.translationValues(0, -30, 1),
+                  width: 85.w,
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      boxShadow: [
+                        BoxShadow(
+                            color: Color.fromARGB(45, 158, 158, 158),
+                            offset: Offset(0, 0),
+                            spreadRadius: 1,
+                            blurRadius: 1),
+                      ]),
+                  child: Image.asset('assets/images/awrad.png')),
+            ),
+          ),
           // SizedBox(
           //   height: 12,
           // ),
-          
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
-            child: Container(
-                // transform: Matrix4.translationValues(0, -30, 1),
-                width: 85.w,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    boxShadow: [
-                      BoxShadow(
-                          color: Color.fromARGB(45, 158, 158, 158),
-                          offset: Offset(0, 0),
-                          spreadRadius: 1,
-                          blurRadius: 1),
-                    ]),
-                child: Image.asset('assets/images/bannerbaru.png')),
-          ),
+
+          // Padding(
+          //   padding: const EdgeInsets.only(bottom: 8.0),
+          //   child: Container(
+          //       // transform: Matrix4.translationValues(0, -30, 1),
+          //       width: 85.w,
+          //       decoration: BoxDecoration(
+          //           borderRadius: BorderRadius.all(Radius.circular(10)),
+          //           boxShadow: [
+          //             BoxShadow(
+          //                 color: Color.fromARGB(45, 158, 158, 158),
+          //                 offset: Offset(0, 0),
+          //                 spreadRadius: 1,
+          //                 blurRadius: 1),
+          //           ]),
+          //       child: Image.asset('assets/images/bannerbaru.png')),
+          // ),
         ],
       ),
     );
   }
 }
-

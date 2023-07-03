@@ -46,31 +46,30 @@ class _slider_widgetState extends State<slider_widget> {
 Widget sliderBuilder() {
   return FutureBuilder<List<SliderModel>?>(
     future: APIService(idslider: "18576").getSliderData(),
-    builder: (BuildContext context, AsyncSnapshot<List<SliderModel>?> sliderModel) {
+    builder:
+        (BuildContext context, AsyncSnapshot<List<SliderModel>?> sliderModel) {
       if (sliderModel.connectionState == ConnectionState.done) {
         if (sliderModel.hasData && sliderModel.data != null) {
           // Simpan data slider secara lokal
-          final sliderUrls = sliderModel.data!.map((model) => model.url).toList();
+          final sliderUrls =
+              sliderModel.data!.map((model) => model.url).toList();
           saveSliderData(sliderUrls);
 
           return Container(
             width: MediaQuery.of(context).size.width,
             child: imageCarousel(sliderModel.data!),
           );
-        } 
+        }
       }
 
       return Center(
-        child: Container(
-            width: MediaQuery.of(context).size.width,
-            child: offlineImageCarousel(),
-          )
-      );
+          child: Container(
+        width: MediaQuery.of(context).size.width,
+        child: offlineImageCarousel(),
+      ));
     },
   );
 }
-
-
 
 Widget imageCarousel(List<SliderModel> sliderList) {
   return CarouselSlider(
@@ -80,13 +79,15 @@ Widget imageCarousel(List<SliderModel> sliderList) {
         fit: BoxFit.cover,
         width: 100.w,
         alignment: Alignment.bottomCenter,
-        placeholder: (context, url) => Container(color: Colors.black38,),
+        placeholder: (context, url) => Container(
+          color: Colors.black38,
+        ),
         errorWidget: (context, url, error) => Icon(Icons.error),
       );
     }).toList(),
     options: CarouselOptions(
         autoPlay: true,
-        aspectRatio: 12.5 / 16,
+        aspectRatio: 12.5 / 20,
         autoPlayCurve: Curves.decelerate,
         enableInfiniteScroll: true,
         autoPlayAnimationDuration: Duration(milliseconds: 800),
@@ -94,12 +95,12 @@ Widget imageCarousel(List<SliderModel> sliderList) {
   );
 }
 
-
 Widget offlineImageCarousel() {
   return FutureBuilder<List<String>>(
     future: getOfflineSliderData(),
     builder: (BuildContext context, AsyncSnapshot<List<String>> snapshot) {
-      if (snapshot.connectionState == ConnectionState.done && snapshot.hasData) {
+      if (snapshot.connectionState == ConnectionState.done &&
+          snapshot.hasData) {
         final sliderUrls = snapshot.data!;
         if (sliderUrls.isNotEmpty) {
           return imageCarousel(
