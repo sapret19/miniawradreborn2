@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+// import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
@@ -17,33 +18,34 @@ class DetailDalail extends StatefulWidget {
 }
 
 class _DetailDalailState extends State<DetailDalail> {
-//   @override
-//   void initState() {
-//     // TODO: implement initState
-//     super.initState();
-//     initBannerAd();
-//   }
+  late BannerAd bannerAd;
+  bool isAdLoaded = false;
+  var IdBanner = 'ca-app-pub-1150816972900335/8829837669';
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    initBannerAd();
+  }
 
-//   late BannerAd bannerAd;
-//   bool isAdLoaded = false;
-// //  final String storagePath = 'dalail/dalail_ahad.pdf';
+//  final String storagePath = 'dalail/dalail_ahad.pdf';
 
-//   initBannerAd() {
-//     bannerAd = BannerAd(
-//       size: AdSize.banner,
-//       adUnitId: '',
-//       listener: BannerAdListener(onAdLoaded: (ad) {
-//         setState(() {
-//           isAdLoaded = true;
-//         });
-//       }, onAdFailedToLoad: (ad, error) {
-//         ad.dispose();
-//         print('eror');
-//       }),
-//       request: AdRequest(),
-//     );
-//     bannerAd.load();
-//   }
+  void initBannerAd() {
+    bannerAd = BannerAd(
+      size: AdSize.banner,
+      adUnitId: IdBanner,
+      listener: BannerAdListener(onAdLoaded: (ad) {
+        setState(() {
+          isAdLoaded = true;
+        });
+      }, onAdFailedToLoad: (ad, error) {
+        ad.dispose();
+        print('eror');
+      }),
+      request: AdRequest(),
+    );
+    bannerAd.load();
+  }
 
   Future<String> getDownloadURL() async {
     final firebase_storage.Reference ref = firebase_storage
@@ -57,6 +59,12 @@ class _DetailDalailState extends State<DetailDalail> {
   Future<String> downloadPDF(String url) async {
     final file = await DefaultCacheManager().getSingleFile(url);
     return file.path;
+  }
+
+  @override
+  void dispose() {
+    bannerAd.dispose();
+    super.dispose();
   }
 
   @override
@@ -107,13 +115,12 @@ class _DetailDalailState extends State<DetailDalail> {
             }
           },
         ),
-        // bottomNavigationBar: isAdLoaded
-        //     ? SizedBox(
-        //         height: bannerAd.size.height.toDouble(),
-        //         width: bannerAd.size.width.toDouble(),
-        //         child: AdWidget(ad: bannerAd),
-        //       )
-        //     : SizedBox()
-            );
+        bottomNavigationBar: isAdLoaded
+            ? SizedBox(
+                height: bannerAd.size.height.toDouble(),
+                width: bannerAd.size.width.toDouble(),
+                child: AdWidget(ad: bannerAd),
+              )
+            : SizedBox());
   }
 }

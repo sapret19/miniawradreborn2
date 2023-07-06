@@ -5,6 +5,11 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <application android:usesCleartextTraffic="true">
+
+     <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1150816972900335~7952387188" />
+
     
     
     </application>
